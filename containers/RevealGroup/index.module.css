@@ -1,0 +1,17 @@
+.reveal__group {
+  width: 100%;
+  border: 1px solid #720ef1;
+  border-radius: 1.8rem;
+}
+
+.reveal__group > :first-child > :first-child {
+  border-top: none;
+}
+
+.reveal__group > :first-child {
+  border-radius: 1.8rem 1.8rem 0 0;
+}
+
+.reveal__group > :last-child {
+  border-radius: 0 0 1.8rem 1.8rem;
+}

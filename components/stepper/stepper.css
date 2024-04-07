@@ -1,0 +1,22 @@
+.step-item {
+  @apply relative flex flex-col justify-center items-center lg:w-36 w-10;
+}
+.step-item:not(:first-child):before {
+  @apply content-[''] bg-[#2C2C30] w-[3px] h-[6rem];
+}
+.step {
+  @apply w-5 h-5 flex items-center justify-center z-10 relative bg-slate-700 rounded-full font-semibold text-white;
+}
+.active .step {
+  @apply bg-gradient-to-l from-blue-400 via-blue-500 to-indigo-600;
+}
+.complete .step {
+  @apply bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-600;
+}
+.complete p {
+  @apply text-white;
+}
+.complete:not(:first-child):before,
+.active:not(:first-child):before {
+  @apply bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-600;
+}
