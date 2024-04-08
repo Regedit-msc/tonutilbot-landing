@@ -5,7 +5,7 @@ import coin from "@assets/Coin.png";
 import GlowCoin from "@assets/GlowCoin.png";
 
 import GlowMoney from "@assets/GlowMoney.png";
-import Money from "@assets/Money.png";
+import Money from "@assets/money.png";
 
 import GlowPaper from "@assets/GlowPaper.png";
 import Paper from "@assets/Paper.png";
