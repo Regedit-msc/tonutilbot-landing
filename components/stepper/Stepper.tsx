@@ -1,14 +1,12 @@
 "use client";
-import React, { useState } from "react";
-import "./stepper.css";
-import { TiTick } from "react-icons/ti";
+import React from "react";
 /* eslint-disable @next/next/no-img-element */
 
 interface StepperProps {
   step?: number;
 }
 
-const Stepper: React.FC = ({ step = 1 }: StepperProps) => {
+const Stepper = ({ step = 1 }: StepperProps) => {
   const steps: string[] = [
     "Customer Info",
     "Shipping Info",

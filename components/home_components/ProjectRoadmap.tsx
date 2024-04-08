@@ -52,6 +52,7 @@ export const ProjectRoadmap = () => {
               {roadmap?.map((_, i) => {
                 return (
                   <div
+                   key={i}
                     className={`text-white gap-3 flex p-5 lg:w-[18.55rem]    w-full  rounded-[1.6rem] border  pr-10 cursor-pointer ${
                       currentStep === i
                         ? "bg-[#ffffff13] border-[#ffffff20]"
