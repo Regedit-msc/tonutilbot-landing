@@ -2,25 +2,25 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Scrim: Earn, Shop, Swap, and Transfer Globally!",
+  title: "Ton Bot",
   description:
-    "Sending value directly to your Freelancers, Content Creators, Crush using their social identity.",
+    "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
   openGraph: {
-    title: "Scrim: Earn, Shop, Swap, and Transfer Globally!",
-    url: "https://scrim.ai/",
+    title: " Ton Bot",
+    url: "",
     description:
-      "The ultimate financial playground! Earn, shop, swap crypto, and send global transfers effortlessly with Scrim. Join now and revolutionize your financial journey.",
+      "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
     images: [
       `https://drive.google.com/uc?id=1sC4Y882TEs30ynQUuTP4HRdkObfgbKdy`,
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@sendscrim",
-    creator: "@sendscrim",
+    site: "@",
+    creator: "@",
     images: "https://drive.google.com/uc?id=1sC4Y882TEs30ynQUuTP4HRdkObfgbKdy",
     description:
-      "The ultimate financial playground! Earn, shop, swap crypto, and send global transfers effortlessly with Scrim. Join now and revolutionize your financial journey.",
+      "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
   },
 };
 
