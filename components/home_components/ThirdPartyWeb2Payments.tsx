@@ -17,7 +17,11 @@ export const ThirdPartyWeb2Payments = () => {
           data subscriptions can be made using TON token on TonBot.
         </p>
 
-        <img src={IntegrationsImage.src} alt="" className="md:mt-20 " />
+        <img
+          src={IntegrationsImage.src}
+          alt="IntegrationsImage Image"
+          className="md:mt-20 "
+        />
       </div>
     </div>
   );
