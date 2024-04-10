@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 
-
 import { GradientButton } from "@components/buttons/GradientButton";
 import { FaTelegramPlane } from "react-icons/fa";
 import logo from "@assets/ton_logo.png";
@@ -16,8 +15,9 @@ export const Navbar = () => {
       </div>
 
       <GradientButton
-        icon={<FaTelegramPlane className="text-[1.5rem]" />}
+        icon={<FaTelegramPlane className="text-[1.5rem] " />}
         text="Open In Telegram"
+        className="max-sm:hidden"
       />
     </nav>
   );

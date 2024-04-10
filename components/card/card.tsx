@@ -35,13 +35,13 @@ export const Card: React.FC<CardProps> = ({ imgIndex, text }) => {
         <img
           src={HoverGradient.src}
           className="absolute top-0 left-auto"
-          alt=""
+          alt="HoverGradient Image"
         />
       )}
       <img
         src={hoverPic ? hover[imgIndex].src : normal[imgIndex].src}
-        alt={""}
         className="w-[140px]"
+        alt="HoverGradient Image"
       />
 
       <h1 className="bg-gradient-to-r from-gray-300 via-white to-[#a9baeb] inline-block text-transparent bg-clip-text lg: md:text-3xl text-[22.35px] font-bold">

@@ -10,14 +10,16 @@ import light from "@assets/light.svg";
 export const HeroSection = () => {
   return (
     <div className="text-white ">
-      <div className="flex flex-col justify-center items-center text-center md:gap-10 gap-6 my-[9rem] md:my-[8rem] relative">
+      <div className="flex flex-col justify-center items-center text-center md:gap-10 gap-6 my-[6rem] md:my-[8rem] relative">
         <img
           src={mesh.src}
+          alt="Mesh Image"
           className="absolute bottom-auto left-auto -z-0 animate-pulse"
         />
 
         <img
           src={light.src}
+          alt="Light Image"
           className="absolute bottom-auto left-auto -z-0 animate-pulse"
         />
 

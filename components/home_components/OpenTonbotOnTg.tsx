@@ -12,6 +12,7 @@ export const OpenTonbotOnTg = () => {
       <div className="flex flex-col justify-center items-center text-center gap-10  relative">
         <img
           src={Xmen.src}
+          alt="Xmen Image"
           className="absolute bottom-[-13%] left-0 -z-0 opacity-40 max-md:bottom-[-45%]"
         />
 

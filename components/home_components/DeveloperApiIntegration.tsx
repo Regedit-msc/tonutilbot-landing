@@ -14,19 +14,27 @@ export const DeveloperApiIntegration = () => {
       <div className="flex flex-col justify-center items-center text-center gap-10 mt-[20%] mb-[15%] max-md:my-24   relative">
         <img
           src={DeveloperApiPic.src}
-          alt=""
+          alt="DeveloperApi Image"
           className=" absolute top-[-6rem] -z-0"
         />
         <img
           src={DeveloperApiPic2.src}
-          alt=""
+          alt="DeveloperApi Image"
           className=" absolute  top-[-6rem] -z-0"
         />
 
         <div className="bg-[#000] w-full h-full absolute top-[4rem]  z-10"></div>
-        <img src={mesh.src} className="absolute bottom-auto left-auto z-10  " />
+        <img
+          src={mesh.src}
+          className="absolute bottom-auto left-auto z-10  "
+          alt="MeshGradient Image"
+        />
 
-        <img src={light.src} className="mt-20 absolute opacity-45 z-10" />
+        <img
+          src={light.src}
+          className="mt-20 absolute opacity-45 z-10"
+          alt="LightGradient Image"
+        />
 
         <GradientText
           text="Developer API integration"
@@ -41,7 +49,6 @@ export const DeveloperApiIntegration = () => {
         <GradientButton
           icon={<IoDocumentText className="text-[1.5rem]" />}
           text="Read our Documentations"
-          
         />
       </div>
     </div>
