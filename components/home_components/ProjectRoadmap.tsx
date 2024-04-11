@@ -24,9 +24,23 @@ const roadmap = [
     info: "Project Startup and initialization",
   },
 ];
+type nextStep = () => void;
+type changeStep = (i: number) => void;
 
 export const ProjectRoadmap = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
+  const incrementStep = (step: number) => setCurrentStep(step);
+  const updateStep = (next: number) => {
+    if (currentStep !== 3) {
+      incrementStep(currentStep == next ? currentStep + 1 : currentStep);
+    } else incrementStep(0);
+  };
+  const nextStep: nextStep = () => {
+    updateStep(currentStep);
+    console.log(currentStep);
+  };
+  setInterval(nextStep, 3000);
+
   return (
     <div className="text-white">
       <div className="flex flex-col justify-center items-center text-center gap-10 my-[10%] relative w-full">
@@ -52,7 +66,7 @@ export const ProjectRoadmap = () => {
               {roadmap?.map((_, i) => {
                 return (
                   <div
-                   key={i}
+                    key={i}
                     className={`text-white gap-3 flex p-5 lg:w-[18.55rem]    w-full  rounded-[1.6rem] border  pr-10 cursor-pointer ${
                       currentStep === i
                         ? "bg-[#ffffff13] border-[#ffffff20]"
