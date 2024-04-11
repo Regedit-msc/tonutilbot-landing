@@ -3,7 +3,7 @@
 import { DarkButton } from "@components/buttons/DarkButton";
 import { GradientText } from "@components/special_text/GradientText";
 import Stepper from "@components/stepper/Stepper";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 
 const roadmap = [
@@ -24,23 +24,17 @@ const roadmap = [
     info: "Project Startup and initialization",
   },
 ];
-type nextStep = () => void;
-type changeStep = (i: number) => void;
 
 export const ProjectRoadmap = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
-  const incrementStep = (step: number) => setCurrentStep(step);
-  const updateStep = (next: number) => {
-    if (currentStep !== 3) {
-      incrementStep(currentStep == next ? currentStep + 1 : currentStep);
-    } else incrementStep(0);
-  };
-  const nextStep: nextStep = () => {
-    updateStep(currentStep);
-    console.log(currentStep);
-  };
-  setInterval(nextStep, 3000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const next = currentStep === 3 ? 0 : currentStep + 1;
+      setCurrentStep(next);
+    }, 2000);
 
+    return () => clearInterval(interval);
+  }, [currentStep]);
   return (
     <div className="text-white">
       <div className="flex flex-col justify-center items-center text-center gap-10 my-[10%] relative w-full">
