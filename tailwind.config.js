@@ -8,7 +8,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: { backgroundSize: { 16: "4rem" } },
   },
   plugins: [],
 };

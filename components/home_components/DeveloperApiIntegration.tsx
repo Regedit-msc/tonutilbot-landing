@@ -11,7 +11,7 @@ import light from "@assets/light.svg";
 export const DeveloperApiIntegration = () => {
   return (
     <div className="text-white relative max-md:mt-72">
-      <div className="flex flex-col justify-center items-center text-center gap-10 mt-[20%] mb-[15%] max-md:my-24   relative">
+      <div className="flex flex-col justify-center items-center text-center gap-10 mt-[20%] mb-[15%] max-md:my-24 relative">
         <img
           src={DeveloperApiPic.src}
           alt="DeveloperApi Image"
@@ -38,7 +38,7 @@ export const DeveloperApiIntegration = () => {
 
         <GradientText
           text="Developer API integration"
-          className="w-[60%] max-md:w-[80%] text-center md:mb-5 lg:text-7xl  bg-[#00000063]  mt-20 z-20   lg:text-[80px] md:text-6xl text-[40px]"
+          className="w-[60%] max-md:w-[80%] text-center md:mb-5 lg:text-7xl bg-[#00000063] mt-16 pt-4 z-50 lg:text-[80px] md:text-6xl text-[40px] shadow-black shadow-[0px_-30px_40px_20px_#00000060]"
         />
 
         <p className="text-white lg:w-[70%] w-[80%] my-5 max-sm:my-0 z-10 t sm:text-2xl font-medium lg:leading-[33px] text-xs">

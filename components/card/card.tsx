@@ -31,19 +31,32 @@ export const Card: React.FC<CardProps> = ({ imgIndex, text }) => {
         setHoverPic(false);
       }}
     >
-      {hoverPic && (
-        <img
-          src={HoverGradient.src}
-          className="absolute top-0 left-auto"
-          alt="HoverGradient Image"
-        />
-      )}
       <img
-        src={hoverPic ? hover[imgIndex].src : normal[imgIndex].src}
-        className="w-[140px]"
+        src={HoverGradient.src}
+        className={`absolute top-0 left-auto opacity-0 transition-all duration-500 ease-in-out ${
+          hoverPic && "opacity-100"
+        }`}
         alt="HoverGradient Image"
       />
-
+      {/* */}
+      <div
+        className={`w-full h-full flex justify-center items-center hover:opacity-100 transition-all duration-500 ease-in-out`}
+      >
+        <img
+          src={normal[imgIndex].src}
+          className={`absolute w-[140px] transition-all duration-500 ease-in-out ${
+            hoverPic ? "opacity-0" : "opacity-100"
+          }`}
+          alt="HoverGradient Image"
+        />
+        <img
+          src={hover[imgIndex].src}
+          className={`w-[140px] transition-all duration-500 ease-in-out opacity-0 ${
+            hoverPic && "opacity-100"
+          }`}
+          alt="HoverGradient Image"
+        />
+      </div>
       <h1 className="bg-gradient-to-r from-gray-300 via-white to-[#a9baeb] inline-block text-transparent bg-clip-text lg: md:text-3xl text-[22.35px] font-bold">
         {text}
       </h1>

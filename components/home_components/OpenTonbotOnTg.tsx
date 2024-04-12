@@ -21,20 +21,18 @@ export const OpenTonbotOnTg = () => {
         <GradientText
           text={
             <>
-              {" "}
               Open TonBot on <br /> telegram, create a wallet <br /> and start
               trading.
             </>
           }
-          className="lg:text-7xl z-10 md:leading-[47.51px] md:text-[50.31px] max-md:leading-[29px] max-md:text-[31.56px] lg:leading-[68px]"
+          className="lg:text-7xl z-10 md:leading-[47.51px] md:text-[50.31px] max-md:leading-[29px] max-md:text-[31.56px] lg:leading-[68px] sm:leading-[30px] sm:text-4xl text-white"
         />
 
         <button
-          className={`bg-white shadow-lg rounded-full p-4 flex justify-center items-center  gap-3  w-fit transition-all z-10 `}
+          className={`bg-white shadow-lg rounded-full py-4 px-6 flex justify-center items-center  gap-3  w-fit transition-all z-10 `}
         >
           <FaTelegramPlane className="text-[1.5rem]  text-indigo-600 " />
-          <div className=" font-medium">
-            {" "}
+          <div className="font-medium">
             <span className=" text-sky-400 ">Open In</span>
             <span className=" text-sky-500 "> Telegram</span>
           </div>
