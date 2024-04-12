@@ -6,7 +6,6 @@ import GlowCoin from "@assets/GlowCoin.png";
 import Transition from "@components/transitions";
 
 export const BuySwapOrSell = () => {
-  
   const cards = [
     { imgIndex: 0, text: "Create buy or sell limit orders" },
     { imgIndex: 1, text: "Swap TON for other jettons and tokens" },
@@ -24,8 +23,8 @@ export const BuySwapOrSell = () => {
         </Transition>
 
         <div className="flex justify-center items-center gap-[5%] w-full max-lg:flex-wrap max-lg:gap-14 p-2">
-          {cards.map((card) => (
-            <Transition>
+          {cards.map((card, i) => (
+            <Transition key={i}>
               <Card imgIndex={card.imgIndex} text={card.text} />
             </Transition>
           ))}

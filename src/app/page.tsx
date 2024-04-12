@@ -12,6 +12,7 @@ export default function Home() {
   return (
     <>
       <div className="bg-black min-h-screen flex justify-center ">
+        
         <div className="max-w-7xl mx-5 w-full">
           <Navbar />
           <HeroSection />

@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Space_Grotesk } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Ton Bot",
@@ -23,14 +24,14 @@ export const metadata: Metadata = {
       "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
   },
 };
-
+const myFont = Space_Grotesk({ subsets: ["latin"] });
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={myFont.className}>
       <body className="overflow-x-hidden">{children}</body>
     </html>
   );
