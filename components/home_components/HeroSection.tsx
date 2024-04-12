@@ -11,7 +11,7 @@ import Transition from "@components/transitions";
 export const HeroSection = () => {
   return (
     <Transition>
-      <div className="text-white ">
+      <div className="text-white px-3 sm:px-0">
         <div className="flex flex-col justify-center items-center text-center md:gap-10 gap-6 my-[6rem] md:my-[8rem] relative">
           <img
             src={mesh.src}
@@ -33,21 +33,19 @@ export const HeroSection = () => {
           <GradientText
             text={
               <>
-                The best utility bot <br /> on the TON network.
+                The best utility bot <br className="flex sm:hidden lg:hidden" /> on
+                <br className="hidden lg:flex" /> the TON network.
               </>
             }
-            className="lg:text-[116px] md:text-[80px] text-[44px] lg:leading-[105px] md:leading-[74.93px] sm:leading-10"
+            className="lg:text-8xl lg:leading-[105px] md:leading-[74.93px] sm:leading-11 text-6xl sm:text-6xl font-black sm:px-3"
           />
 
-          <p className="text-white sm:text-2xl font-medium lg:leading-[33px] text-xs">
-            Buy, Swap or Sell TON using our wallet along with web2 <br />{" "}
-            payments and developer API integration.{" "}
+          <p className="text-white font-medium lg:leading-[33px] text-base sm:text-xl sm:w-2/3">
+            Buy, Swap or Sell TON using our <br className="flex sm:hidden" />
+            wallet along with web2 payments and developer API integration.{" "}
           </p>
 
-          <GradientButton
-            icon={<FaTelegramPlane className="text-[1.5rem]" />}
-            text="Open In Telegram"
-          />
+          <GradientButton icon={<FaTelegramPlane />} text="Open In Telegram" />
         </div>
       </div>
     </Transition>

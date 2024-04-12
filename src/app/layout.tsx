@@ -24,7 +24,11 @@ export const metadata: Metadata = {
       "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
   },
 };
-const myFont = Space_Grotesk({ subsets: ["latin"] });
+const myFont = Space_Grotesk({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+});
+
 export default function RootLayout({
   children,
 }: {

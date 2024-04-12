@@ -18,11 +18,11 @@ export const BuySwapOrSell = () => {
         <Transition>
           <GradientText
             text="Buy, Swap or Sell Ton in a few clicks."
-            className=" text-center mb-10 lg:text-[80px] md:text-6xl text-[40px]"
+            className="w-4/5 sm:w-3/4 text-6xl sm:text-5xl lg:w-full text-center mb-10 lg:text-[80px] text-[40px] bg-gradient-to-r from-white to-gray-600 bg-clip-text text-transparent leading-[0.75em] font-black"
           />
         </Transition>
 
-        <div className="flex justify-center items-center gap-[5%] w-full max-lg:flex-wrap max-lg:gap-14 p-2">
+        <div className="flex justify-center items-center gap-[5%] max-lg:flex-wrap max-lg:gap-14 py-2 px-6 sm:px-2">
           {cards.map((card, i) => (
             <Transition key={i}>
               <Card imgIndex={card.imgIndex} text={card.text} />

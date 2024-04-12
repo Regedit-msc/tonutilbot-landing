@@ -23,7 +23,7 @@ export const Card: React.FC<CardProps> = ({ imgIndex, text }) => {
   const [hoverPic, setHoverPic] = useState(false);
   return (
     <div
-      className="flex flex-col items-center justify-between px-8 py-12 max-w-[395px] min-w-[285px] w-full h-[371px] box-border inset-0 bg-[#ffffff13] rounded-3xl border border-[#ffffff20] relative cursor-pointer"
+      className="flex flex-col items-center justify-between px-6 sm:px-8 py-12 max-w-[395px] min-w-[285px] w-full h-[371px] box-border inset-0 bg-[#ffffff13] rounded-[3rem] border border-[#ffffff20] relative cursor-pointer"
       onMouseOver={() => {
         setHoverPic(true);
       }}
@@ -57,7 +57,7 @@ export const Card: React.FC<CardProps> = ({ imgIndex, text }) => {
           alt="HoverGradient Image"
         />
       </div>
-      <h1 className="bg-gradient-to-r from-gray-300 via-white to-[#a9baeb] inline-block text-transparent bg-clip-text lg: md:text-3xl text-[22.35px] font-bold">
+      <h1 className="bg-white inline-block text-transparent bg-clip-text lg: sm:text-3xl text-3xl font-bold w-4/5">
         {text}
       </h1>
     </div>

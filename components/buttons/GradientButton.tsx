@@ -18,7 +18,7 @@ export function GradientButton({
 
   return (
     <button
-      className={`bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-600 shadow-lg rounded-full py-3 px-6 flex justify-center items-center text-white gap-2 w-fit transition-all z-10 ${className} `}
+      className={`bg-gradient-to-r from-blue-400 to-indigo-600 shadow-lg rounded-full py-3 px-6 flex justify-center items-center text-white gap-2 w-fit transition-all z-10 ${className} `}
     >
       <img
         src={HoverGradient.src}
