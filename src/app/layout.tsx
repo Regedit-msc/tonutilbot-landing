@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Ton Bot",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
       "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
   },
 };
-const myFont = Space_Grotesk({
-  weight: ["300", "400", "500", "700"],
+const myFont = Poppins({
+  weight: ["100", "200", "300", "400", "500", "700"],
   subsets: ["latin"],
 });
 

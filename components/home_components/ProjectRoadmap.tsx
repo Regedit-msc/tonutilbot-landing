@@ -3,7 +3,8 @@
 import { DarkButton } from "@components/buttons/DarkButton";
 import { GradientText } from "@components/special_text/GradientText";
 import Stepper from "@components/stepper/Stepper";
-import { useEffect, useState } from "react";
+import { useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 
 const roadmap = [
@@ -27,16 +28,24 @@ const roadmap = [
 
 export const ProjectRoadmap = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const visible = useInView(ref);
+
   useEffect(() => {
+    if (!visible) {
+      return;
+    }
     const interval = setInterval(() => {
-      const next = currentStep === 3 ? 0 : currentStep + 1;
+      const next = currentStep === roadmap.length - 1 ? 0 : currentStep + 1;
       setCurrentStep(next);
+      console.log("next", visible);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [currentStep]);
+  }, [visible, currentStep]);
+
   return (
-    <div className="text-white">
+    <div ref={ref} className="text-white">
       <div className="flex flex-col justify-center items-center text-center gap-10 my-[10%] relative w-full">
         <DarkButton
           icon={<FaTelegramPlane className="text-[1.5rem]" />}
