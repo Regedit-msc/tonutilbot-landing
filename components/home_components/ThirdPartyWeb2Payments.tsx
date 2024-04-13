@@ -76,7 +76,7 @@ export const ThirdPartyWeb2Payments = () => {
         <div
           className="flex flex-col h-[7.07rem] md:h-[14.58rem] 
           lg:h-[20.69rem] gap-[1.28rem] md:gap-[2.64rem] lg:gap-[3.75rem] 
-          items-center justify-center "
+          items-center justify-center overflow-x-hidden relative"
         >
           <motion.div
             className=" flex lg:gap-[4.38rem] md:gap-[3.08rem] gap-[1.49rem] "
