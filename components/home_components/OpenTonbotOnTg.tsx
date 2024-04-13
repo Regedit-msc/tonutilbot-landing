@@ -13,7 +13,7 @@ export const OpenTonbotOnTg = () => {
         <img
           src={Xmen.src}
           alt="Xmen Image"
-          className="absolute bottom-[-13%] left-0 -z-0 opacity-40 max-md:bottom-[-45%]"
+          className="absolute left-0 -z-0 opacity-40 max-md:bottom-[-45%]"
         />
 
         <DarkButton text="HOW TO GET STARTED" className="shadow-none tracking-widest" />
