@@ -33,11 +33,12 @@ export const HeroSection = () => {
           <GradientText
             text={
               <>
-                The best utility bot <br className="flex sm:hidden lg:hidden" /> on
+                The best utility bot <br className="flex sm:hidden lg:hidden" />{" "}
+                on
                 <br className="hidden lg:flex" /> the TON network.
               </>
             }
-            className="lg:text-8xl lg:leading-[105px] md:leading-[74.93px] sm:leading-11 text-6xl sm:text-6xl font-black sm:px-3"
+            className="lg:text-8xl lg:leading-[105px] md:leading-[74.93px] sm:leading-11 text-5xl sm:text-6xl font-black sm:px-3"
           />
 
           <p className="text-white font-medium lg:leading-[33px] text-base sm:text-xl sm:w-2/3">
