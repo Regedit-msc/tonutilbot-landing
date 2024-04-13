@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import light from "@assets/light.svg";
 import { animate, motion, useMotionValue } from "framer-motion";
 import useMeasure from "react-use-measure";
 import { GradientText } from "@components/special_text/GradientText";
@@ -50,12 +51,13 @@ export const ThirdPartyWeb2Payments = () => {
   }, [rerender, xTranslation, duration, width]);
 
   return (
-    <div className="text-white ">
-      <div className="flex flex-col justify-center items-center text-center  my-28 max-md:my-52 relative">
+    <div className="text-white pt-8">
+      <div className="flex flex-col justify-center items-center text-center relative">
+        
         <GradientText
           text={
-            <span className="bg-inherit from-inherit via-inherit to-inherit ">
-              Third Party <br className="md:hidden" /> Web2{" "}
+            <span className="bg-inherit from-inherit via-inherit to-inherit text-[3.4rem] tracking-tighter insetShadow">
+              Third Party <br className="md:hidden" /> Web2
               <br className="max-md:hidden" /> payments
             </span>
           }
@@ -63,10 +65,10 @@ export const ThirdPartyWeb2Payments = () => {
         />
 
         <p
-          className="text-white sm:text-2xl font-medium 
+          className="text-white sm:text-2xl font-normal 
           lg:leading-[33px] text-base w-4/5 
           mt-[1.56rem] mb-[2.88rem]
-          md:mt-[5.46rem] md:mb-[5.46rem] 
+          md:my-[5.46rem] 
           lg:mt-[3.31rem] lg:mb-4"
         >
           Web 2 transactions such as making payments and purchasing airtime or

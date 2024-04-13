@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import light from "@assets/light.svg";
 import { Card } from "@components/card/card";
 import { GradientText } from "@components/special_text/GradientText";
 import GlowCoin from "@assets/GlowCoin.png";
@@ -18,14 +19,23 @@ export const BuySwapOrSell = () => {
         <Transition>
           <GradientText
             text="Buy, Swap or Sell Ton in a few clicks."
-            className="w-4/5 sm:w-3/4 text-6xl sm:text-5xl lg:w-full text-center mb-10 lg:text-[80px] text-[40px] bg-gradient-to-r from-white to-gray-600 bg-clip-text text-transparent leading-[0.75em] font-black"
+            className="insetShadow w-4/5 sm:w-3/4 text-[2.8rem] tracking-tighter sm:text-5xl lg:w-full text-center mb-6 bg-gradient-to-tr from-white to-gray-600 bg-clip-text text-transparent leading-[0.9em] font-black"
           />
         </Transition>
 
-        <div className="flex justify-center items-center gap-[5%] max-lg:flex-wrap max-lg:gap-14 py-2 px-6 sm:px-2">
+        <div className="flex justify-center items-center max-lg:flex-wrap gap-10 lg:gap-14 px-6 sm:px-2">
+          <img
+            src={light.src}
+            alt=""
+            className="sm:opacity-[0.25] absolute scale-[5] top-2/3"
+          />
           {cards.map((card, i) => (
             <Transition key={i}>
-              <Card imgIndex={card.imgIndex} text={card.text} />
+              <Card
+                imgIndex={card.imgIndex}
+                text={card.text}
+                className="shadow-[#2f2f2f] tracking-tighter"
+              />
             </Transition>
           ))}
         </div>

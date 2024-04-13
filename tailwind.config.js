@@ -8,7 +8,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: { backgroundSize: { 16: "4rem" } },
+    extend: {
+      backgroundSize: { 16: "4rem" },
+      boxShadow: {
+        card: "0 10px 1500px -30px rgba(0, 0, 0, 0.3)",
+      },
+    },
   },
   plugins: [],
 };

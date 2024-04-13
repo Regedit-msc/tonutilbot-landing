@@ -18,11 +18,11 @@ export function GradientButton({
 
   return (
     <button
-      className={`bg-gradient-to-r from-blue-400 to-indigo-600 shadow-lg rounded-full py-3 px-6 flex justify-center items-center text-white gap-2 w-fit transition-all z-10 ${className} `}
+      className={`bg-gradient-to-r from-blue-400 to-purple-600 via-indigo-500 shadow-lg rounded-full py-3 px-4 flex justify-center items-center text-white gap-2 w-fit transition-all z-10 ${className} `}
     >
       <img
         src={HoverGradient.src}
-        className={` absolute left-auto opacity-0 transition-all duration-500 ease-in-out w-[26rem] ${
+        className={`scale-125 blur-2xl absolute left-auto opacity-0 transition-all duration-1000 ease-in-out w-[26rem] ${
           hoverPic && "opacity-100"
         }`}
         alt="HoverGradient Image"
