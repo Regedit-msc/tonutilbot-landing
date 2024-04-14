@@ -3,9 +3,8 @@
 import { DarkButton } from "@components/buttons/DarkButton";
 import { GradientButton } from "@components/buttons/GradientButton";
 import { GradientText } from "@components/special_text/GradientText";
-import { FaTelegramPlane } from "react-icons/fa";
+import docs from "@/assets/docs.svg";
 import mesh from "@assets/mesh.png";
-import prismLight from "@/assets/Light.svg";
 import Transition from "@components/transitions";
 import { useEffect, useState } from "react";
 
@@ -19,43 +18,51 @@ export const HeroSection = () => {
       clearTimeout(timeout);
     };
   }, []);
-  
+
   return (
     <Transition>
-      <div className="text-white px-3 sm:px-0">
+      <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-2">
         <div className="flex flex-col justify-center items-center text-center md:gap-10 gap-6 my-[6rem] md:my-[8rem] relative">
           {/* <img src={mesh.src} alt="Mesh Image" className="absolute w-1/2" /> */}
-          <img src={prismLight.src} alt="Mesh Image" className="absolute w-full" />
 
           <div
             className={`${
               inView ? "opacity-100" : "opacity-0"
             } transition-all duration-1000 ease-in-out`}
           >
-            <DarkButton text="EXPLORE" />
+            <DarkButton text="TONBOT" className="sm:translate-y-6 text-sm" />
           </div>
 
           <GradientText
             text={
               <>
-                The best utility bot on
-                <br /> the TON network.
+                The best utility <br className="flex sm:hidden" /> bot
+                <br className="sm:flex hidden" /> on the TON{" "}
+                <br className="sm:hidden" /> network.
               </>
             }
-            className="insetShadow lg:text-8xl lg:leading-[105px] md:leading-[74.93px] sm:leading-11 text-5xl sm:text-6xl font-black sm:px-3 tracking-tighter"
+            className="insetShadow lg:text-8xl text-[2.6rem] sm:text-5xl md:text-6xl font-semibold sm:px-3 tracking-tighter leading-[0.9]"
           />
 
-          <p className="text-white font-medium lg:leading-[33px] text-sm sm:text-xl w-[85%] sm:w-2/3">
+          <p className="text-white font-normal text-[0.8rem] sm:text-sm leading-[1.7]">
             Buy, Swap or Sell TON using our wallet
             <br className="flex sm:hidden" />
-            along with web2 payments and developer API integration.{" "}
+            along with web2 <br className="sm:flex lg:hidden hidden" /> payments
+            and developer <br className="sm:hidden" />
+            API integration.{" "}
           </p>
 
-          <GradientButton
-            className="text-sm"
-            icon={<FaTelegramPlane className="text-[1.3rem]" />}
-            text="Open In Telegram"
-          />
+          <section className="flex justify-center items-center gap-3">
+            <GradientButton className="text-xs" text="Open In Telegram" />
+            <GradientButton
+              text="Read our Documentation"
+              className="hidden sm:flex text-xs"
+              gradient={false}
+              isIcon={false}
+              myIcon={docs}
+              hover={false}
+            />
+          </section>
         </div>
       </div>
     </Transition>

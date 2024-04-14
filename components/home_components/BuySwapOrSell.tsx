@@ -22,7 +22,7 @@ export const BuySwapOrSell = () => {
           />
         </Transition>
 
-        <div className="flex justify-center items-center max-lg:flex-wrap gap-10 lg:gap-14 px-6 sm:px-2">
+        <div className="flex justify-center items-center max-lg:flex-wrap gap-10 lg:gap-14">
          
           {cards.map((card, i) => (
             <Transition key={i}>

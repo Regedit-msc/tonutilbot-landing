@@ -52,78 +52,24 @@ export const ThirdPartyWeb2Payments = () => {
   return (
     <div className="text-white pt-8">
       <div className="flex flex-col justify-center items-center text-center relative">
-        
         <GradientText
           text={
-            <span className="bg-inherit from-inherit via-inherit to-inherit text-[3.4rem] tracking-tighter insetShadow">
+            <span className="bg-inherit from-inherit via-inherit to-inherit text-[2.6rem] tracking-tighter insetShadow">
               Third Party <br className="md:hidden" /> Web2
-              <br className="max-md:hidden" /> payments
+              <br className="sm:flex hidden" /> payments
             </span>
           }
           className="text-center lg:text-[80px] text-6xl text-[40px]"
         />
 
         <p
-          className="text-white sm:text-2xl font-normal 
-          lg:leading-[33px] text-base w-4/5 
-          mt-[1.56rem] mb-[2.88rem]
-          md:my-[5.46rem] 
-          lg:mt-[3.31rem] lg:mb-4"
+          className="text-white sm:text-2xl text-xs font-normal 
+         mt-6 leading-[1.8]"
         >
-          Web 2 transactions such as making payments and purchasing airtime or
-          data subscriptions can be made using TON token on TonBot.
+          Web 2 transactions such as making payments <br /> and purchasing
+          airtime or data subscriptions <br /> can be made using TON token on
+          TonBot.
         </p>
-
-        <div
-          className="flex flex-col h-[7.07rem] md:h-[14.58rem] 
-          lg:h-[20.69rem] gap-[1.28rem] md:gap-[2.64rem] lg:gap-[3.75rem] 
-          items-center justify-center overflow-x-hidden relative"
-        >
-          <motion.div
-            className=" flex lg:gap-[4.38rem] md:gap-[3.08rem] gap-[1.49rem] "
-            style={{ x: xTranslation }}
-            ref={ref}
-            onHoverStart={() => {
-              setMustFinish(true);
-              setDuration(SLOW_DURATION);
-            }}
-            onHoverEnd={() => {
-              setMustFinish(true);
-              setDuration(FAST_DURATION);
-            }}
-          >
-            {[...images, ...images].map((item, idx) => (
-              <img
-                key={idx}
-                src={item.src}
-                alt="IntegrationsImage Image"
-                className="h-[0.94956rem] md:h-[1.95794rem] lg:h-[2.78144rem]"
-              />
-            ))}
-          </motion.div>
-          <motion.div
-            className=" flex lg:gap-[4.38rem] md:gap-[3.08rem] gap-[1.49rem] "
-            style={{ x: xTranslation }}
-            ref={ref}
-            onHoverStart={() => {
-              setMustFinish(true);
-              setDuration(SLOW_DURATION);
-            }}
-            onHoverEnd={() => {
-              setMustFinish(true);
-              setDuration(FAST_DURATION);
-            }}
-          >
-            {[...images, ...images].map((item, idx) => (
-              <img
-                key={idx}
-                src={item.src}
-                alt="IntegrationsImage Image"
-                className="h-[0.94956rem] md:h-[1.95794rem] lg:h-[2.78144rem]"
-              />
-            ))}
-          </motion.div>
-        </div>
       </div>
     </div>
   );

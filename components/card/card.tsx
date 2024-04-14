@@ -24,7 +24,7 @@ export const Card: React.FC<CardProps> = ({ imgIndex, text, className }) => {
   const [hoverPic, setHoverPic] = useState(false);
   return (
     <div
-      className={`${className} flex flex-col items-center justify-between px-10 sm:px-8 max-w-[395px] min-w-[285px] w-full h-[371px] box-border inset-0 bg-gradient-to-t from-[#ffffff10] to-[#111] rounded-[2.8rem] border border-[#ffffff20] relative cursor-pointer`}
+      className={`${className} flex flex-col items-center justify-between px-4 w-[295px] h-[277px] box-border inset-0 bg-gradient-to-t from-[#ffffff10] to-[#111] rounded-[2rem] border border-[#ffffff20] relative cursor-pointer`}
       onMouseOver={() => {
         setHoverPic(true);
       }}
@@ -45,20 +45,26 @@ export const Card: React.FC<CardProps> = ({ imgIndex, text, className }) => {
       >
         <img
           src={normal[imgIndex].src}
-          className={`absolute w-[140px] transition-all duration-500 ease-in-out ${
+          className={`absolute w-[100px] transition-all duration-1000 ease-in-out -translate-y-2   ${
             hoverPic ? "opacity-0" : "opacity-100"
-          }`}
+          }
+           ${imgIndex === 0 && "scale-100"}
+           ${imgIndex === 1 && "scale-125"}
+           ${imgIndex === 2 && "scale-150"}`}
           alt="HoverGradient Image"
         />
         <img
           src={hover[imgIndex].src}
-          className={`w-[140px] transition-all duration-500 ease-in-out opacity-0 ${
+          className={`w-[100px] transition-all duration-1000 ease-in-out opacity-0 -translate-y-2 ${
             hoverPic && "opacity-100"
-          }`}
+          }
+         ${imgIndex === 0 && "scale-100"}
+           ${imgIndex === 1 && "scale-125"}
+           ${imgIndex === 2 && "scale-150"}`}
           alt="HoverGradient Image"
         />
       </div>
-      <h1 className="bg-white inline-block text-transparent bg-clip-text lg: sm:text-3xl text-[1.7rem] font-bold -translate-y-12 leading-none">
+      <h1 className="bg-white inline-block text-transparent bg-clip-text text-[1.45rem] font-bold -translate-y-8 leading-[1.2] w-[90%]">
         {text}
       </h1>
     </div>
