@@ -83,7 +83,7 @@ export const ProjectRoadmap = () => {
                         >
                           <p className="text-xs">{roadmap[i].quarter}</p>
 
-                          <p className="text-start text-xs min-[538px]:w-[40%] min-[713px]:w-[30%] min-[920px]:w-2/3 sm:text-sm sm:w-1/4 w-1/2 lg:w-3/4 leading-[1.5]">
+                          <p className="text-start text-xs min-[538px]:w-[40%] min-[713px]:w-[30%] min-[920px]:w-2/3 sm:text-sm sm:w-[30%] w-1/2 lg:w-3/4 leading-[1.5]">
                             {roadmap[i].info}
                           </p>
                           <span

@@ -10,7 +10,7 @@ const Indicator: FC<IProps> = ({ currentStep }: IProps) => {
       <span
         className={`bg-gradient-to-r from-blue-400 to-purple-600 z-20 absolute top-8 left-0 min-[920px]:left-[3.5rem] w-3 h-3 rounded-full transition-all duration-300 ease-in-out ${
           currentStep === 1
-            ? "translate-y-[5.6rem] animate-pulse"
+            ? "translate-y-[5.75rem] animate-pulse"
             : currentStep === 2
             ? "translate-y-[11.5rem] md:translate-y-[12rem] animate-pulse"
             : currentStep === 3
@@ -21,7 +21,7 @@ const Indicator: FC<IProps> = ({ currentStep }: IProps) => {
       <p
         className={`absolute bg-blue-300 blur top-8 left-0 min-[920px]:left-[3.5rem] w-3 h-3 z-20 transition-all duration-300 ease-in-out ${
           currentStep === 1
-            ? "translate-y-[5.6rem] animate-pulse"
+            ? "translate-y-[5.75rem] animate-pulse"
             : currentStep === 2
             ? "translate-y-[11.5rem] md:translate-y-[12rem] animate-pulse"
             : currentStep === 3
