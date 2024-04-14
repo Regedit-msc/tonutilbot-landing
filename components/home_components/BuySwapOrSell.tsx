@@ -16,7 +16,7 @@ export const BuySwapOrSell = () => {
     <div className="text-white">
       <div className="flex flex-col justify-center items-center text-center gap-10 mb-20 sm:mb-40 sm:mt-20 relative">
         <Transition>
-          <GradientText className="insetShadow text-[2.6rem] tracking-tighter sm:text-5xl lg:w-full text-center mb-6 bg-gradient-to-tr from-white to-gray-600 bg-clip-text text-transparent leading-[0.9em] font-bold flex justify-center items-center">
+          <GradientText className="insetShadow text-[2.6rem] tracking-tighter sm:text-5xl lg:w-full text-center mb-2 sm:mb-6 bg-gradient-to-tr from-white to-gray-600 bg-clip-text text-transparent leading-[0.9em] font-bold flex justify-center items-center">
             Buy, Swap or <br className="sm:hidden" /> Sell{" "}
             <br className="hidden sm:flex" /> Ton in a{" "}
             <br className="sm:hidden" /> few clicks.
