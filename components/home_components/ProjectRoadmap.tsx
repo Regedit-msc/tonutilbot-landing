@@ -55,7 +55,7 @@ export const ProjectRoadmap = () => {
         <section className="flex flex-col justify-center items-center">
           <DarkButton text="ROADMAP" />
 
-          <GradientText className="text-[2.6rem] tracking-tighter mb-8 font-semibold leading-none mt-5 text-center">
+          <GradientText className="text-[2.6rem] lg:text-[4rem] tracking-tighter mb-8 font-semibold leading-none mt-5 text-center">
             Project <br className="md:hidden" /> Roadmap
           </GradientText>
         </section>

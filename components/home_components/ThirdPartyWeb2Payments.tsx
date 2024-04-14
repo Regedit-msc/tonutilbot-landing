@@ -54,7 +54,7 @@ export const ThirdPartyWeb2Payments = () => {
       <div className="flex flex-col justify-center items-center text-center relative">
         <GradientText
           text={
-            <span className="text-[2.4rem] sm:text-[3.5rem] tracking-tighter insetShadow z-30">
+            <span className="text-[2.4rem] sm:text-[3.5rem] lg:text-[4rem] tracking-tighter insetShadow z-30">
               Third Party <br className="md:hidden" /> Web2
               <br className="sm:flex hidden" /> payments
             </span>

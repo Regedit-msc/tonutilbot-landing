@@ -30,8 +30,9 @@ export const DeveloperApiIntegration = () => {
           alt="MeshGradient Image"
         /> */}
 
-        <GradientText className="sm:w-3/4 text-center sm:mb-5 lg:text-7xl mt-14 pt-4 pb-2 z-50 md:text-6xl text-[2.5rem] tracking-tighter leading-[0.9] shadow-myGray shadow-[0px_-5px_20px_15px_myGray] bg-gradient-to-tr from-white via-gray-300 to-gray-600 bg-clip-text text-transparent">
-          Developer API <br />integration
+        <GradientText className="sm:w-3/4 text-center sm:mb-5 lg:text-[4rem] mt-14 pt-4 pb-2 z-50 md:text-6xl text-[2.5rem] tracking-tighter leading-[0.9] shadow-myGray shadow-[0px_-5px_20px_15px_myGray] bg-gradient-to-tr from-white via-gray-300 to-gray-600 bg-clip-text text-transparent">
+          Developer API <br />
+          integration
         </GradientText>
 
         <p className="leading-[1.8] text-white z-10 sm:text-lg font-normal text-[0.85rem]">
