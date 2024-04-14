@@ -14,16 +14,16 @@ export const BuySwapOrSell = () => {
 
   return (
     <div className="text-white">
-      <div className="flex flex-col justify-center items-center text-center gap-10 my-[20%] relative">
+      <div className="flex flex-col justify-center items-center text-center gap-10 mb-20 sm:mb-40 sm:mt-20 relative">
         <Transition>
-          <GradientText
-            text="Buy, Swap or Sell Ton in a few clicks."
-            className="insetShadow w-4/5 sm:w-3/4 text-[2.8rem] tracking-tighter sm:text-5xl lg:w-full text-center mb-6 bg-gradient-to-tr from-white to-gray-600 bg-clip-text text-transparent leading-[0.9em] font-black"
-          />
+          <GradientText className="insetShadow text-[2.6rem] tracking-tighter sm:text-5xl lg:w-full text-center mb-6 bg-gradient-to-tr from-white to-gray-600 bg-clip-text text-transparent leading-[0.9em] font-bold flex justify-center items-center">
+            Buy, Swap or <br className="sm:hidden" /> Sell{" "}
+            <br className="hidden sm:flex" /> Ton in a{" "}
+            <br className="sm:hidden" /> few clicks.
+          </GradientText>
         </Transition>
 
-        <div className="flex justify-center items-center max-lg:flex-wrap gap-10 lg:gap-14">
-         
+        <div className="flex justify-center items-center max-lg:flex-wrap gap-10 lg:gap-14 lg:mt-10">
           {cards.map((card, i) => (
             <Transition key={i}>
               <Card

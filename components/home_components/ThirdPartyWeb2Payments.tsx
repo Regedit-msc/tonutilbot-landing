@@ -54,20 +54,22 @@ export const ThirdPartyWeb2Payments = () => {
       <div className="flex flex-col justify-center items-center text-center relative">
         <GradientText
           text={
-            <span className="bg-inherit from-inherit via-inherit to-inherit text-[2.6rem] tracking-tighter insetShadow">
+            <span className="text-[2.4rem] sm:text-[3.5rem] tracking-tighter insetShadow z-30">
               Third Party <br className="md:hidden" /> Web2
               <br className="sm:flex hidden" /> payments
             </span>
           }
-          className="text-center lg:text-[80px] text-6xl text-[40px]"
+          className="text-center lg:leading-[0.5] lg:text-[6rem] text-6xl text-[40px] lg:pb-6"
         />
 
         <p
-          className="text-white sm:text-2xl text-xs font-normal 
+          className="text-white sm:text-lg text-xs font-normal 
          mt-6 leading-[1.8]"
         >
-          Web 2 transactions such as making payments <br /> and purchasing
-          airtime or data subscriptions <br /> can be made using TON token on
+          Web 2 transactions such as making payments{" "}
+          <br className="sm:hidden" /> and <br className="hidden sm:flex" />{" "}
+          purchasing airtime or data subscriptions <br className="sm:hidden" />{" "}
+          can be made <br className="hidden sm:flex" /> using TON token on
           TonBot.
         </p>
       </div>

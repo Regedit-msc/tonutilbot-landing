@@ -8,11 +8,11 @@ interface IProps {
 const RoadmapCard: FC<IProps> = ({ currentStep, className }: IProps) => {
   return (
     <div
-      className={`${className} flex w-full text-white pt-4 pb-8 sm:pb-12 bg-gradient-to-t from-[#111] to-myGray rounded-[1.4rem] border border-[#ffffff20] flex-grow text-start `}
+      className={`${className} flex w-full text-white pt-16 sm:pt-[4.5rem] pb-8 sm:pb-12 min-[920px]:pb-10 rounded-[1.4rem] border border-[#ffffff07] flex-grow text-start relative bg-gradient-to-b from-white/[8%] to-white/[3%] min-[920px]:h-[370px] overflow-hidden`}
     >
-      <div className="h-[16rem] sm:h-[24rem] overflow-y-scroll ">
-        <div className="relative pl-6 sm:pl-12 sm:pr-12">
-          <div className="text-xl py-3 sticky -top-2 bg-myGray">
+      <div className="h-[16rem] sm:h-[24rem]  min-[920px]:h-[16rem] overflow-y-scroll">
+        <div className="pl-6 sm:pl-12 sm:pr-12">
+          <div className="absolute text-xl py-4 sm:py-6 z-10 top-0">
             Q {currentStep + 1}. Project Startup
           </div>
 
@@ -22,7 +22,7 @@ const RoadmapCard: FC<IProps> = ({ currentStep, className }: IProps) => {
               .map((_, i) => {
                 return (
                   <p
-                    className="text-[0.5rem] sm:text-base flex items-end cursor-pointer font-light leading-normal h-1/2 w-[90%]"
+                    className="text-xs sm:text-base min-[920px]:text-sm flex items-end cursor-pointer font-light leading-normal h-1/2 w-[90%]"
                     key={i}
                   >
                     This is some information about the project and stuff. This

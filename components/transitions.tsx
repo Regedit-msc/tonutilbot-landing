@@ -16,7 +16,7 @@ export default function Transition({
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
       transition={{ ease: "easeInOut", duration: 1 }}
-    >
+    className="flex justify-center items-center">
       {children}
     </motion.div>
   );

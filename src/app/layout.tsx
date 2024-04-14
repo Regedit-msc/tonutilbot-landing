@@ -79,7 +79,7 @@ export default function RootLayout({
         <img
           src={prismLight.src}
           alt="Mesh Image"
-          className="absolute sm:h-fit w-full h-[40rem] scale-150 sm:scale-100"
+          className="absolute sm:h-fit w-full h-[40rem] -lg:top-96"
         />
         {children}
       </body>

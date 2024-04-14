@@ -25,7 +25,7 @@ export function GradientButton({
 
   return (
     <button
-      className={`${className}  shadow-lg rounded-full py-[0.65rem] px-[0.9rem] flex justify-center items-center text-white gap-2 w-fit transition-all z-10
+      className={`${className}  shadow-lg rounded-full py-[0.65rem] sm:py-[0.8rem] px-[0.9rem] sm:px-5 flex justify-center items-center text-white gap-2 w-fit transition-all z-10
       ${
         gradient
           ? "bg-gradient-to-r from-blue-400 to-purple-600 via-indigo-500"

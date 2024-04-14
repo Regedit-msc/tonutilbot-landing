@@ -21,8 +21,8 @@ export const HeroSection = () => {
 
   return (
     <Transition>
-      <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-2">
-        <div className="flex flex-col justify-center items-center text-center md:gap-10 gap-6 my-[6rem] md:my-[8rem] relative">
+      <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-8 lg:pt-20">
+        <div className="flex flex-col justify-center items-center text-center gap-6 my-[6rem] md:my-[8rem] relative">
           {/* <img src={mesh.src} alt="Mesh Image" className="absolute w-1/2" /> */}
 
           <div
@@ -30,7 +30,7 @@ export const HeroSection = () => {
               inView ? "opacity-100" : "opacity-0"
             } transition-all duration-1000 ease-in-out`}
           >
-            <DarkButton text="TONBOT" className="sm:translate-y-6 text-sm" />
+            <DarkButton text="TONBOT" className="sm:translate-y-3 text-sm" />
           </div>
 
           <GradientText
@@ -44,11 +44,11 @@ export const HeroSection = () => {
             className="insetShadow lg:text-8xl text-[2.6rem] sm:text-5xl md:text-6xl font-semibold sm:px-3 tracking-tighter leading-[0.9]"
           />
 
-          <p className="text-white font-normal text-[0.8rem] sm:text-sm leading-[1.7]">
+          <p className="text-white font-normal text-[0.8rem] sm:text-sm lg:text-lg leading-[1.7]">
             Buy, Swap or Sell TON using our wallet
             <br className="flex sm:hidden" />
-            along with web2 <br className="sm:flex lg:hidden hidden" /> payments
-            and developer <br className="sm:hidden" />
+            along with web2 <br className="sm:flex hidden" /> payments and
+            developer <br className="sm:hidden" />
             API integration.{" "}
           </p>
 

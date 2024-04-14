@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { GradientButton } from "@components/buttons/GradientButton";
+import docs from "@/assets/docs.svg";
 import { GradientText } from "@components/special_text/GradientText";
 import { IoDocumentText } from "react-icons/io5";
 import DeveloperApiPic from "@assets/DeveloperApiIntegration.png";
@@ -14,12 +15,12 @@ export const DeveloperApiIntegration = () => {
         <img
           src={DeveloperApiPic.src}
           alt="DeveloperApi Image"
-          className="scale-[0.55] absolute top-[-5.75rem] -z-0 bg-myGray"
+          className="scale-[0.55] sm:scale-[0.7] absolute top-[-5.75rem] -z-0 bg-myGray"
         />
         <img
           src={DeveloperApiPic2.src}
           alt="DeveloperApi Image"
-          className="scale-[0.55] absolute top-[-5.75rem] -z-0 bg-myGray"
+          className="scale-[0.55] sm:scale-[0.7] absolute top-[-5.75rem] -z-0 bg-myGray"
         />
 
         <div className="bg-myGray w-full h-full absolute top-[3.3rem] z-10"></div>
@@ -29,20 +30,21 @@ export const DeveloperApiIntegration = () => {
           alt="MeshGradient Image"
         /> */}
 
-        <GradientText
-          text="Developer API integration"
-          className="sm:w-3/4 text-center sm:mb-5 lg:text-7xl mt-14 pt-4 pb-2 z-50 md:text-6xl text-[2.5rem] tracking-tighter leading-[0.9] shadow-myGray shadow-[0px_-5px_20px_15px_myGray] bg-gradient-to-tr from-white via-gray-300 to-gray-600 bg-clip-text text-transparent"
-        />
+        <GradientText className="sm:w-3/4 text-center sm:mb-5 lg:text-7xl mt-14 pt-4 pb-2 z-50 md:text-6xl text-[2.5rem] tracking-tighter leading-[0.9] shadow-myGray shadow-[0px_-5px_20px_15px_myGray] bg-gradient-to-tr from-white via-gray-300 to-gray-600 bg-clip-text text-transparent">
+          Developer API <br />integration
+        </GradientText>
 
-        <p className="leading-[1.8] text-white z-10 sm:text-2xl font-normal text-[0.85rem]">
-          Developers can easily integrate our API’s into <br /> their various
-          infrastructures.
+        <p className="leading-[1.8] text-white z-10 sm:text-lg font-normal text-[0.85rem]">
+          Developers can easily integrate our API’s into{" "}
+          <br className="flex sm:hidden" /> their{" "}
+          <br className="sm:flex hidden" /> various infrastructures.
         </p>
 
         <GradientButton
           text="Read our Documentation"
-          className="text-[0.6rem]"
-          
+          className="text-[0.6rem] sm:text-sm mt-3 sm:mt-6"
+          isIcon={false}
+          myIcon={docs}
         />
       </div>
     </div>

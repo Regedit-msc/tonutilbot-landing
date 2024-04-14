@@ -20,7 +20,7 @@ export const Navbar = () => {
         <p>About</p>
         <GradientButton
           text="Contact us"
-          className="text-xs md:text-sm max-sm:hidden"
+          className="text-xs max-sm:hidden"
           isIcon={false}
         />
       </section>
