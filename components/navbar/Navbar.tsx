@@ -6,7 +6,7 @@ import logo from "@assets/ton_logo.png";
 
 export const Navbar = () => {
   return (
-    <nav className="p-4 flex justify-between items-center">
+    <nav className="p-4 flex justify-between items-center absolute">
       <div className="flex items-center px-8 py-12 sm:p-0">
         <img src={logo.src} alt="Logo" className="mr-2" />
         <span className="text-white font-normal text-3xl sm:text-lg translate-y-1">

@@ -22,7 +22,7 @@ export function GradientButton({
     >
       <img
         src={HoverGradient.src}
-        className={`scale-125 blur-2xl absolute left-auto opacity-0 transition-all duration-1000 ease-in-out w-[26rem] ${
+        className={`scale-125 blur-2xl absolute left-auto opacity-0 transition-all duration-1000 ease-in-out w-[16rem] ${
           hoverPic && "opacity-100"
         }`}
         alt="HoverGradient Image"

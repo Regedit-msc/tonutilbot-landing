@@ -16,13 +16,11 @@ export function DarkButton({
   className = "",
 }: DarkButtonProps): JSX.Element {
   return (
-    <div className={poppins.className}>
-      <button
-        className={`border border-[#333] bg-gradient-to-b from-[#050505] to-[#444] ${className} shadow-lg rounded-full py-[0.375rem] px-3 flex justify-center items-center text-white gap-3 w-fit transition-all z-10 font tracking-[0.3em] font-normal text-xs`}
-      >
-        <img src={plane.src} alt="plane" width={"10rem"} />
-        {text}
-      </button>
-    </div>
+    <button
+      className={`border border-[#333] bg-gradient-to-b from-[#050505] to-[#444] ${className} shadow-lg rounded-full py-[0.375rem] px-3 flex justify-center items-center text-white gap-3 w-fit transition-all z-10 font tracking-[0.3em] font-normal text-xs`}
+    >
+      <img src={plane.src} alt="plane" width={"10rem"} />
+      {text}
+    </button>
   );
 }

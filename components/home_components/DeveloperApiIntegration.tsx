@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-
+"use client";
 import { GradientButton } from "@components/buttons/GradientButton";
 import { GradientText } from "@components/special_text/GradientText";
 import { IoDocumentText } from "react-icons/io5";
 import DeveloperApiPic from "@assets/DeveloperApiIntegration.png";
 import DeveloperApiPic2 from "@assets/DeveloperApiIntegration2.png";
 import mesh from "@assets/mesh.png";
-import light from "@assets/light.svg";
 
 export const DeveloperApiIntegration = () => {
   return (
@@ -30,11 +29,7 @@ export const DeveloperApiIntegration = () => {
           alt="MeshGradient Image"
         />
 
-        <img
-          src={light.src}
-          className="mt-20 absolute opacity-45 z-10"
-          alt="LightGradient Image"
-        />
+      
 
         <GradientText
           text="Developer API integration"

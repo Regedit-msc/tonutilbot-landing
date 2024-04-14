@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import light from "@assets/light.svg";
 import Indicator from "@components/Indicator";
 import RoadmapCard from "@components/RoadmapCard";
 import { DarkButton } from "@components/buttons/DarkButton";
@@ -49,7 +48,6 @@ export const ProjectRoadmap = () => {
 
   return (
     <div ref={ref} className="text-white flex flex-col items-center">
-      <img src={light.src} alt="" className="absolute scale-[3] bottom-0" />
       <section className="flex flex-col justify-center items-center">
         <DarkButton text="ROADMAP" />
 

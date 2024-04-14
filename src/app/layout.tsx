@@ -1,6 +1,7 @@
+import { Navbar } from "@components/navbar/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   title: "Ton Bot",
@@ -24,9 +25,30 @@ export const metadata: Metadata = {
       "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
   },
 };
-const myFont = Poppins({
-  weight: ["100", "200", "300", "400", "500","600", "700"],
-  subsets: ["latin"],
+// const myFont = Poppins({
+//   weight: ["100", "200", "300", "400", "500", "600", "700"],
+//   subsets: ["latin"],
+//   display: "swap",
+// });
+
+const myFont = localFont({
+  src: [
+    {
+      path: "../../fonts/Poppins/Poppins-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Poppins/Poppins-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Poppins/Poppins-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+  ],
 });
 
 export default function RootLayout({
@@ -36,7 +58,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={myFont.className}>
-      <body className="overflow-x-hidden">{children}</body>
+      <body className="overflow-x-hidden">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import light from "@assets/light.svg";
 import { animate, motion, useMotionValue } from "framer-motion";
 import useMeasure from "react-use-measure";
 import { GradientText } from "@components/special_text/GradientText";

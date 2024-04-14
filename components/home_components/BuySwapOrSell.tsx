@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-
-import light from "@assets/light.svg";
+"use client";
 import { Card } from "@components/card/card";
 import { GradientText } from "@components/special_text/GradientText";
-import GlowCoin from "@assets/GlowCoin.png";
+// import GlowCoin from "@assets/GlowCoin.png";
 import Transition from "@components/transitions";
 
 export const BuySwapOrSell = () => {
@@ -24,11 +23,7 @@ export const BuySwapOrSell = () => {
         </Transition>
 
         <div className="flex justify-center items-center max-lg:flex-wrap gap-10 lg:gap-14 px-6 sm:px-2">
-          <img
-            src={light.src}
-            alt=""
-            className="sm:opacity-[0.25] absolute scale-[5] top-2/3"
-          />
+         
           {cards.map((card, i) => (
             <Transition key={i}>
               <Card
