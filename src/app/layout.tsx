@@ -2,7 +2,7 @@ import { Navbar } from "@components/navbar/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import prismLight from "@/assets/Light.svg";
+import prismLight from "@/assets/herolight.svg";
 
 export const metadata: Metadata = {
   title: "Ton Bot",
