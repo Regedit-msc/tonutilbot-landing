@@ -26,11 +26,7 @@ export const metadata: Metadata = {
       "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
   },
 };
-// const myFont = Poppins({
-//   weight: ["100", "200", "300", "400", "500", "600", "700"],
-//   subsets: ["latin"],
-//   display: "swap",
-// });
+
 
 const myFont = localFont({
   src: [
