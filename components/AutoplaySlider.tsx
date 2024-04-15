@@ -25,6 +25,7 @@ const AutoplaySlider: FC<IProps> = () => {
         >
           {images.map((_, i) => (
             <img
+              key={i}
               src={images[i].src}
               alt=""
               className="h-6 sm:h-10 lg:mr-[4.485rem]"
@@ -32,6 +33,7 @@ const AutoplaySlider: FC<IProps> = () => {
           ))}
           {images.map((_, i) => (
             <img
+              key={i}
               src={images[i].src}
               alt=""
               className="h-6 sm:h-10 lg:mr-[4.485rem]"
@@ -51,6 +53,7 @@ const AutoplaySlider: FC<IProps> = () => {
         >
           {images.map((_, i) => (
             <img
+              key={i}
               src={images[i].src}
               alt=""
               className="h-6 sm:h-10 lg:mr-[4.485rem]"
@@ -58,6 +61,7 @@ const AutoplaySlider: FC<IProps> = () => {
           ))}
           {images.map((_, i) => (
             <img
+              key={i}
               src={images[i].src}
               alt=""
               className="h-6 sm:h-10 lg:mr-[4.485rem]"
