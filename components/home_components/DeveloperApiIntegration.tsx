@@ -10,7 +10,7 @@ import mesh from "@assets/mesh.png";
 
 export const DeveloperApiIntegration = () => {
   return (
-    <div className=" text-white relative mt-[12rem] mb-52">
+    <div className=" text-white relative mt-28 sm:mt-[12rem] mb-52">
       <div className="flex flex-col justify-center items-center text-center gap-6 relative">
         <img
           src={DeveloperApiPic.src}

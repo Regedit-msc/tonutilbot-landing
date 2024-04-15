@@ -5,8 +5,10 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export const CTA = () => {
   return (
-    <div className="text-[#ffffff51] border-t border-t-[#ffffff51] flex gap-5 items-center justify-center py-4 text-sm">
-      <p className="">TonBot technologies. c2024 . All rights reserved</p>
+    <div className="text-[#ffffff51] border-t border-t-[#ffffff51] flex gap-5 items-center justify-center py-4">
+      <p className="text-xs sm:text-sm">
+        TonBot technologies. c2024 . All rights reserved
+      </p>
       <FaTelegramPlane className="text-base" />
       <FaXTwitter />
       <FaDiscord />

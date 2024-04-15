@@ -14,7 +14,7 @@ const AutoplaySlider: FC<IProps> = () => {
   const width = useWindowWidth() || 0;
 
   return (
-    <div className="flex justify-center flex-col items-center mt-24 lg:mt-14">
+    <div className="flex justify-center flex-col items-center mt-12 lg:mt-14 sm:mt-16 overflow-hidden">
       <div className="relative flex my-4 mx-10 w-[500px] sm:w-[800px] lg:w-[1200px] py-1 overflow-hidden">
         <span className="absolute bg-gradient-to-r from-myGray via-myGray lg:via-[30%] via-[60%] to-transparent -left-1 w-28 sm:w-36 md:w-28 h-full z-10" />
         <span className="absolute bg-gradient-to-l from-myGray via-myGray via-[60%] to-transparent -right-1 w-28 sm:w-32 md:w-28 h-full z-10" />
@@ -41,7 +41,7 @@ const AutoplaySlider: FC<IProps> = () => {
       </div>
 
       {/* slide two */}
-      <div className="relative flex my-4 mx-10 w-[500px] sm:w-[800px] lg:w-[1200px] py-1 overflow-hidden">
+      <div className="relative flex my-4 mx-10 w-[500px] sm:w-[800px] lg:w-[1200px] py-1 overflow-x-hidden">
         <span className="absolute bg-gradient-to-r from-myGray via-myGray lg:via-[30%] via-[60%] to-transparent -left-1 w-28 sm:w-36 md:w-28 h-full z-10" />
         <span className="absolute bg-gradient-to-l from-myGray via-myGray via-[60%] to-transparent -right-1 w-28 sm:w-32 md:w-28 h-full z-10" />
         <div

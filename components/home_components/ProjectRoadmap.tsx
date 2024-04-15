@@ -59,7 +59,7 @@ export const ProjectRoadmap = () => {
             Project <br className="md:hidden" /> Roadmap
           </GradientText>
         </section>
-        <section className="relative flex">
+        <section className="relative flex px-5">
           <div className="flex flex-col h-full w-[10%] justify-center items-center">
             <Indicator currentStep={currentStep} />
           </div>
