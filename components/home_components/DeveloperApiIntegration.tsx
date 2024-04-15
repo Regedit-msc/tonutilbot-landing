@@ -15,22 +15,22 @@ export const DeveloperApiIntegration = () => {
         <img
           src={DeveloperApiPic.src}
           alt="DeveloperApi Image"
-          className="scale-[0.55] sm:scale-[0.7] absolute top-[-5.75rem] -z-0 bg-myGray"
+          className="scale-[0.55] sm:scale-[0.7] absolute top-[-5.75rem] -z-0 bg-ashy"
         />
         <img
           src={DeveloperApiPic2.src}
           alt="DeveloperApi Image"
-          className="scale-[0.55] sm:scale-[0.7] absolute top-[-5.75rem] -z-0 bg-myGray"
+          className="scale-[0.55] sm:scale-[0.7] absolute top-[-5.75rem] -z-0 bg-ashy"
         />
 
-        <div className="bg-myGray w-full h-full absolute top-[3.3rem] z-10"></div>
+        <div className="bg-ashy w-full h-full absolute top-[3.3rem] z-10"></div>
         {/* <img
           src={mesh.src}
           className="absolute bottom-auto left-auto z-10  "
           alt="MeshGradient Image"
         /> */}
 
-        <GradientText className="sm:w-3/4 text-center sm:mb-5 lg:text-[4rem] mt-14 pt-4 pb-2 z-50 md:text-6xl text-[2.5rem] tracking-tighter leading-[0.9] shadow-myGray shadow-[0px_-5px_20px_15px_myGray] bg-gradient-to-tr from-white via-gray-300 to-gray-600 bg-clip-text text-transparent">
+        <GradientText className="sm:w-3/4 text-center sm:mb-5 lg:text-[4rem] mt-14 pt-4 pb-2 z-50 md:text-6xl text-[2.5rem] tracking-tighter leading-[0.9] shadow-ashy shadow-[0px_-5px_20px_15px_ashy] bg-gradient-to-tr from-white via-gray-300 to-gray-600 bg-clip-text text-transparent">
           Developer API <br />
           integration
         </GradientText>

@@ -1,50 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { animate, motion, useMotionValue } from "framer-motion";
-import useMeasure from "react-use-measure";
 import { GradientText } from "@components/special_text/GradientText";
-
-import { useEffect, useState } from "react";
 import AutoplaySlider from "@components/AutoplaySlider";
 
 export const ThirdPartyWeb2Payments = () => {
-  //   const FAST_DURATION = 5;
-  //   const SLOW_DURATION = 28;
-
-  //   const [duration, setDuration] = useState(FAST_DURATION);
-  //   let [ref, { width }] = useMeasure();
-
-  //   const xTranslation = useMotionValue(0);
-
-  //   const [mustFinish, setMustFinish] = useState(false);
-  //   const [rerender, setRerender] = useState(false);
-
-  //   useEffect(() => {
-  //     let controls;
-  //     let finalPosition = -width / 2 - 8;
-
-  //     if (mustFinish) {
-  //       controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
-  //         ease: "linear",
-  //         duration: duration * (1 - xTranslation.get() / finalPosition),
-  //         onComplete: () => {
-  //           setMustFinish(false);
-  //           setRerender(!rerender);
-  //         },
-  //       });
-  //     } else {
-  //       controls = animate(xTranslation, [0, finalPosition], {
-  //         ease: "linear",
-  //         duration: duration,
-  //         repeat: Infinity,
-  //         repeatType: "loop",
-  //         repeatDelay: 0,
-  //       });
-  //     }
-
-  //     return controls?.stop;
-  // }, [rerender, xTranslation, duration, width]);
-
   return (
     <div className="text-white pt-8">
       <div className="flex flex-col justify-center items-center text-center relative">
@@ -64,7 +23,7 @@ export const ThirdPartyWeb2Payments = () => {
         >
           Web 2 transactions such as making payments{" "}
           <br className="sm:hidden" /> and <br className="hidden sm:flex" />{" "}
-          purchasing airtime or data subscriptions <br className="sm:hidden" />{" "}
+          purchasing airtime or data subscriptions <br className="sm:hidden" />
           can be made <br className="hidden sm:flex" /> using TON token on
           TonBot.
         </p>

@@ -11,8 +11,8 @@ import { CTA } from "@components/cta/CTA";
 export default function Home() {
   return (
     <>
-      <div className="bg-myGray flex justify-center">
-        <div className="mx-5 w-full">
+      <div className="flex justify-center">
+        <div className="mx-5 w-full lg:max-w-[70rem]">
           <HeroSection />
           <BuySwapOrSell />
           <ThirdPartyWeb2Payments />

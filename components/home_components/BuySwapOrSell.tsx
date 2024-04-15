@@ -2,7 +2,6 @@
 "use client";
 import { Card } from "@components/card/card";
 import { GradientText } from "@components/special_text/GradientText";
-// import GlowCoin from "@assets/GlowCoin.png";
 import Transition from "@components/transitions";
 
 export const BuySwapOrSell = () => {

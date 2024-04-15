@@ -14,7 +14,7 @@ module.exports = {
         card: "0 10px 1500px -30px rgba(0, 0, 0, 0.3)",
       },
       colors: {
-        myGray: "#141519",
+        ashy: "#141519",
       },
     },
   },

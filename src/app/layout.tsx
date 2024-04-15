@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 const myFont = localFont({
   src: [
     {
@@ -70,7 +69,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={myFont.className}>
-      <body className="overflow-x-hidden box-border">
+      <body className="bg-ashy overflow-x-hidden box-border">
         <Navbar />
         <img
           src={prismLight.src}

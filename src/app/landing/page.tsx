@@ -7,7 +7,7 @@ import WeBuildSolutionsForWeb3 from "@components/landing-components/WeBuildSolut
 export default function Home() {
   return (
     <>
-      <div className="bg-myGray min-h-screen">
+      <div className="bg-ashy min-h-screen">
         <Hero />
         <OurProcess />
         <FeaturedProducts />
