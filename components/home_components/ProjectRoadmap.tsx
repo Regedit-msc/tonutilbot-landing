@@ -1,10 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Indicator from "@components/Indicator";
+import RoadmapCard from "@components/RoadmapCard";
 import { DarkButton } from "@components/buttons/DarkButton";
 import { GradientText } from "@components/special_text/GradientText";
-import Stepper from "@components/stepper/Stepper";
-import { useState } from "react";
-import { FaTelegramPlane } from "react-icons/fa";
+import Transition from "@components/transitions";
+import useWindowWidth from "@hooks/useWindowWidth";
+import { useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { IoIosArrowUp } from "react-icons/io";
 
 const roadmap = [
   {
@@ -13,96 +17,103 @@ const roadmap = [
   },
   {
     quarter: "Q2",
-    info: "Project Startup and initialization",
+    info: "Project Continued and initialization",
   },
   {
     quarter: "Q3",
-    info: "Project Startup and initialization",
+    info: "Project third quarter and initialization",
   },
   {
     quarter: "Q4",
-    info: "Project Startup and initialization",
+    info: "Project Finalising and initialization",
   },
 ];
 
 export const ProjectRoadmap = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const visible = useInView(ref);
+  const INTERVAL = 2000;
+  const size = useWindowWidth() || 0;
+
+  useEffect(() => {
+    if (!visible || size <= 768) {
+      return;
+    }
+    const interval = setInterval(() => {
+      const next = currentStep === roadmap.length - 1 ? 0 : currentStep + 1;
+      setCurrentStep(next);
+      console.log("next", visible);
+    }, INTERVAL);
+
+    return () => clearInterval(interval);
+  }, [visible, currentStep]);
+
   return (
-    <div className="text-white">
-      <div className="flex flex-col justify-center items-center text-center gap-10 my-[10%] relative w-full">
-        <DarkButton
-          icon={<FaTelegramPlane className="text-[1.5rem]" />}
-          text="VISION"
-        />
+    <Transition>
+      <div ref={ref} className="text-white flex flex-col items-center">
+        <section className="flex flex-col justify-center items-center">
+          <DarkButton text="ROADMAP" />
 
-        <GradientText
-          text={
-            <>
-              Project <br className="md:hidden" /> Roadmap
-            </>
-          }
-          className="text-7xl mb-16"
-        />
-
-        <div className="flex md:gap-10 gap-[1.38rem] max-[920px]:flex-col lg:w-fit w-full">
-          <div className="flex items-center lg:w-fit w-full">
-            <Stepper step={currentStep} />
-
-            <div className="flex flex-col gap-6 lg:w-fit w-full">
-              {roadmap?.map((_, i) => {
-                return (
-                  <div
-                   key={i}
-                    className={`text-white gap-3 flex p-5 lg:w-[18.55rem]    w-full  rounded-[1.6rem] border  pr-10 cursor-pointer ${
-                      currentStep === i
-                        ? "bg-[#ffffff13] border-[#ffffff20]"
-                        : "border-transparent"
-                    }`}
-                    onClick={() => {
-                      setCurrentStep(i);
-                    }}
-                  >
-                    <p className="">Q1</p>
-
-                    <p className="text-start">
-                      {" "}
-                      Project Startup and <br /> initialization{" "}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
+          <GradientText className="text-[2.6rem] lg:text-[4rem] tracking-tighter mb-8 font-semibold leading-none mt-5 text-center">
+            Project <br className="md:hidden" /> Roadmap
+          </GradientText>
+        </section>
+        <section className="relative flex px-5">
+          <div className="flex flex-col h-full w-[10%] justify-center items-center">
+            <Indicator currentStep={currentStep} />
           </div>
 
-          <div className="w-full text-white py-16 pr-6 pl-14 bg-[#ffffff13] rounded-[1.6rem] border border-[#ffffff20] flex-grow text-start ">
-            <div className="max-h-96 overflow-y-scroll ">
-              <div className="mr-[12%]">
-                <h1 className="text-5xl mb-10">
-                  Q {currentStep + 1}. Project Startup
-                </h1>
-
-                {Array(10)
-                  .fill(0)
-                  .map((_, i) => {
+          <div className="flex flex-col justify-center items-center text-center gap-10 relative w-[90%]">
+            <div className="flex md:gap-10 gap-[1.38rem] max-[920px]:flex-col lg:w-fit w-full min-[920px]:pr-10 lg:pr-20">
+              <div className="flex items-center lg:w-fit min-[920px]:w-[40%]">
+                <div className="flex flex-col gap-6 lg:w-fit w-full">
+                  {roadmap.map((_, i) => {
                     return (
-                      <p
-                        className="text-xl mb-10 mr-360 cursor-pointer font-normal leading-normal"
-                        key={i}
-                      >
-                        This is some information about the project and stuff.
-                        This is some information about the project and stuff.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Deserunt quis voluptates molestiae minima culpa,
-                        quisquam error, dolore saepe doloribus cum fugit, iusto
-                        odit illum dolores. Quisquam qui quaerat minus nostrum.
-                      </p>
+                      <section className="flex flex-col gap-4" key={i}>
+                        <div
+                          className={`relative text-white gap-3 flex px-5 py-4 lg:w-[18.55rem] w-full rounded-[1.4rem] border transition-all duration-300 ease-out pr-10 cursor-pointer ${
+                            currentStep === i
+                              ? "bg-gradient-to-b from-white/[8%] to-white/[3%] border-[#ffffff07]"
+                              : "border-transparent"
+                          }`}
+                          onClick={() => {
+                            setCurrentStep(i);
+                          }}
+                        >
+                          <p className="text-xs">{roadmap[i].quarter}</p>
+
+                          <p className="text-start text-xs min-[538px]:w-[40%] min-[713px]:w-[30%] min-[920px]:w-2/3 sm:text-sm sm:w-[30%] w-1/2 lg:w-3/4 leading-[1.5]">
+                            {roadmap[i].info}
+                          </p>
+                          <span
+                            className={`absolute right-6 top-7 transition-all duration-300 ease-in-out ${
+                              currentStep === i && "rotate-180"
+                            }`}
+                          >
+                            <IoIosArrowUp size={13} />
+                          </span>
+                        </div>
+                        <RoadmapCard
+                          className={`min-[920px]:hidden ${
+                            currentStep === i ? "flex" : "hidden"
+                          }`}
+                          currentStep={currentStep}
+                        />
+                      </section>
                     );
                   })}
+                </div>
               </div>
+
+              <RoadmapCard
+                className="min-[920px]:w-[60%] hidden min-[920px]:flex"
+                currentStep={currentStep}
+              />
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </section>
+      </div>{" "}
+    </Transition>
   );
 };

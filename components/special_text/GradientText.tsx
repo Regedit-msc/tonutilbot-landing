@@ -1,19 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 
 interface GradientTextProps {
+  children?: any;
   text?: string | React.ReactNode;
   className?: string;
 }
 
 export const GradientText: React.FC<GradientTextProps> = ({
-  text = "Buy, Swap or Sell <br /> Ton in a few clicks.",
+  text,
+  children,
   className = "",
 }) => {
   return (
     <h1
-      className={`bg-gradient-to-r from-gray-300 via-white to-[#a9baeb] inline-block text-gray-300 bg-clip-text font-bold ${className}`}
+      className={`${className} bg-gradient-to-r from-gray-300 via-white to-[#a9baeb] text-gray-300 font-bold pb-2 bg-clip-text`}
     >
-      {text}
+      {children} {text}
     </h1>
   );
 };

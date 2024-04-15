@@ -1,22 +1,56 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+import HoverGradient from "@assets/HoverGradient.png";
+import openInTelegramPlane from "@assets/openInTelegramPlane.svg";
+import { useState } from "react";
 
 interface GradientButtonProps {
-  icon?: JSX.Element;
   text?: string;
   className?: string;
+  isIcon?: boolean;
+  hover?: boolean;
+  gradient?: boolean;
+  myIcon?: any;
 }
 
 export function GradientButton({
-  icon = <></>,
+  gradient = true,
+  hover = true,
+  isIcon = true,
   text = "",
   className = "",
+  myIcon,
 }: GradientButtonProps): JSX.Element {
+  const [hoverPic, setHoverPic] = useState(false);
+
   return (
     <button
-      className={`bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-600 shadow-lg rounded-full p-4 flex justify-center items-center text-white gap-3 hover:shadow-blue-400 w-fit transition-all z-10 ${className}`}
+      className={`${className}  shadow-lg rounded-full py-[0.65rem] sm:py-[0.8rem] px-[0.9rem] sm:px-5 flex justify-center items-center text-white gap-2 w-fit transition-all z-10
+      ${
+        gradient
+          ? "bg-gradient-to-r from-blue-400 to-purple-600 via-indigo-500"
+          : "border"
+      }
+      ${!hover && "hover:shadow-2xl"}
+      `}
     >
-      {icon}
-      {text}
+      {hover && (
+        <img
+          src={HoverGradient.src}
+          className={`scale-125 absolute left-auto opacity-0 transition-all duration-1000 ease-in-out w-[16rem] translate-y-8 ${
+            hoverPic && "opacity-100"
+          }`}
+          alt="HoverGradient Image"
+          onMouseOver={() => {
+            setHoverPic(true);
+          }}
+          onMouseOut={() => {
+            setHoverPic(false);
+          }}
+        />
+      )}
+      {myIcon && <img src={myIcon.src} alt={myIcon} className="w-[1rem]" />}
+      {isIcon && <img src={openInTelegramPlane.src} alt="tg" />} {text}
     </button>
   );
 }

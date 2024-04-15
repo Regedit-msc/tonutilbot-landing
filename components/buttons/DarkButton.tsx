@@ -1,21 +1,25 @@
 /* eslint-disable @next/next/no-img-element */
+import { Poppins } from "next/font/google";
+import plane from "@/assets/plane.svg";
 
+const poppins = Poppins({
+  weight: ["300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+});
 interface DarkButtonProps {
-  icon?: JSX.Element;
   text?: string;
   className?: string;
 }
 
 export function DarkButton({
-  icon = <></>,
   text = "",
   className = "",
 }: DarkButtonProps): JSX.Element {
   return (
     <button
-      className={`bg-gradient-to-b hover:bg-gradient-to-t cursor-pointer from-transparent to-[#ffffff2e] shadow-lg rounded-full p-4 px-6 flex justify-center items-center text-white gap-3 w-fit transition-all border border-[#ffffff2e] z-10 ${className}`}
+      className={`border border-[#333] bg-gradient-to-b from-[#282828] to-[#444] ${className} shadow-lg rounded-full py-[0.375rem] px-3 flex justify-center items-center text-white gap-3 w-fit transition-all z-10 tracking-[0.3em] sm:tracking-[0.3em] text-xs font-extralight`}
     >
-      {icon}
+      <img src={plane.src} alt="plane" width={"10rem"} />
       {text}
     </button>
   );

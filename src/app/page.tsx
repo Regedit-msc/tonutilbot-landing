@@ -11,15 +11,16 @@ import { CTA } from "@components/cta/CTA";
 export default function Home() {
   return (
     <>
-      <div className="bg-black min-h-screen flex justify-center ">
-        <div className="max-w-7xl mx-5 w-full">
-          <Navbar />
+      <div className="flex justify-center">
+        <div className="mx-5 w-full lg:max-w-[70rem]">
           <HeroSection />
           <BuySwapOrSell />
           <ThirdPartyWeb2Payments />
           <DeveloperApiIntegration />
           <ProjectRoadmap />
-          <OpenTonbotOnTg />
+          <div className="flex justify-center items-center">
+            <OpenTonbotOnTg />
+          </div>
           <CTA />
         </div>
       </div>

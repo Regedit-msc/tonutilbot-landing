@@ -1,28 +1,34 @@
 /* eslint-disable @next/next/no-img-element */
-
+"use client";
 import { GradientText } from "@components/special_text/GradientText";
-import IntegrationsImage from "@assets/integrations_image.png";
+import AutoplaySlider from "@components/AutoplaySlider";
 
 export const ThirdPartyWeb2Payments = () => {
   return (
-    <div className="text-white ">
-      <div className="flex flex-col justify-center items-center text-center gap-10  my-28 max-md:my-52 relative">
+    <div className="text-white pt-8">
+      <div className="flex flex-col justify-center items-center text-center relative">
         <GradientText
-          text="Third Party Web2 payments"
-          className="text-center mb-10 lg:text-[80px] md:text-6xl text-[40px]"
+          text={
+            <span className="text-[2.4rem] sm:text-[3.5rem] lg:text-[4rem] tracking-tighter insetShadow z-30">
+              Third Party <br className="md:hidden" /> Web2
+              <br className="sm:flex hidden" /> payments
+            </span>
+          }
+          className="text-center lg:leading-[0.5] lg:text-[6rem] text-6xl text-[40px] lg:pb-6"
         />
 
-        <p className="text-white sm:text-2xl font-medium lg:leading-[33px] text-xs">
-          Web 2 transactions such as making payments and purchasing airtime or
-          data subscriptions can be made using TON token on TonBot.
+        <p
+          className="text-white sm:text-lg text-xs font-normal 
+         mt-6 leading-[1.8]"
+        >
+          Web 2 transactions such as making payments{" "}
+          <br className="sm:hidden" /> and <br className="hidden sm:flex" />{" "}
+          purchasing airtime or data subscriptions <br className="sm:hidden" />
+          can be made <br className="hidden sm:flex" /> using TON token on
+          TonBot.
         </p>
-
-        <img
-          src={IntegrationsImage.src}
-          alt="IntegrationsImage Image"
-          className="md:mt-20 "
-        />
       </div>
+      <AutoplaySlider />
     </div>
   );
 };

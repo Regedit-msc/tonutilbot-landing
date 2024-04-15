@@ -14,16 +14,18 @@ import { useState } from "react";
 interface CardProps {
   imgIndex: number;
   text: string;
+  className?: string;
 }
 
 const hover = [GlowCoin, GlowMoney, GlowPaper];
 const normal = [coin, Money, Paper];
 
-export const Card: React.FC<CardProps> = ({ imgIndex, text }) => {
+export const Card: React.FC<CardProps> = ({ imgIndex, text, className }) => {
   const [hoverPic, setHoverPic] = useState(false);
   return (
     <div
-      className="flex flex-col items-center justify-between px-8 py-12 max-w-[395px] min-w-[285px] w-full h-[371px] box-border inset-0 bg-[#ffffff13] rounded-3xl border border-[#ffffff20] relative cursor-pointer"
+      className={`${className} flex flex-col items-center justify-between px-4 w-[295px] h-[277px] box-border inset-0 bg-gradient-to-b from-[#ffffff03] to-[#ffffff09] rounded-[2rem] border border-[#ffffff20] relative cursor-pointer transition-all duration-500 ease-in-out
+      ${hoverPic && "sm:-translate-y-5 lg:-translate-y-10"}`}
       onMouseOver={() => {
         setHoverPic(true);
       }}
@@ -31,20 +33,39 @@ export const Card: React.FC<CardProps> = ({ imgIndex, text }) => {
         setHoverPic(false);
       }}
     >
-      {hoverPic && (
-        <img
-          src={HoverGradient.src}
-          className="absolute top-0 left-auto"
-          alt="HoverGradient Image"
-        />
-      )}
       <img
-        src={hoverPic ? hover[imgIndex].src : normal[imgIndex].src}
-        className="w-[140px]"
+        src={HoverGradient.src}
+        className={`absolute top-0 left-auto opacity-0 transition-all duration-500 ease-in-out ${
+          hoverPic && "opacity-100"
+        }`}
         alt="HoverGradient Image"
       />
-
-      <h1 className="bg-gradient-to-r from-gray-300 via-white to-[#a9baeb] inline-block text-transparent bg-clip-text lg: md:text-3xl text-[22.35px] font-bold">
+      {/* */}
+      <div
+        className={`w-full h-full flex justify-center items-center hover:opacity-100 transition-all duration-500 ease-in-out`}
+      >
+        <img
+          src={normal[imgIndex].src}
+          className={`absolute w-[100px] transition-all duration-1000 ease-in-out -translate-y-2   ${
+            hoverPic ? "opacity-0" : "opacity-100"
+          }
+           ${imgIndex === 0 && "scale-100"}
+           ${imgIndex === 1 && "scale-125"}
+           ${imgIndex === 2 && "scale-150"}`}
+          alt="HoverGradient Image"
+        />
+        <img
+          src={hover[imgIndex].src}
+          className={`w-[100px] transition-all duration-1000 ease-in-out opacity-0 -translate-y-2 ${
+            hoverPic && "opacity-100"
+          }
+         ${imgIndex === 0 && "scale-100"}
+           ${imgIndex === 1 && "scale-125"}
+           ${imgIndex === 2 && "scale-150"}`}
+          alt="HoverGradient Image"
+        />
+      </div>
+      <h1 className="bg-white inline-block text-transparent bg-clip-text text-[1.45rem] font-bold -translate-y-8 leading-[1.2] w-[90%]">
         {text}
       </h1>
     </div>
