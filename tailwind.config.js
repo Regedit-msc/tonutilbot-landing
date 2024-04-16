@@ -15,6 +15,7 @@ module.exports = {
       },
       colors: {
         ashy: "#141519",
+        ashyBorder: "#414249",
       },
     },
   },

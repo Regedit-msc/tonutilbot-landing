@@ -21,16 +21,14 @@ export const HeroSection = () => {
 
   return (
     <Transition>
-      <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-8 lg:pt-20">
-        <div className="flex flex-col justify-center items-center text-center gap-6 my-[6rem] md:my-[8rem] relative">
-          {/* <img src={mesh.src} alt="Mesh Image" className="absolute w-1/2" /> */}
-
+      <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-0 lg:pt-20">
+        <div className="flex flex-col justify-center items-center text-center gap-6 my-[4rem] sm:my-[8rem] md:my-[4rem] lg:my-0 relative">
           <div
             className={`${
               inView ? "opacity-100" : "opacity-0"
             } transition-all duration-1000 ease-in-out`}
           >
-            <DarkButton text="TONBOT" className="sm:translate-y-3 text-sm" />
+            <DarkButton text="TONDERBOT" className="sm:translate-y-3 text-sm" />
           </div>
 
           <GradientText
@@ -41,22 +39,21 @@ export const HeroSection = () => {
                 <br className="sm:hidden" /> network.
               </>
             }
-            className="insetShadow lg:text-8xl text-[2.6rem] sm:text-5xl md:text-6xl font-semibold sm:px-3 tracking-tighter leading-[0.9]"
+            className="insetShadow lg:text-8xl text-[3rem] sm:text-[4rem] font-semibold sm:px-3 tracking-tighter leading-[0.9]"
           />
 
-          <p className="text-white font-normal text-[0.8rem] sm:text-sm lg:text-lg leading-[1.7]">
+          <p className="text-white font-normal text-sm lg:text-lg leading-[1.7]">
             Buy, Swap or Sell TON using our wallet
             <br className="flex sm:hidden" />
             along with web2 <br className="sm:flex hidden" /> payments and
-            developer <br className="sm:hidden" />
-            API integration.{" "}
+            <br className="sm:hidden" /> developer API integration.{" "}
           </p>
 
           <section className="flex justify-center items-center gap-3">
-            <GradientButton className="text-xs" text="Open In Telegram" />
+            <GradientButton className="text-sm" text="Open In Telegram" />
             <GradientButton
               text="Read our Documentation"
-              className="hidden sm:flex text-xs"
+              className="hidden sm:flex text-sm"
               gradient={false}
               isIcon={false}
               myIcon={docs}

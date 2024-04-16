@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import prismLight from "@/assets/herolight.svg";
+import mesh from "@/assets/mesh.png";
 
 export const metadata: Metadata = {
   title: "Ton Bot",
@@ -73,9 +74,14 @@ export default function RootLayout({
         <Navbar />
         <img
           src={prismLight.src}
-          alt="Mesh Image"
-          className="absolute sm:h-fit w-full h-[40rem] -lg:top-96"
+          alt=""
+          className="absolute sm:h-fit w-full h-[40rem] top-0"
         />
+        {/* <img
+          src={mesh.src}
+          alt="Mesh Image"
+          className="absolute w-full h-[40rem] sm:h-full -lg:top-96 opacity-50"
+        /> */}
         {children}
       </body>
     </html>

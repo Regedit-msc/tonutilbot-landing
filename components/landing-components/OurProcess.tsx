@@ -1,9 +1,33 @@
 import React, { FC } from "react";
+import dots from "@assets/landing-page/our-process-dots.svg";
+import AllProcessCards from "./AllProcessCards";
 
-interface IProps {}
-
-const OurProcess: FC<IProps> = () => {
-  return <div>OurProcess</div>;
-};
+const OurProcess: FC = () => (
+  <div className="w-full">
+    <div className="flex md:flex-row flex-col justify-center items-center w-full text-white my-16 md:my-12 lg:max-w-[100rem]">
+      <section className="relative w-full flex md:w-2/5 flex-col text-[2.6rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[0.9] font-semibold pl-12 lg:pl-20 ">
+        <img
+          src={dots.src}
+          alt=""
+          className="absolute -top-6 left-4 lg:left-10 h-20"
+        />{" "}
+        Our
+        <br />
+        Process
+        <span className="text-xs md:text-sm lg:text-[1.1rem] font-light py-3 w-full leading-[1.5] lg:leading-[1.55]">
+          Here&apos;s a little breakdown of how we{" "}
+          <br className="hidden md:flex" /> build{" "}
+          <br className="flex md:hidden" />
+          innovative solutions for all our <br className="hidden md:flex" />{" "}
+          target users
+        </span>
+      </section>
+      <section className="relative flex justify-end items-center w-full md:w-3/5 my-10">
+        <AllProcessCards />
+        <div className="absolute w-[75%] sm:w-[90%] md:w-[90%] lg:w-full rounded-l-2xl bg-gradient-to-r from-blue-500 to-purple-500 h-[200px] sm:h-[370px]" />
+      </section>
+    </div>
+  </div>
+);
 
 export default OurProcess;
