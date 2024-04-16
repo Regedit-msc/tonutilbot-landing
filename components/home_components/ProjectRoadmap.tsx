@@ -47,7 +47,7 @@ export const ProjectRoadmap = () => {
     }, INTERVAL);
 
     return () => clearInterval(interval);
-  }, [visible, currentStep]);
+  }, [visible, currentStep, size]);
 
   return (
     <Transition>

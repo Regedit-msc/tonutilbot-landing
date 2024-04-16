@@ -20,7 +20,7 @@ const Hero: FC<IProps> = () => {
           TON Network
         </div>
         <p className="text-center py-6 sm:py-8 text-sm lg:text-xl z-10">
-          We're a Web3 company dedicated to <br className="flex sm:hidden" />{" "}
+          We are a Web3 company dedicated to <br className="flex sm:hidden" />{" "}
           developing the <br className="hidden sm:flex" /> best utility
           softwares on <br className="flex sm:hidden" /> the TON network
         </p>

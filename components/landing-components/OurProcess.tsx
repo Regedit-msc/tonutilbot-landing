@@ -14,7 +14,7 @@ const OurProcess: FC = () => (
         innovative solutions for all our target users
       </span>
     </section>
-    <section className="relative flex justify-end items-center w-full md:w-3/5  my-10">
+    <section className="relative flex justify-end items-center w-full md:w-3/5 my-10">
       <AllProcessCards />
       <div className="absolute w-[80%] md:w-[95%] rounded-l-2xl bg-gradient-to-r from-blue-700 to-purple-500 h-[200px]" />
     </section>
