@@ -8,9 +8,9 @@ interface IProps {
 const RoadmapCard: FC<IProps> = ({ currentStep, className }: IProps) => {
   return (
     <div
-      className={`${className} flex w-full text-white pt-16 sm:pt-[4.5rem] pb-8 sm:pb-12 min-[920px]:pb-10 rounded-[1.4rem] border border-[#ffffff07] flex-grow text-start relative bg-gradient-to-b from-white/[8%] to-white/[3%] min-[920px]:h-[370px] overflow-hidden`}
+      className={`${className} flex w-full text-white pt-16 sm:pt-[4.5rem] pb-8 sm:pb-12 min-[920px]:pb-10 rounded-[1.4rem] border border-[#ffffff07] flex-grow text-start relative bg-gradient-to-b from-white/[8%] to-white/[3%] min-[920px]:h-[420px] overflow-hidden`}
     >
-      <div className="h-[16rem] sm:h-[24rem]  min-[920px]:h-[16rem] overflow-y-scroll">
+      <div className="h-[16rem] sm:h-[24rem] min-[920px]:h-[19rem] overflow-y-scroll">
         <div className="pl-6 sm:pl-12 sm:pr-12">
           <div className="absolute text-xl py-4 sm:py-6 z-10 top-0">
             Q {currentStep + 1}. Project Startup

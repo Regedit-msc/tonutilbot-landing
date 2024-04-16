@@ -7,7 +7,7 @@ interface IProps {
 const Indicator: FC<IProps> = ({ currentStep }: IProps) => {
   return (
     <div className="flex flex-col">
-      <span
+      {/* <span
         className={`bg-gradient-to-r from-blue-400 to-purple-600 z-20 absolute top-8 left-5 min-[920px]:left-[3.5rem] w-3 h-3 rounded-full transition-all duration-300 ease-in-out ${
           currentStep === 1
             ? "translate-y-[5.75rem] animate-pulse"
@@ -30,8 +30,9 @@ const Indicator: FC<IProps> = ({ currentStep }: IProps) => {
         }`}
       >
         ...
-      </p>
-      <span className="w-1 h-[90%] min-[920px]:h-[80%] top-[5%] min-[920px]:top-[10%] absolute flex bg-[#111] left-6 min-[920px]:left-[3.75rem] rounded-full"></span>
+      </p> */}
+
+      <span className="w-1 h-[90%] min-[920px]:h-[80%] top-[5%] min-[920px]:top-[10%] absolute hidden sm:flex bg-[#111] left-6 min-[920px]:left-[3.75rem] rounded-full"></span>
     </div>
   );
 };

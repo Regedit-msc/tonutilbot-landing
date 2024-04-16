@@ -25,7 +25,7 @@ export function GradientButton({
 
   return (
     <button
-      className={`${className}  shadow-lg rounded-full py-[0.65rem] sm:py-[0.8rem] px-[0.9rem] sm:px-5 flex justify-center items-center text-white gap-2 w-fit transition-all z-10
+      className={`${className}  shadow-lg rounded-full py-4 px-6 flex justify-center items-center text-white gap-2 w-fit transition-all z-10
       ${
         gradient
           ? "bg-gradient-to-r from-blue-400 to-purple-600 via-indigo-500"
@@ -37,7 +37,7 @@ export function GradientButton({
       {hover && (
         <img
           src={HoverGradient.src}
-          className={`scale-125 absolute left-auto opacity-0 transition-all duration-1000 ease-in-out w-[16rem] translate-y-8 ${
+          className={`scale-150 sm:scale-[2] absolute left-auto opacity-0 transition-all duration-1000 ease-in-out w-[16rem] translate-y-8 ${
             hoverPic && "opacity-100"
           }`}
           alt="HoverGradient Image"
@@ -49,7 +49,7 @@ export function GradientButton({
           }}
         />
       )}
-      {myIcon && <img src={myIcon.src} alt={myIcon} className="w-[1rem]" />}
+      {myIcon && <img src={myIcon.src} alt={myIcon} className="w-[25px]" />}
       {isIcon && <img src={openInTelegramPlane.src} alt="tg" />} {text}
     </button>
   );
