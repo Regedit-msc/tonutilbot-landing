@@ -25,7 +25,7 @@ export const Card: React.FC<CardProps> = ({ imgIndex, text, className }) => {
   return (
     <div
       className={`${className} flex flex-col items-center justify-between px-4 w-[295px] h-[277px] box-border inset-0 bg-gradient-to-b from-[#ffffff03] to-[#ffffff09] rounded-[2rem] border border-[#ffffff20] relative cursor-pointer transition-all duration-500 ease-in-out
-      ${hoverPic && "-translate-y-4"}`}
+      ${hoverPic && "sm:-translate-y-4"}`}
       onMouseOver={() => {
         setHoverPic(true);
       }}

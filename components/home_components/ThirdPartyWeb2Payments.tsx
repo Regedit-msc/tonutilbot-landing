@@ -11,7 +11,7 @@ export const ThirdPartyWeb2Payments = () => {
           text={
             <span className="text-[3rem] sm:text-[3.5rem] lg:text-[4rem] tracking-tighter insetShadow z-30">
               Third Party <br className="md:hidden" /> Web2
-              <br className="flex sm:hidden" /> payments
+              <br /> payments
             </span>
           }
           className="text-center lg:leading-[0.5] lg:text-[6rem] text-6xl text-[40px] lg:pb-6"
