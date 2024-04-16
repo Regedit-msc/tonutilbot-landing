@@ -9,7 +9,7 @@ const Hero: FC<IProps> = () => {
   return (
     <>
       <section className="w-full text-white flex flex-col justify-center items-center pb-24 z-10">
-        <div className="flex flex-col justify-center items-center text-center lg:text-8xl text-[2.8rem] sm:text-[4rem] font-semibold sm:px-3 tracking-tighter leading-[0.9] pt-40 md:pt-0 lg:pt-8">
+        <div className="flex flex-col justify-center items-center text-center lg:text-8xl text-[2.8rem] sm:text-[4rem] font-bold sm:px-3 tracking-tighter leading-[0.9] pt-40 md:pt-0 lg:pt-8">
           Building Web3 <br />{" "}
           <div className="flex gap-3 justify-center">
             <p className="text-transparent bg-gradient-to-r from from-blue-500 to-purple-500 bg-clip-text">
