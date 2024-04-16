@@ -25,6 +25,7 @@
   background-clip: text;
 }
 
+
 @keyframes slide {
   to {
     transform: translateX(-86.5%);

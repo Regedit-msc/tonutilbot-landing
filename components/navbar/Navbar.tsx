@@ -14,10 +14,16 @@ export const Navbar = () => {
 
     window.addEventListener("scroll", function () {
       newScroll = window.scrollY;
-      if (scrollY > newScroll) {
-        document.querySelector("nav")?.classList.remove("-translate-y-[150px]");
+      if (newScroll < 75) {
+        return;
       } else {
-        document.querySelector("nav")?.classList.add("-translate-y-[150px]");
+        if (scrollY > newScroll) {
+          document
+            .querySelector("nav")
+            ?.classList.remove("-translate-y-[150px]");
+        } else {
+          document.querySelector("nav")?.classList.add("-translate-y-[150px]");
+        }
       }
       scrollY = newScroll;
     });
@@ -44,8 +50,9 @@ export const Navbar = () => {
           </p>
           <p>About</p>
           <GradientButton
-            text="Contact us"
-            className="text-xs sm:text-sm lg:text-base max-sm:hidden"
+            myPadding={true}
+            className="text-sm px-6 py-2 sm:py-3"
+            text="Contact Us"
             isIcon={false}
           />
         </section>

@@ -8,7 +8,7 @@ interface IProps {}
 const Hero: FC<IProps> = () => {
   return (
     <>
-      <section className="w-full text-white flex flex-col justify-center items-center pb-24">
+      <section className="w-full text-white flex flex-col justify-center items-center pb-24 z-10">
         <div className="flex flex-col justify-center items-center text-center lg:text-8xl text-[2.8rem] sm:text-[4rem] font-semibold sm:px-3 tracking-tighter leading-[0.9] pt-40 md:pt-0 lg:pt-8">
           Building Web3 <br />{" "}
           <div className="flex gap-3 justify-center">
@@ -19,7 +19,7 @@ const Hero: FC<IProps> = () => {
           </div>
           TON Network
         </div>
-        <p className="text-center py-6 sm:py-8 text-sm lg:text-xl">
+        <p className="text-center py-6 sm:py-8 text-sm lg:text-xl z-10">
           We're a Web3 company dedicated to <br className="flex sm:hidden" />{" "}
           developing the <br className="hidden sm:flex" /> best utility
           softwares on <br className="flex sm:hidden" /> the TON network
@@ -34,12 +34,12 @@ const Hero: FC<IProps> = () => {
       <img
         src={zigzag.src}
         alt=""
-        className="zig-float top-[21rem] lg:top-[30rem] h-24 md:h-28 lg:h-32 min-[1200px]:h-40 absolute left-[6%] md:left-[18%] lg:left-[10%] min-[1200px]:left-[15%]"
+        className="zig-float top-[21rem] lg:top-[30rem] h-24 md:h-28 lg:h-32 min-[1200px]:h-40 absolute left-[6%] md:left-[18%] lg:left-[10%] min-[1200px]:left-[15%] z-0"
       />
       <img
         src={zigzag2.src}
         alt=""
-        className="zig-float-2 top-[16.5rem] sm:top-[18rem] lg:top-[24rem] h-14 md:h-20 lg:h-24 min-[1200px]:h-32 absolute right-[10%] md:right-[15%] lg:right-[10%]"
+        className="zig-float-2 top-[16.5rem] sm:top-[18rem] lg:top-[24rem] h-14 md:h-20 lg:h-24 min-[1200px]:h-32 absolute right-[10%] md:right-[15%] lg:right-[10%] z-20"
       />
     </>
   );
