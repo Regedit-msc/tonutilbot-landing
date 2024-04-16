@@ -11,6 +11,7 @@ interface GradientButtonProps {
   hover?: boolean;
   gradient?: boolean;
   myIcon?: any;
+  myPadding?: boolean;
 }
 
 export function GradientButton({
@@ -20,18 +21,20 @@ export function GradientButton({
   text = "",
   className = "",
   myIcon,
+  myPadding = false,
 }: GradientButtonProps): JSX.Element {
   const [hoverPic, setHoverPic] = useState(false);
 
   return (
     <button
-      className={`${className}  shadow-lg rounded-full py-4 px-6 flex justify-center items-center text-white gap-2 w-fit transition-all z-10
+      className={`${className} shadow-lg rounded-full flex justify-center items-center text-white gap-2 w-fit transition-all z-10
       ${
         gradient
           ? "bg-gradient-to-r from-blue-400 to-purple-600 via-indigo-500"
           : "border"
       }
       ${!hover && "hover:shadow-2xl"}
+      ${!myPadding && "py-4 px-6"}
       `}
     >
       {hover && (

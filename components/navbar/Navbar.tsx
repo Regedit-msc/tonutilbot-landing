@@ -15,9 +15,9 @@ export const Navbar = () => {
     window.addEventListener("scroll", function () {
       newScroll = window.scrollY;
       if (scrollY > newScroll) {
-        document.querySelector("nav")?.classList.remove("-translate-y-[100px]");
+        document.querySelector("nav")?.classList.remove("-translate-y-[150px]");
       } else {
-        document.querySelector("nav")?.classList.add("-translate-y-[100px]");
+        document.querySelector("nav")?.classList.add("-translate-y-[150px]");
       }
       scrollY = newScroll;
     });
