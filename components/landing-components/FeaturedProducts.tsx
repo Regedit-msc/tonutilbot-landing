@@ -1,15 +1,23 @@
-
+"use client";
 import { GradientText } from "@components/special_text/GradientText";
 import Transition from "@components/transitions";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import leftArrow from "@assets/landing-page/leftArrowInactive.png";
 import rightArrow from "@assets/landing-page/rightArrowActive.png";
 
+
 interface IProps {}
 
+const slideNumber = 2;
+
+
+
 const FeaturedProducts: FC<IProps> = () => {
+  const [transform, setTransform] = useState(0);
+
+  
   return (
-    <Transition>
+    <>
       <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-8 lg:pt-20">
         <div className="flex flex-col justify-center items-center text-center gap-6 relative">
           {/* <img src={mesh.src} alt="Mesh Image" className="absolute w-1/2" /> */}
@@ -37,21 +45,36 @@ const FeaturedProducts: FC<IProps> = () => {
             <br className="" /> that help us fulfil our mission at TONDr labs
           </p>
         </div>
-
-        <div className="flex justify-end  gap-3">
-          <img
-            src={leftArrow.src}
-            alt="Left Arrow"
-            className="cursor-pointer w-[54px] h-[54px]"
-          />
-          <img
-            src={rightArrow.src}
-            alt="Right Arrow"
-            className="cursor-pointer w-[54px] h-[54px]"
-          />
-        </div>
       </div>
-    </Transition>
+
+      <div className="flex justify-end  gap-3 max-w-[75.1rem] xl:mx-auto   mx-6 mt-4">
+        <img
+          src={leftArrow.src}
+          alt="Left Arrow"
+          className="cursor-pointer w-[54px] h-[54px]"
+          onClick={() => setTransform((prev) => (prev > 0 ? prev - 1 : 0))}
+        />
+        <img
+          src={rightArrow.src}
+          alt="Right Arrow"
+          className="cursor-pointer w-[54px] h-[54px]"
+          onClick={() =>
+            setTransform((prev) => (prev < slideNumber - 1 ? prev + 1 : prev))
+          }
+        />
+      </div>
+
+      <div className="overflow-hidden lg:max-w-[81.1rem]  block w-full text-nowrap mt-[2.4rem] px-4 sm:px-6 lg:px-8">
+        {Array(slideNumber)
+          .fill(0)
+          .map((_, index) => (
+            <div
+              className={`lg:w-[55.8125rem] md:w-[36rem] sm:w-[25rem] w-[17.625rem] lg:h-[37.8125rem] md:h-[22rem] sm:h-[17rem] h-[13.5625rem]  bg-gradient-to-r from-sky-400 via-indigo-500 to-violet-500 rounded-[52px] 
+           transition-transform translate-x-[] ease-in-out duration-5000 inline-block mr-8`}
+            ></div>
+          ))}
+      </div>
+    </>
   );
 };
 

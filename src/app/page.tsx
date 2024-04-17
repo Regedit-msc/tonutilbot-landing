@@ -14,7 +14,7 @@ export default function Home() {
         <FeaturedProducts />
         <OurTeam />
         <WeBuildSolutionsForWeb3 />
-        <CTA />
+        <CTA text={` TonderLabs technologies. ${new Date().getFullYear()} . All rights reserved`} />
       </div>
     </>
   );
