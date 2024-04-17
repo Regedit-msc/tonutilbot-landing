@@ -10,16 +10,16 @@ export const metadata: Metadata = {
   description: "Building Web3 solutions for the TON Network",
   openGraph: {
     title: "TonderLabs",
-    url: "1epq8gOSlrasoT2fkLcxQvTTZby4LcSf7",
+    url: "https://tonderlabs.com",
     description:
       "We're a company dedicated to developing the best utility softwares on the TON Network",
-    images: `1epFRG7uzatcvGEzaxCgb-TyWqy1lSMzn`,
+    images: "https://drive.google.com/uc?export=view&id=1k_kcrD4DGA5NcVJ0Y5kI912qyQEJ-CHK",
   },
   twitter: {
     card: "summary_large_image",
     site: "@",
     creator: "@",
-    images: "1epFRG7uzatcvGEzaxCgb-TyWqy1lSMzn",
+    images: "https://drive.google.com/uc?export=view&id=1k_kcrD4DGA5NcVJ0Y5kI912qyQEJ-CHK",
     description: "Building Web3 solutions for the TON Network",
   },
 };

@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { Navbar } from "@components/navbar/Navbar";
 import { HeroSection } from "@components/home_components/HeroSection";
 import { BuySwapOrSell } from "@components/home_components/BuySwapOrSell";
 import { ThirdPartyWeb2Payments } from "@components/home_components/ThirdPartyWeb2Payments";

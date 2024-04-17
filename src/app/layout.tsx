@@ -3,7 +3,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import prismLight from "@/assets/herolight.svg";
-import mesh from "@/assets/mesh.png";
 
 export const metadata: Metadata = {
   title: "Tonder Bot",
@@ -11,16 +10,18 @@ export const metadata: Metadata = {
     "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
   openGraph: {
     title: "Tonder Bot",
-    url: "1epq8gOSlrasoT2fkLcxQvTTZby4LcSf7",
+    url: "https://tonderlabs.com",
     description:
       "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
-    images: `1epq8gOSlrasoT2fkLcxQvTTZby4LcSf7`,
+    images:
+      "https://drive.google.com/uc?export=view&id=12mplcD7OyGX5-3KxDeNW62bHexU-6DQu",
   },
   twitter: {
     card: "summary_large_image",
     site: "@",
     creator: "@",
-    images: "1epq8gOSlrasoT2fkLcxQvTTZby4LcSf7",
+    images:
+      "https://drive.google.com/uc?export=view&id=12mplcD7OyGX5-3KxDeNW62bHexU-6DQu",
     description:
       "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
   },
