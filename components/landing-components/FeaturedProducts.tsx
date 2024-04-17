@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { GradientText } from "@components/special_text/GradientText";
 import Transition from "@components/transitions";
@@ -5,17 +6,13 @@ import React, { FC, useState } from "react";
 import leftArrow from "@assets/landing-page/leftArrowInactive.png";
 import rightArrow from "@assets/landing-page/rightArrowActive.png";
 
-
 interface IProps {}
 
 const slideNumber = 2;
 
-
-
 const FeaturedProducts: FC<IProps> = () => {
   const [transform, setTransform] = useState(0);
 
-  
   return (
     <>
       <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-8 lg:pt-20">
@@ -64,13 +61,20 @@ const FeaturedProducts: FC<IProps> = () => {
         />
       </div>
 
-      <div className="overflow-hidden lg:max-w-[81.1rem]  block w-full text-nowrap mt-[2.4rem] px-4 sm:px-6 lg:px-8">
+      <div className="overflow-hidden lg:max-w-[81.1rem]  block w-full text-nowrap mt-[2.4rem] px-4 sm:px-6 lg:px-8 mx-auto">
         {Array(slideNumber)
           .fill(0)
           .map((_, index) => (
             <div
+              key={index}
               className={`lg:w-[55.8125rem] md:w-[36rem] sm:w-[25rem] w-[17.625rem] lg:h-[37.8125rem] md:h-[22rem] sm:h-[17rem] h-[13.5625rem]  bg-gradient-to-r from-sky-400 via-indigo-500 to-violet-500 rounded-[52px] 
-           transition-transform translate-x-[] ease-in-out duration-5000 inline-block mr-8`}
+           transition-transform lg:translate-x-[${
+             -55.8125 * transform
+           }rem] md:translate-x-[-${36 * transform}rem] sm:translate-x-[${
+                -25 * transform
+              }rem] translate-x-[${
+                -17.625 * transform
+              }rem]  ease-in-out duration-5000 inline-block mr-8`}
             ></div>
           ))}
       </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Transition from "@components/transitions";
 import React, { FC } from "react";
 import worlddextop from "@assets/landing-page/WeBuildSolutionsForWeb3/WorldDextop.png";

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { GradientText } from "@components/special_text/GradientText";
 import Transition from "@components/transitions";
@@ -162,6 +163,7 @@ const OurTeam: FC<IProps> = () => {
                 ?.slice(3, developers.length)
                 .map((developer, index) => (
                   <div
+                    
                     className={`flex flex-col gap-[1.71rem] items-center justify-center cursor-pointer  ${
                       developers.length - 4 === index &&
                       "max-sm:hidden min-w-[9.8rem]"
