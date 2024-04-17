@@ -51,7 +51,7 @@ export const HeroSection = () => {
           </p>
 
           <section className="flex justify-center items-center gap-3">
-            <Link href={"https://t.me/GlobalChainBot"}>
+            <Link href={"/"}>
               <GradientButton className="text-sm" text="Open In Telegram" />
             </Link>
             <GradientButton

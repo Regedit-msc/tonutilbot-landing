@@ -34,7 +34,7 @@ export const OpenTonbotOnTg = () => {
           }
           className="lg:text-[3.25rem] z-10 leading-[0.95] text-[1.95rem] sm:text-[2.25rem] md:text-[2.75rem] text-white font-bold tracking-tight"
         />
-        <Link href={"https://t.me/GlobalChainBot"}>
+        <Link href={"/"}>
           <button
             className={`bg-white shadow-lg rounded-full py-3 px-5 flex justify-center items-center gap-2 w-fit transition-all z-10 `}
           >
