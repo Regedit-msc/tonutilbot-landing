@@ -7,6 +7,7 @@ import docs from "@/assets/docs.svg";
 import mesh from "@assets/mesh.png";
 import Transition from "@components/transitions";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export const HeroSection = () => {
   const [inView, setInView] = useState(false);
@@ -50,7 +51,9 @@ export const HeroSection = () => {
           </p>
 
           <section className="flex justify-center items-center gap-3">
-            <GradientButton className="text-sm" text="Open In Telegram" />
+            <Link href={"https://t.me/GlobalChainBot"}>
+              <GradientButton className="text-sm" text="Open In Telegram" />
+            </Link>
             <GradientButton
               text="Read our Documentation"
               className="hidden sm:flex text-sm"

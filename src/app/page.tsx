@@ -1,27 +1,40 @@
-/* eslint-disable @next/next/no-img-element */
-import { HeroSection } from "@components/home_components/HeroSection";
-import { BuySwapOrSell } from "@components/home_components/BuySwapOrSell";
-import { ThirdPartyWeb2Payments } from "@components/home_components/ThirdPartyWeb2Payments";
-import { DeveloperApiIntegration } from "@components/home_components/DeveloperApiIntegration";
-import { ProjectRoadmap } from "@components/home_components/ProjectRoadmap";
-import { OpenTonbotOnTg } from "@components/home_components/OpenTonbotOnTg";
-import { CTA } from "@components/cta/CTA";
+import Hero from "@/components/landing-components/Hero";
+import OurProcess from "@/components/landing-components/OurProcess";
+import FeaturedProducts from "@components/landing-components/FeaturedProducts";
+import OurTeam from "@components/landing-components/OurTeam";
+import WeBuildSolutionsForWeb3 from "@components/landing-components/WeBuildSolutionsForWeb3";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TonderLabs",
+  description: "Building Web3 solutions for the TON Network",
+  openGraph: {
+    title: "TonderLabs",
+    url: "https://tonderlabs.com",
+    description:
+      "We're a company dedicated to developing the best utility softwares on the TON Network",
+    images:
+      "https://drive.google.com/uc?export=view&id=1k_kcrD4DGA5NcVJ0Y5kI912qyQEJ-CHK",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@",
+    creator: "@",
+    images:
+      "https://drive.google.com/uc?export=view&id=1k_kcrD4DGA5NcVJ0Y5kI912qyQEJ-CHK",
+    description: "Building Web3 solutions for the TON Network",
+  },
+};
 
 export default function Home() {
   return (
     <>
-      <div className="flex justify-center">
-        <div className="mx-5 w-full lg:max-w-[70rem]">
-          <HeroSection />
-          <BuySwapOrSell />
-          <ThirdPartyWeb2Payments />
-          <DeveloperApiIntegration />
-          <ProjectRoadmap />
-          <div className="flex justify-center items-center">
-            <OpenTonbotOnTg />
-          </div>
-          <CTA />
-        </div>
+      <div className="bg-ashy min-h-screen">
+        <Hero />
+        <OurProcess />
+        <FeaturedProducts />
+        <OurTeam />
+        <WeBuildSolutionsForWeb3 />
       </div>
     </>
   );
