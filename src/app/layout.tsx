@@ -1,33 +1,32 @@
+/* eslint-disable @next/next/no-img-element */
 import { Navbar } from "@components/navbar/Navbar";
 import "./globals.css";
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import prismLight from "@/assets/herolight.svg";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tonder Bot",
-  description:
-    "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
+  title: "TonderLabs",
+  description: "Building Web3 solutions for the TON Network",
   openGraph: {
-    title: "Tonder Bot",
+    title: "TonderLabs",
     url: "https://tonderlabs.com",
     description:
-      "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
+      "We're a company dedicated to developing the best utility software on the TON Network",
     images:
-      "https://drive.google.com/uc?export=view&id=12mplcD7OyGX5-3KxDeNW62bHexU-6DQu",
+      "https://drive.google.com/uc?export=view&id=1k_kcrD4DGA5NcVJ0Y5kI912qyQEJ-CHK",
   },
   twitter: {
     card: "summary_large_image",
     site: "@",
     creator: "@",
     images:
-      "https://drive.google.com/uc?export=view&id=12mplcD7OyGX5-3KxDeNW62bHexU-6DQu",
-    description:
-      "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
+      "https://drive.google.com/uc?export=view&id=1k_kcrD4DGA5NcVJ0Y5kI912qyQEJ-CHK",
+    description: "Building Web3 solutions for the TON Network",
   },
 };
 
-const myFont = localFont({
+const poppinsFont = localFont({
   src: [
     {
       path: "../../fonts/Poppins/Poppins-ExtraLight.ttf",
@@ -68,12 +67,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={myFont.className}>
+    <html lang="en" className={poppinsFont.className}>
       <body className="bg-ashy overflow-x-hidden box-border">
         <Navbar />
         <img
           src={prismLight.src}
-          alt=""
+          alt="prism light image"
           className="absolute sm:h-fit w-full h-[40rem] top-0"
         />
         {/* <img

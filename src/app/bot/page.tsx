@@ -1,15 +1,35 @@
-
-
-
-
 /* eslint-disable @next/next/no-img-element */
-import { HeroSection } from "@components/home_components/HeroSection";
-import { BuySwapOrSell } from "@components/home_components/BuySwapOrSell";
-import { ThirdPartyWeb2Payments } from "@components/home_components/ThirdPartyWeb2Payments";
-import { DeveloperApiIntegration } from "@components/home_components/DeveloperApiIntegration";
-import { ProjectRoadmap } from "@components/home_components/ProjectRoadmap";
-import { OpenTonbotOnTg } from "@components/home_components/OpenTonbotOnTg";
+import { HeroSection } from "@components/bot_components/HeroSection";
+import { BuySwapOrSell } from "@components/bot_components/BuySwapOrSell";
+import { ThirdPartyWeb2Payments } from "@components/bot_components/ThirdPartyWeb2Payments";
+import { DeveloperApiIntegration } from "@components/bot_components/DeveloperApiIntegration";
+import { ProjectRoadmap } from "@components/bot_components/ProjectRoadmap";
+import { OpenTonbotOnTg } from "@components/bot_components/OpenTonbotOnTg";
 import { CTA } from "@components/cta/CTA";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tonder Bot",
+  description:
+    "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
+  openGraph: {
+    title: "Tonder Bot",
+    url: "https://tonderlabs.com/bot",
+    description:
+      "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
+    images:
+      "https://drive.google.com/uc?export=view&id=12mplcD7OyGX5-3KxDeNW62bHexU-6DQu",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@",
+    creator: "@",
+    images:
+      "https://drive.google.com/uc?export=view&id=12mplcD7OyGX5-3KxDeNW62bHexU-6DQu",
+    description:
+      "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
+  },
+};
 
 export default function Home() {
   return (

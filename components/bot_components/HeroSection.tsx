@@ -37,7 +37,7 @@ export const HeroSection = () => {
               <>
                 The best utility <br className="flex sm:hidden" /> bot
                 <br className="sm:flex hidden" /> on the TON{" "}
-                <br className="sm:hidden" /> network.
+                <br className="sm:hidden" /> Network.
               </>
             }
             className="insetShadow lg:text-8xl text-[3rem] sm:text-[4rem] font-semibold sm:px-3 tracking-tighter leading-[0.9]"
