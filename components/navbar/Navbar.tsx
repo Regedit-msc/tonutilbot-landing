@@ -6,6 +6,7 @@ import menu from "@assets/menu.png";
 import tonderLabs from "@assets/TonderLabs.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { useEffect } from "react";
+import Link from "next/link";
 
 export const Navbar = () => {
   useEffect(() => {
@@ -37,10 +38,13 @@ export const Navbar = () => {
       <nav
         className={`top-0 flex justify-between items-center fixed md:static w-full py-3 md:py-7 sm:px-10 lg:px-20 lg:max-w-[70rem] z-[999] backdrop-blur-xl sm:backdrop:blur-none transition-all duration-300 ease-in-out`}
       >
-        <div className="flex items-center pl-6 sm:pl-0 sm:py-8 py-4">
-          <img src={logo.src} alt="Logo" className="mr-2 h-10" />
-          <img src={tonderLabs.src} alt="" className="h-5" />
-        </div>
+        <Link href={"/"}>
+          <div className="flex items-center pl-6 sm:pl-0 sm:py-8 py-4">
+            <img src={logo.src} alt="Logo" className="mr-2 h-10" />
+            <img src={tonderLabs.src} alt="" className="h-5" />
+          </div>
+        </Link>
+        
 
         <img src={menu.src} className="w-8 sm:hidden mr-6" alt="" />
 

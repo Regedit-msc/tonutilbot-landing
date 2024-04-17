@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import Indicator from "@components/Indicator";
 import RoadmapCard from "@components/RoadmapCard";
 import { DarkButton } from "@components/buttons/DarkButton";
 import { GradientText } from "@components/special_text/GradientText";

@@ -4,6 +4,7 @@ import TelegramPlanePurple from "@assets/TelegramPlanePurple.svg";
 
 import { GradientText } from "@components/special_text/GradientText";
 import Xmen from "@assets/xmen.png";
+import Link from "next/link";
 
 export const OpenTonbotOnTg = () => {
   return (
@@ -33,15 +34,17 @@ export const OpenTonbotOnTg = () => {
           }
           className="lg:text-[3.25rem] z-10 leading-[0.95] text-[1.95rem] sm:text-[2.25rem] md:text-[2.75rem] text-white font-bold tracking-tight"
         />
+        <Link href={"/"}>
+          <button
+            className={`bg-white shadow-lg rounded-full py-3 px-5 flex justify-center items-center gap-2 w-fit transition-all z-10 `}
+          >
+            <img src={TelegramPlanePurple.src} alt="tg" />
 
-        <button
-          className={`bg-white shadow-lg rounded-full py-3 px-5 flex justify-center items-center gap-2 w-fit transition-all z-10 `}
-        >
-          <img src={TelegramPlanePurple.src} alt="tg" />
-          <div className="font-semibold text-[0.85rem] sm:text-sm bg-gradient-to-tr from-blue-400 to-indigo-600 bg-clip-text text-transparent">
-            Open In Telegram
-          </div>
-        </button>
+            <div className="font-semibold text-[0.85rem] sm:text-sm bg-gradient-to-tr from-blue-400 to-indigo-600 bg-clip-text text-transparent">
+              Open In Telegram
+            </div>
+          </button>
+        </Link>
       </div>
     </div>
   );

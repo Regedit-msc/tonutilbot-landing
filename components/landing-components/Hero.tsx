@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { GradientButton } from "@components/buttons/GradientButton";
 import React, { FC } from "react";
 import zigzag from "@assets/landing-page/Zigzag.png";
@@ -22,7 +23,7 @@ const Hero: FC<IProps> = () => {
         <p className="text-center py-6 sm:py-8 text-sm lg:text-xl z-10">
           We&apos;re a Web3 company dedicated to{" "}
           <br className="flex sm:hidden" /> developing the{" "}
-          <br className="hidden sm:flex" /> best utility softwares on{" "}
+          <br className="hidden sm:flex" /> best utility software on{" "}
           <br className="flex sm:hidden" /> the TON network
         </p>
         <GradientButton
