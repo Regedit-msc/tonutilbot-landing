@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { FC } from "react";
 import ProcessCard from "./ProcessCard";
 import define from "@assets/landing-page/define.svg";

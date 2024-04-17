@@ -3,12 +3,12 @@
 import { FaDiscord, FaTelegramPlane } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-export const CTA = () => {
+export const CTA = ({
+  text = ` TonBot technologies. ${new Date().getFullYear()} . All rights reserved`,
+}) => {
   return (
     <div className="text-[#ffffff51] border-t border-t-[#ffffff51] flex gap-5 items-center justify-center py-4 mx-8">
-      <p className="text-xs sm:text-sm">
-        TonBot technologies. 2024 . All rights reserved
-      </p>
+      <p className="text-xs sm:text-sm">{text}</p>
       <FaTelegramPlane className="text-base" />
       <FaXTwitter />
       <FaDiscord />
