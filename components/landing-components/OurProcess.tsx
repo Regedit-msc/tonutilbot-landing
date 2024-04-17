@@ -5,7 +5,7 @@ import AllProcessCards from "./AllProcessCards";
 const OurProcess: FC = () => (
   <div className="w-full">
     <div className="flex md:flex-row flex-col justify-center items-center w-full text-white my-16 md:my-12 lg:max-w-[100rem]">
-      <section className="relative w-full flex md:w-2/5 flex-col text-[2.6rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[0.9] font-semibold pl-12 lg:pl-20 ">
+      <section className="relative w-full flex md:w-2/5 flex-col text-[2.6rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[0.9] font-bold pl-12 lg:pl-20 ">
         <img
           src={dots.src}
           alt=""
