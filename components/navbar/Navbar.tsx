@@ -48,7 +48,7 @@ export const Navbar = () => {
 
         <img src={menu.src} className="w-8 sm:hidden mr-6" alt="" />
 
-        <section className="sm:flex text-white gap-8 justify-center items-center hidden text-xs sm:text-sm lg:text-base">
+        <section className="sm:flex text-white gap-8 justify-center items-center hidden text-xs sm:text-sm lg:text-base overflow-hidden">
           <p className="flex text-white justify-center items-center gap-2">
             Products <IoIosArrowDown />
           </p>

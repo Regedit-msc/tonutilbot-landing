@@ -13,8 +13,7 @@ import MuizSanni from "@assets/landing-page/developers/Muiz Sanni.png";
 import Somto from "@assets/landing-page/developers/Somto.png";
 import { StaticImageData } from "next/image";
 
-import vector1 from "@assets/landing-page/OurTeam/vector1.svg";
-import vector2 from "@assets/landing-page/OurTeam/Vector2.svg";
+import vector from "@assets/landing-page/OurTeam/Curved Lines.svg";
 import ShareIcon from "@assets/landing-page/OurTeam/ShareIcon.svg";
 
 interface Developer {
@@ -69,20 +68,13 @@ const OurTeam: FC<IProps> = () => {
   const [activeDev2, setActiveDev2] = useState([false, -1]);
   return (
     <Transition>
-      <div className=" text-white px-3 sm:px-0 pt-20 sm:pt-8 lg:pt-20 relative">
+      <div className=" text-white px-3 sm:px-0 pt-[8rem] md:pt-[14rem] relative overflow-hidden w-full">
         <img
-          src={vector1.src}
+          src={vector.src}
           alt=""
-          className="absolute md:top-0 md:right-[-62.5%] sm:right-[-68%] right-[-197.5%] top-0  max-w-[69.44331rem] "
+          className="absolute lg:top-0 md:top-[14%] md:right-[0%]  right-[-100%] top-0 w-full min-w-[1000px]"
         />
-        <img
-          src={vector2.src}
-          alt=""
-          className="absolute  md:bottom-[-24%] sm:bottom-[7%] bottom-[16%]  md:left-[-50.5%] sm:left-[-40.5%] left-[-100%]  max-w-[69.44331rem]   "
-          style={{
-            maxWidth: "",
-          }}
-        />
+
         <div className="flex flex-col justify-center items-center text-center gap-6 relative w-full">
           {/* <img src={mesh.src} alt="Mesh Image" className="absolute w-1/2" /> */}
 
@@ -163,7 +155,6 @@ const OurTeam: FC<IProps> = () => {
                 ?.slice(3, developers.length)
                 .map((developer, index) => (
                   <div
-                    
                     className={`flex flex-col gap-[1.71rem] items-center justify-center cursor-pointer  ${
                       developers.length - 4 === index &&
                       "max-sm:hidden min-w-[9.8rem]"
