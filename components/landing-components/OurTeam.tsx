@@ -155,9 +155,9 @@ const OurTeam: FC<IProps> = () => {
                 ?.slice(3, developers.length)
                 .map((developer, index) => (
                   <div
-                    className={`flex flex-col gap-[1.71rem] items-center justify-center cursor-pointer  ${
+                    className={`flex flex-col gap-[1.71rem] items-center justify-center cursor-pointer min-w-[9.8rem]  ${
                       developers.length - 4 === index &&
-                      "max-sm:hidden min-w-[9.8rem]"
+                      "max-sm:hidden "
                     }`}
                     key={index}
                   >
