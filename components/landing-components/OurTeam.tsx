@@ -3,14 +3,13 @@
 import { GradientText } from "@components/special_text/GradientText";
 import Transition from "@components/transitions";
 import React, { FC, useState } from "react";
-
-import Ayomide from "@assets/landing-page/developers/Ayomide.png";
-import Bayo from "@assets/landing-page/developers/Bayo.png";
-import Divine from "@assets/landing-page/developers/Divine.png";
-import Kinyichukwu from "@assets/landing-page/developers/Kinyichukwu.png";
-import Mayowa from "@assets/landing-page/developers/Mayowa.png";
-import MuizSanni from "@assets/landing-page/developers/Muiz Sanni.png";
-import Somto from "@assets/landing-page/developers/Somto.png";
+import Ayomide from "@assets/landing-page/developers/Ayomide.svg";
+import Bayo from "@assets/landing-page/developers/Bayo.svg";
+import Divine from "@assets/landing-page/developers/Divine.svg";
+import Kinyichukwu from "@assets/landing-page/developers/Kinyichukwu.svg";
+import Mayowa from "@assets/landing-page/developers/Mayowa.svg";
+import MuizSanni from "@assets/landing-page/developers/Muiz Sanni.svg";
+import Somto from "@assets/landing-page/developers/Somto.svg";
 import { StaticImageData } from "next/image";
 
 import vector from "@assets/landing-page/OurTeam/Curved Lines.svg";
@@ -78,22 +77,18 @@ const OurTeam: FC<IProps> = () => {
         <div className="flex flex-col justify-center items-center text-center gap-6 relative w-full">
           {/* <img src={mesh.src} alt="Mesh Image" className="absolute w-1/2" /> */}
 
-          <div
-            className={`${
-              "inView" ? "opacity-100" : "opacity-0"
-            } transition-all duration-1000 ease-in-out`}
+          <button
+            className={` bg-[#ffffff0d] text-[.79rem] shadow-lg rounded-full px-[1.19rem] py-[.44rem]
+              text-white gap-3  inter font-light
+              sm:text-[1.5rem]`}
           >
-            <button
-              className={`border border-[#333] bg-gradient-to-b from-[#282828] to-[#444] sm:translate-y-3 text-sm shadow-lg rounded-full py-[0.375rem] px-3 flex justify-center 
-           items-center text-white gap-3 w-fit transition-all z-10 tracking-[0.3em] sm:tracking-[0.3em]  font-extralight`}
-            >
-              MEET THE MINDS
-            </button>
-          </div>
+            MEET THE MINDS
+          </button>
 
           <GradientText
             text={<>Our Team</>}
-            className="insetShadow lg:text-8xl text-[2.6rem] sm:text-5xl md:text-6xl font-semibold sm:px-3 tracking-tighter leading-[0.9]"
+            className="insetShadow lg:text-8xl text-[2.6rem] sm:text-5xl 
+            md:text-6xl font-semibold sm:px-3 tracking-tighter leading-[0.9]"
           />
 
           <div className="flex flex-col md:gap-[2.69rem] gap-[1.06rem] max-sm:flex-row-reverse md:mt-[6rem]">
@@ -138,10 +133,11 @@ const OurTeam: FC<IProps> = () => {
                     <div className="">
                       <GradientText
                         text={<>{developer.name}</>}
-                        className=" text-center font-poppins sm:text-[1.87rem] text-[1.23669rem] font-semibold tracking-tighter leading-[0.9] font-Poppins"
+                        className=" text-center sm:text-[1.87rem] text-[1.23669rem] font-semibold 
+                        leading-[1.32331rem] tracking-[-0.07481rem] "
                       />
 
-                      <p className="sm:text-[1.32331rem] text-[0.75rem] font-light font-inter">
+                      <p className="sm:text-[1.32331rem] text-[0.75rem] font-normal inter">
                         {developer.role}
                       </p>
                     </div>
@@ -156,8 +152,7 @@ const OurTeam: FC<IProps> = () => {
                 .map((developer, index) => (
                   <div
                     className={`flex flex-col gap-[1.71rem] items-center justify-center cursor-pointer min-w-[9.8rem]  ${
-                      developers.length - 4 === index &&
-                      "max-sm:hidden "
+                      developers.length - 4 === index && "max-sm:hidden "
                     }`}
                     key={index}
                   >

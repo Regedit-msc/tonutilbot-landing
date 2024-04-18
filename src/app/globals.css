@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 3px;
@@ -24,7 +30,6 @@
   -moz-background-clip: text;
   background-clip: text;
 }
-
 
 @keyframes slide {
   to {

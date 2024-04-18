@@ -31,10 +31,9 @@ const WeBuildSolutionsForWeb3: FC<IProps> = () => {
           <div className="flex flex-col w-full">
             {" "}
             <button
-              className="bg-gradient-to-b from-transparent
-            to-white/20 shadow-none tracking-[0.4em] rounded-full py-[0.2rem] px-[0.9rem] 
-              items-center text-white gap-2 w-fit transition-all  mb-[1.44rem]
-              md:text-[1.25rem] text-[0.65956rem]"
+              className={` bg-[#ffffff0d] text-[.79rem] shadow-lg rounded-full px-[1.19rem] py-[.44rem]
+              text-white inter font-normal tracking-[0.2125rem] leading-[165%]
+              sm:text-[1.5rem] mb-[1.44rem] w-fit `}
             >
               OUR MISSION
             </button>
@@ -44,12 +43,13 @@ const WeBuildSolutionsForWeb3: FC<IProps> = () => {
                   We build <br /> solutions for <br /> Web3 on TON
                 </>
               }
-              className="lg:text-[4.5rem] z-10 leading-[0.95] text-[1.95rem] sm:text-[2.25rem] md:text-[2.75rem] text-white font-bold tracking-tight"
+              className="lg:text-[4.5rem] z-10  text-[1.95rem] sm:text-[2.25rem] 
+              md:text-[2.75rem] text-white font-bold tracking-[-0.18rem] leading-[2.25rem] sm:leading-[4rem]"
             />
           </div>
 
           <div className="flex flex-col w-full">
-            <p className="mb-[2.38rem] text-[0.75rem] md:text-[1.25rem] font-normal">
+            <p className="mb-[2.38rem] text-[0.75rem] md:text-[1.25rem] font-normal inter leading-[165%]">
               TonderLabs is a company dedicated to solving real world problems
               by building utility softwares and applications that help bridge
               the gap between Web2 and Web3, all of which are built on TON
@@ -58,7 +58,7 @@ const WeBuildSolutionsForWeb3: FC<IProps> = () => {
 
             <button
               className={`bg-white shadow-lg rounded-full md:py-3 md:px-5 py-[0.4rem] pl-[0.79rem] pr-[.53rem] flex justify-center 
-              items-center gap-2 w-fit transition-all z-10 `}
+              items-center gap-2 w-fit transition-all z-10 cursor-pointer`}
             >
               <div
                 className="font-semibold bg-gradient-to-tr from-blue-400 to-indigo-600 bg-clip-text 

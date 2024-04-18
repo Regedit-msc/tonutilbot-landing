@@ -3,12 +3,10 @@
 import { GradientText } from "@components/special_text/GradientText";
 import Transition from "@components/transitions";
 import React, { FC, useState } from "react";
-import leftArrow from "@assets/landing-page/leftArrowInactive.png";
-import rightArrow from "@assets/landing-page/rightArrowActive.png";
 import useWindowWidth from "@hooks/useWindowWidth";
-
-import TonBot from "@assets/landing-page/OurTeam/ProductImages/Product1.png";
-import TonBot2 from "@assets/landing-page/OurTeam/ProductImages/Product2.png";
+import TonBot from "@assets/landing-page/OurTeam/ProductImages/Product1.svg";
+import TonBot2 from "@assets/landing-page/OurTeam/ProductImages/Product2.svg";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 interface IProps {}
 
@@ -31,28 +29,26 @@ const FeaturedProducts: FC<IProps> = () => {
   return (
     <>
       <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-8 lg:pt-20">
-        <div className="flex flex-col justify-center items-center text-center gap-6 relative">
-          {/* <img src={mesh.src} alt="Mesh Image" className="absolute w-1/2" /> */}
-
-          <div
-            className={`${
-              "inView" ? "opacity-100" : "opacity-0"
-            } transition-all duration-1000 ease-in-out`}
+        <div className="flex flex-col justify-center items-center text-center relative">
+          <button
+            className={` bg-[#ffffff0d] text-[.79rem] shadow-lg rounded-full px-[1.19rem] py-[.44rem]
+              text-white gap-3  inter font-light
+              sm:text-[1.5rem]`}
           >
-            <button
-              className={`border border-[#333] bg-gradient-to-b from-[#282828] to-[#444] sm:translate-y-3 text-sm shadow-lg rounded-full py-[0.375rem] px-3 flex justify-center 
-              items-center text-white gap-3 w-fit transition-all z-10 tracking-[0.3em] sm:tracking-[0.3em]  font-extralight`}
-            >
-              OUR WORK
-            </button>
-          </div>
+            OUR WORK
+          </button>
 
           <GradientText
-            text={<>Featured Projects</>}
-            className="insetShadow lg:text-8xl text-[2.6rem] sm:text-5xl md:text-6xl font-semibold sm:px-3 tracking-tighter leading-[0.9]"
+            text={
+              <>
+                Featured <br className="sm:hidden" /> Projects
+              </>
+            }
+            className="insetShadow lg:text-8xl text-[2.6rem] sm:text-5xl md:text-6xl font-semibold sm:px-3 sm:py-0 
+            sm:tracking-[-0.23rem] tracking-[-0.105rem] md:py-[1.38rem] py-[.56rem] z-10 sm:leading-[5.125rem] leading-[2.75rem]"
           />
 
-          <p className="text-white font-normal text-[0.8rem] sm:text-sm lg:text-lg leading-[1.7]">
+          <p className="text-white text-[0.75rem]  lg:text-[1.5rem] leading-[1.25rem] lg:leading-[2.0625rem] font-medium inter">
             We’ve embarked on a few projects to build products{" "}
             <br className="" /> that help us fulfil our mission at TONDr labs
           </p>
@@ -60,23 +56,31 @@ const FeaturedProducts: FC<IProps> = () => {
       </div>
 
       <div className="flex justify-end  gap-3 max-w-[75.1rem] xl:mx-auto   mx-6 mt-4 max-sm:hidden">
-        <img
-          src={leftArrow.src}
-          alt="Left Arrow"
-          className="cursor-pointer w-[54px] h-[54px]"
+        <div
+          className={`cursor-pointer w-[54px] h-[54px] rounded-full border  flex justify-center 
+        items-center  ${
+          transform === 0 ? "bg-[#ffffff0d] border-transparent" : "border-white"
+        }`}
           onClick={() => setTransform((prev) => (prev > 0 ? prev - 1 : 0))}
-        />
-        <img
-          src={rightArrow.src}
-          alt="Right Arrow"
-          className="cursor-pointer w-[54px] h-[54px]"
+        >
+          <IoIosArrowRoundBack className="text-white text-4xl" />
+        </div>
+
+        <div
+          className={`cursor-pointer w-[54px] h-[54px] rounded-full border flex justify-center items-center ${
+            transform === slideNumber - 1
+              ? "bg-[#ffffff0d] border-transparent"
+              : "border-white"
+          }`}
           onClick={() =>
             setTransform((prev) => (prev < slideNumber - 1 ? prev + 1 : prev))
           }
-        />
+        >
+          <IoIosArrowRoundForward className="text-white text-4xl" />
+        </div>
       </div>
 
-      <div className="overflow-hidden lg:max-w-[81.1rem]  block w-full text-nowrap mt-[2.4rem] px-4 sm:px-6 lg:px-8 mx-auto">
+      <div className="overflow-hidden lg:max-w-[81.1rem]  block w-full text-nowrap mt-[3.25rem] sm:mt-[2.4rem] px-4 sm:px-6 lg:px-8 mx-auto">
         {slideImages.map((_, index) => (
           <div
             key={index}
@@ -103,21 +107,29 @@ const FeaturedProducts: FC<IProps> = () => {
         ))}
       </div>
 
-      <div className="flex justify-center  gap-3 max-w-[75.1rem] xl:mx-auto mx-6 mt-4 sm:hidden">
-        <img
-          src={leftArrow.src}
-          alt="Left Arrow"
-          className="cursor-pointer w-[54px] h-[54px]"
+      <div className="flex justify-center  gap-3 max-w-[75.1rem] xl:mx-auto mx-6 mt-[3.25rem] sm:hidden">
+        <div
+          className={`cursor-pointer w-[54px] h-[54px] rounded-full border  flex justify-center 
+        items-center  ${
+          transform === 0 ? "bg-[#ffffff0d] border-transparent" : "border-white"
+        }`}
           onClick={() => setTransform((prev) => (prev > 0 ? prev - 1 : 0))}
-        />
-        <img
-          src={rightArrow.src}
-          alt="Right Arrow"
-          className="cursor-pointer w-[54px] h-[54px]"
+        >
+          <IoIosArrowRoundBack className="text-white text-4xl" />
+        </div>
+
+        <div
+          className={`cursor-pointer w-[54px] h-[54px] rounded-full border flex justify-center items-center ${
+            transform === slideNumber - 1
+              ? "bg-[#ffffff0d] border-transparent"
+              : "border-white"
+          }`}
           onClick={() =>
             setTransform((prev) => (prev < slideNumber - 1 ? prev + 1 : prev))
           }
-        />
+        >
+          <IoIosArrowRoundForward className="text-white text-4xl" />
+        </div>
       </div>
     </>
   );

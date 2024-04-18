@@ -37,7 +37,8 @@ export function GradientButton({
       ${!myPadding && "py-4 px-6"}
       `}
     >
-      {hover && (
+      {/* *
+       *    {hover && (
         <img
           src={HoverGradient.src}
           className={`scale-150 sm:scale-[2] absolute left-auto opacity-0 transition-all duration-1000 ease-in-out w-[16rem] translate-y-8 ${
@@ -52,6 +53,7 @@ export function GradientButton({
           }}
         />
       )}
+       */}
       {myIcon && <img src={myIcon.src} alt={myIcon} className="w-[25px]" />}
       {isIcon && <img src={openInTelegramPlane.src} alt="tg" />} {text}
     </button>
