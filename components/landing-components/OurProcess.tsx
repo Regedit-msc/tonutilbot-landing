@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { FC } from "react";
 import dots from "@assets/landing-page/our-process-dots.svg";
 import AllProcessCards from "./AllProcessCards";

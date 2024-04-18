@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     description:
       "We're a company dedicated to developing the best utility software on the TON Network",
     images:
-      "https://drive.google.com/uc?export=view&id=1k_kcrD4DGA5NcVJ0Y5kI912qyQEJ-CHK",
+      "https://tonderlabs.com/tonderlabs.png",
   },
   twitter: {
     card: "summary_large_image",
     site: "@",
     creator: "@",
     images:
-      "https://drive.google.com/uc?export=view&id=1k_kcrD4DGA5NcVJ0Y5kI912qyQEJ-CHK",
+      "https://tonderlabs.com/tonderlabs.png",
     description: "Building Web3 solutions for the TON Network",
   },
 };

@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     description:
       "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
     images:
-      "https://drive.google.com/uc?export=view&id=12mplcD7OyGX5-3KxDeNW62bHexU-6DQu",
+      "https://tonderlabs.com/bot.png",
   },
   twitter: {
     card: "summary_large_image",
     site: "@",
     creator: "@",
     images:
-      "https://drive.google.com/uc?export=view&id=12mplcD7OyGX5-3KxDeNW62bHexU-6DQu",
+      "https://tonderlabs.com/bot.png",
     description:
       "Best Utility Bot on the TON Network. Buy, Swap or Sell TON using our wallet along with web2 payments and developer API integration.",
   },

@@ -5,13 +5,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://tonderlabs.com',
       lastModified: new Date(),
-      changeFrequency: 'daily',
+      changeFrequency: 'hourly',
       priority: 1,
     },
     {
       url: 'https://tonderlabs.com/bot',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'hourly',
       priority: 0.8,
     },
   ]
