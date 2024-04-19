@@ -7,10 +7,9 @@ interface DevProps {
   name: string;
   title: string;
   img: StaticImageData;
-  active?: boolean;
 }
 
-const DevBubble: FC<DevProps> = ({ name, title, img, active }: DevProps) => {
+const DevBubble: FC<DevProps> = ({ name, title, img }: DevProps) => {
   const [activeDev, setActiveDev] = useState(0);
   return (
     <div className="relative flex flex-col gap-1 lg:gap-2 justify-center items-center rounded-full">
