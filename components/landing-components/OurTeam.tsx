@@ -15,7 +15,7 @@ import { StaticImageData } from "next/image";
 
 import vector1 from "@assets/landing-page/OurTeam/vector1.svg";
 import vector2 from "@assets/landing-page/OurTeam/Vector2.svg";
-import { DarkButton } from "@components/buttons/DarkButton";
+import LandingDarkButton from "@components/buttons/LandingDarkButton";
 import DevBubble from "./DevBubble";
 
 interface Developer {
@@ -83,11 +83,7 @@ const OurTeam: FC<IProps> = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center text-center gap-6 relative w-full">
-          <DarkButton
-            text="MEET THE MINDS"
-            isIcon={false}
-            className="sm:translate-y-3 text-sm"
-          />
+          <LandingDarkButton text="MEET THE MINDS" isIcon={false} />
 
           <GradientText text={<>Our Team</>} />
 

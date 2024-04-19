@@ -13,9 +13,10 @@ const OurProcess: FC = () => (
           alt=""
           className="absolute -top-6 left-4 lg:left-10 h-20"
         />{" "}
-        Our
-        <br />
-        Process
+        <GradientText
+          text={<>Our Process</>}
+          className="sm:w-full w-2/3 insetShadow lg:text-8xl text-[2.6rem] sm:text-5xl md:text-6xl font-bold sm:px-3 tracking-tighter pb-[6px]"
+        />
         <span className="text-xs md:text-sm lg:text-[1.1rem] font-light py-3 w-full leading-[1.5] lg:leading-[1.55]">
           Here&apos;s a little breakdown of how we{" "}
           <br className="hidden md:flex" /> build{" "}
