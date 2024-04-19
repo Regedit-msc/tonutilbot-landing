@@ -8,7 +8,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import ProductsDropdown from "@components/ProductsDropdown";
-import { useOnClickOutside } from "@hooks/useClickOutside";
+import { useOnClickOutside } from "@hooks/useOnClickOutside";
 
 export const Navbar = () => {
   const [productsOpen, setProductsOpen] = useState(false);

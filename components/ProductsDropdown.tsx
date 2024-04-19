@@ -4,7 +4,7 @@ import tonderBot from "@assets/Navbar/ProductsTonderBot.svg";
 import tonderApp from "@assets/Navbar/ProductsTonderApp.svg";
 import { IoIosArrowForward } from "react-icons/io";
 import Link from "next/link";
-import { useOnClickOutside } from "@hooks/useClickOutside";
+import { useOnClickOutside } from "@hooks/useOnClickOutside";
 import Transition from "./transitions";
 
 interface ProductsProps {
@@ -16,14 +16,21 @@ const ProductsDropdown: FC<ProductsProps> = ({
   open,
   setOpen,
 }: ProductsProps) => {
+  const [hover, setHover] = useState(false);
   const dropDownRef = useRef(null);
-  useOnClickOutside(dropDownRef, () => setOpen(false));
+  useOnClickOutside(dropDownRef, () => setOpen(false), hover);
 
   return (
     <>
       {open && (
         <Transition duration={0.3}>
           <div
+            onMouseOver={() => {
+              setHover(true);
+            }}
+            onMouseLeave={() => {
+              setHover(false);
+            }}
             ref={dropDownRef}
             className={`bg-ashyNav absolute translate-y-24 -right-5 w-[340px] md:w-[368px] rounded-2xl shadow-xl shadow-black/50 z-10 border border-ashyBorder flex flex-col gap-6 md:gap-8 py-4 px-3 justify-between items-start
    `}
