@@ -96,6 +96,7 @@ const OurTeam: FC<IProps> = () => {
                   name={developers[i].name}
                   title={developers[i].role}
                   img={developers[i].image}
+                  
                 />
               ))}
           </section>

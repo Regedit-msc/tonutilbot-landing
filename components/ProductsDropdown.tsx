@@ -18,7 +18,7 @@ const ProductsDropdown: FC<ProductsProps> = ({
 }: ProductsProps) => {
   const [hover, setHover] = useState(false);
   const dropDownRef = useRef(null);
-  useOnClickOutside(dropDownRef, () => setOpen(false), hover);
+  useOnClickOutside(dropDownRef, () => setOpen(false));
 
   return (
     <>
