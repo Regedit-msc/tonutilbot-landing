@@ -13,7 +13,7 @@ export const GradientText: React.FC<GradientTextProps> = ({
 }) => {
   return (
     <h1
-      className={`${className} bg-gradient-to-r from-gray-300 via-white to-[#37383f] text-gray-300 font-bold pb-2 bg-clip-text`}
+      className={`${className} insetShadow bg-gradient-to-r from-white via-gray-300 to-[#4d4f5d] text-white bg-clip-text lg:text-8xl text-[2.6rem] sm:text-5xl md:text-6xl font-bold sm:px-3 tracking-tighter leading-[0.9]`}
     >
       {children} {text}
     </h1>

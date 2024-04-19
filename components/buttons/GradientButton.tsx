@@ -26,8 +26,9 @@ export function GradientButton({
   const [hoverPic, setHoverPic] = useState(false);
 
   return (
-    <button
-      className={`${className} shadow-lg rounded-full flex justify-center items-center text-white gap-2 w-fit transition-all z-10
+    <div className="relative">
+      <button
+        className={`${className} shadow-lg rounded-full flex justify-center items-center text-white gap-2 w-fit transition-all
       ${
         gradient
           ? "bg-gradient-to-r from-blue-400 to-purple-600 via-indigo-500"
@@ -36,24 +37,23 @@ export function GradientButton({
       ${!hover && "hover:shadow-2xl"}
       ${!myPadding && "py-4 px-6"}
       `}
-    >
+        onMouseOver={() => {
+          setHoverPic(true);
+        }}
+        onMouseOut={() => {
+          setHoverPic(false);
+        }}
+      >
+        {myIcon && <img src={myIcon.src} alt={myIcon} className="w-[25px]" />}
+        {isIcon && <img src={openInTelegramPlane.src} alt="tg" />} {text}
+      </button>
       {hover && (
-        <img
-          src={HoverGradient.src}
-          className={`scale-150 sm:scale-[2] absolute left-auto opacity-0 transition-all duration-1000 ease-in-out w-[16rem] translate-y-8 ${
+        <div
+          className={`absolute scale-150 top-0 opacity-0 transition-all duration-1000 ease-in-out w-[8rem] h-[3rem] translate-y-8 bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9] blur-2xl rounded-full -z-10 ${
             hoverPic && "opacity-100"
           }`}
-          alt="HoverGradient Image"
-          onMouseOver={() => {
-            setHoverPic(true);
-          }}
-          onMouseOut={() => {
-            setHoverPic(false);
-          }}
         />
       )}
-      {myIcon && <img src={myIcon.src} alt={myIcon} className="w-[25px]" />}
-      {isIcon && <img src={openInTelegramPlane.src} alt="tg" />} {text}
-    </button>
+    </div>
   );
 }

@@ -14,7 +14,7 @@ const Hero: FC<IProps> = () => {
           Building Web3 <br />{" "}
           <div className="flex gap-3 justify-center">
             <p className="text-transparent bg-gradient-to-r from from-blue-500 to-purple-500 bg-clip-text">
-              solutions
+              Solutions
             </p>{" "}
             for the
           </div>

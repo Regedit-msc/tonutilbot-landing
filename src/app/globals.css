@@ -19,7 +19,6 @@
 
 .insetShadow {
   color: transparent;
-  text-shadow: 0px -2px 3px rgba(200, 200, 200, 0.2);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;

@@ -3,8 +3,8 @@
 import { GradientText } from "@components/special_text/GradientText";
 import Transition from "@components/transitions";
 import React, { FC, useState } from "react";
-import leftArrow from "@assets/landing-page/leftArrowInactive.png";
-import rightArrow from "@assets/landing-page/rightArrowActive.png";
+import arrowBack from "@assets/FeaturedProjects/arrowBack.svg";
+import arrowForward from "@assets/FeaturedProjects/arrowForward.svg";
 
 interface IProps {}
 
@@ -15,7 +15,7 @@ const FeaturedProducts: FC<IProps> = () => {
 
   return (
     <>
-      <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-8 lg:pt-20">
+      <div className="hidden relative text-white px-3 sm:px-0 pt-20 sm:pt-8 lg:pt-20 bg-blue-300">
         <div className="flex flex-col justify-center items-center text-center gap-6 relative">
           {/* <img src={mesh.src} alt="Mesh Image" className="absolute w-1/2" /> */}
 
@@ -38,21 +38,21 @@ const FeaturedProducts: FC<IProps> = () => {
           />
 
           <p className="text-white font-normal text-[0.8rem] sm:text-sm lg:text-lg leading-[1.7]">
-            We’ve embarked on a few projects to build products{" "}
+            We&apos;ve embarked on a few projects to build products{" "}
             <br className="" /> that help us fulfil our mission at TONDr labs
           </p>
         </div>
       </div>
 
-      <div className="flex justify-end  gap-3 max-w-[75.1rem] xl:mx-auto   mx-6 mt-4">
+      <div className="flex justify-end  gap-3 max-w-[75.1rem] xl:mx-auto mx-6 mt-4">
         <img
-          src={leftArrow.src}
+          src={arrowBack.src}
           alt="Left Arrow"
           className="cursor-pointer w-[54px] h-[54px]"
           onClick={() => setTransform((prev) => (prev > 0 ? prev - 1 : 0))}
         />
         <img
-          src={rightArrow.src}
+          src={arrowForward.src}
           alt="Right Arrow"
           className="cursor-pointer w-[54px] h-[54px]"
           onClick={() =>
