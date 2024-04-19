@@ -9,7 +9,7 @@ interface DarkButtonProps {
   className?: string;
 }
 
-export function DarkButton({
+export default function LandingDarkButton({
   isIcon = true,
   myIcon,
   text = "",
@@ -17,7 +17,7 @@ export function DarkButton({
 }: DarkButtonProps): JSX.Element {
   return (
     <button
-      className={`border border-[#333] bg-gradient-to-b from-transparent to-white/10 ${className} shadow-lg rounded-full py-2 px-3 flex justify-center items-center text-white gap-3 w-fit transition-all z-10 tracking-[0.4em] sm:tracking-[0.3em] text-[0.8rem] font-light`}
+      className={`${className} bg-white/[0.06] shadow-lg rounded-full py-2 px-3 flex justify-center items-center text-white gap-3 w-fit transition-all z-10 text-[0.8rem] font-extralight text-sm lg:text-base`}
     >
       {myIcon && <img src={myIcon.src} alt={myIcon} className="w-[25px]" />}
       {isIcon && <img src={bot.src} alt="plane" width={"25px"} />}
