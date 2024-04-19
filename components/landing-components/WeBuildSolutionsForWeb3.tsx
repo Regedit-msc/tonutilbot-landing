@@ -12,7 +12,7 @@ interface IProps {}
 const WeBuildSolutionsForWeb3: FC<IProps> = () => {
   return (
     <Transition>
-      <div className="text-white bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9] w-full flex justify-center items-center my-48 py-10 lg:py-[4.5rem] relative px-4 overflow-hidden max-w-[70rem]">
+      <div className="text-white bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9] w-full flex justify-center items-center my-48 py-10 lg:py-[4.5rem] relative px-4 overflow-hidden max-w-[100rem]">
         <img
           src={worlddextop.src}
           alt="Xmen Image"
@@ -25,7 +25,7 @@ const WeBuildSolutionsForWeb3: FC<IProps> = () => {
         />
         {/**left */}
 
-        <div className="max-w-[70rem] ml-[2.19rem] mr-[1.69rem] flex flex-col justify-center items-center md:flex-row lg:gap-[5rem] gap-10 sm:gap-4">
+        <div className="max-w-[100rem] ml-[2.19rem] mr-[1.69rem] flex flex-col justify-center items-center md:flex-row lg:gap-[5rem] gap-10 sm:gap-4">
           <div className="flex flex-col w-full">
             <button className="bg-white/[0.1] rounded-full py-2 px-3 flex justify-center items-center text-white gap-3 w-fit tracking-widest font-light mb-6 flex-col">
               OUR MISSION
