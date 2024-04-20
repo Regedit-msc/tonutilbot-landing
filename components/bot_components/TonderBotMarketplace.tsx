@@ -24,7 +24,7 @@ const TonderBotMarketplace: FC = () => {
           the platform created by the <br className="flex sm:hidden" />
           community and pay directly <br className="hidden sm:flex lg:hidden" />{" "}
           from your <br className="flex sm:hidden" />
-          wallet using TON tokens.
+          wallet using TON.
         </p>
         <Link href={"/"} className="w-fit">
           <GradientButton

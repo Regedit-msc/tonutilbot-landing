@@ -26,11 +26,11 @@ export const ThirdPartyWeb2Payments = () => {
           className="text-white sm:text-lg text-sm font-light 
          mt-6 leading-[1.8] lg:mt-10"
         >
-          Web 2 transactions such as making <br className="sm:hidden" />
+          Web2 transactions such as making <br className="sm:hidden" />
           payments and <br className="hidden sm:flex" /> purchasing airtime or{" "}
           <br className="flex sm:hidden" />
           data subscriptions can be made <br className="hidden sm:flex" /> using{" "}
-          <br className="flex sm:hidden" /> TON token on TonBot.
+          <br className="flex sm:hidden" /> TON token on TonderBot.
         </p>
       </div>
       <AutoplaySlider />
