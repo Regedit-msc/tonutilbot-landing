@@ -29,37 +29,44 @@ const developers = [
     image: Ayomide,
     name: "Ayomide",
     role: "C.E.O",
+    link: ""
   },
   {
     image: Somto,
     name: "Somto",
     role: "C.T.O",
+    link: ""
   },
   {
     image: MuizSanni,
-    name: "Muiz Sanni",
+    name: "Muiz",
     role: "Art Director",
+    link: ""
   },
   {
     image: Divine,
     name: "Divine",
     role: "Developer",
+    link: ""
   },
   {
     image: Kinyichukwu,
     name: "Kinyichukwu",
     role: "Developer",
+    link: ""
   },
   {
     image: Bayo,
     name: "Bayo",
     role: "Developer",
+    link: ""
   },
 
   {
     image: Mayowa,
     name: "Mayowa",
     role: "Developer",
+    link: ""
   },
 ];
 
