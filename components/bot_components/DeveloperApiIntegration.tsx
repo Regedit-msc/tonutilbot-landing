@@ -3,51 +3,45 @@
 import { GradientButton } from "@components/buttons/GradientButton";
 import docs from "@/assets/docs.svg";
 import { GradientText } from "@components/special_text/GradientText";
-import { IoDocumentText } from "react-icons/io5";
-import DeveloperApiPic from "@assets/DeveloperApiIntegration.png";
-import DeveloperApiPic2 from "@assets/DeveloperApiIntegration2.png";
-import mesh from "@assets/trans-mesh.svg";
+import DeveloperApi from "@assets/DeveloperAPI.png";
+import DeveloperApiLarge from "@assets/DeveloperAPILarge.png";
+import Link from "next/link";
 
 export const DeveloperApiIntegration = () => {
   return (
-    <div className=" text-white relative mt-28 sm:mt-[12rem] mb-28">
-      <div className="flex flex-col justify-center items-center text-center gap-6 relative">
-        <img
-          src={DeveloperApiPic.src}
-          alt="DeveloperApi Image"
-          className="scale-[0.55] sm:scale-[0.7] absolute top-[-5.75rem] -z-0 bg-ashy"
-        />
-        <img
-          src={DeveloperApiPic2.src}
-          alt="DeveloperApi Image"
-          className="scale-[0.55] sm:scale-[0.7] absolute top-[-5.75rem] -z-0 bg-ashy"
-        />
-
-        <div className="bg-ashy w-full h-full absolute top-[3.3rem] z-10"></div>
-        {/* <img
-          src={mesh.src}
-          className="absolute bottom-auto left-auto z-10  "
-          alt="MeshGradient Image"
-        /> */}
-
-        <GradientText className="sm:w-3/4 text-center sm:mb-5 lg:text-[4rem] mt-14 pt-4 pb-2 z-50 md:text-6xl text-[3rem] tracking-tighter leading-[0.9] shadow-ashy shadow-[0px_-5px_20px_15px_ashy] bg-gradient-to-tr from-white via-gray-300 to-gray-600 bg-clip-text text-transparent">
-          Developer API <br />
+    <div className="w-full flex flex-col lg:flex-row justify-center lg:gap-[10%] items-center text-white relative mt-28 sm:mt-[12rem] mb-28">
+      <div className="flex flex-col justify-center lg:items-start items-center text-center gap-5 sm:gap-3 lg:gap-2 relative">
+        <p className="text-transparent bg-gradient-to-r from from-blue-500 to-purple-500 bg-clip-text text-lg font-semibold lg:text-start lg:w-fit mb-5">
+          FLEXIBLE DEVELOPMENT
+        </p>
+        <GradientText className="lg:w-full text-center sm:mb-5 lg:text-[3.75rem] md:text-6xl text-[3rem] tracking-tighter leading-[0.9] pb-2 lg:text-start">
+          Developer <br className="hidden lg:flex" /> API{" "}
+          <br className="flex lg:hidden" />
           integration
         </GradientText>
-
-        <p className="leading-[1.8] text-white z-10 sm:text-lg font-normal text-base">
-          Developers can easily integrate our <br className="flex sm:hidden" />{" "}
-          API’s into their <br className="sm:flex hidden" /> various
+        <p className="leading-[1.8] text-white z-10 sm:text-lg font-light text-base text-start">
+          Developers can easily integrate our <br /> API’s into their various
           infrastructures.
         </p>
-
-        <GradientButton
-          text="Read our Documentation"
-          className="text-base mt-3 sm:mt-6"
-          isIcon={false}
-          myIcon={docs}
-        />
+        <Link href={"/"}>
+          <GradientButton
+            text="Read our Documentation"
+            className="text-base mt-3 sm:mt-6"
+            isIcon={false}
+            myIcon={docs}
+          />{" "}
+        </Link>
       </div>
+      <img
+        src={DeveloperApi.src}
+        alt="DeveloperApi"
+        className="sm:py-12 py-6 w-[320px] sm:w-[550px] lg:hidden"
+      />
+      <img
+        src={DeveloperApiLarge.src}
+        alt="DeveloperApi"
+        className="hidden lg:flex lg:w-[550px]"
+      />
     </div>
   );
 };
