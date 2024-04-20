@@ -23,7 +23,7 @@ export const DeveloperApiIntegration = () => {
           Developers can easily integrate our <br /> API’s into their various
           infrastructures.
         </p>
-        <Link href={"/"}>
+        <Link href="docs.tonderlabs.com">
           <GradientButton
             text="Read our Documentation"
             className="text-base mt-3 sm:mt-6"
