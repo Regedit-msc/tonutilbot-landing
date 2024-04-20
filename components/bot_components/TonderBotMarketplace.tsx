@@ -7,7 +7,7 @@ import Link from "next/link";
 const TonderBotMarketplace: FC = () => {
   return (
     <section className="flex flex-col lg:flex-row justify-center items-center py-24 px-[10%] lg:gap-[10%]">
-      <div className="flex flex-col justify-center items-dont text-center lg:text-start text-white">
+      <div className="flex flex-col justify-center items-dont text-center lg:text-start text-white w-full">
         <GradientText
           text={
             <>
