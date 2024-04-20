@@ -55,7 +55,7 @@ export const ProjectRoadmap = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
   const ref = useRef<HTMLDivElement>(null);
   const visible = useInView(ref);
-  const INTERVAL = 2000;
+  const INTERVAL = 4000;
   const size = useWindowWidth() || 0;
 
   useEffect(() => {
@@ -75,7 +75,7 @@ export const ProjectRoadmap = () => {
     <Transition>
       <div
         ref={ref}
-        className="text-white flex flex-col items-center lg:pt-[7rem]"
+        className="w-full text-white flex flex-col items-center lg:pt-[7rem]"
       >
         <section className="flex flex-col justify-center items-center">
           <DarkButton text="ROADMAP" isIcon={false} />
@@ -84,10 +84,10 @@ export const ProjectRoadmap = () => {
             Project <br className="md:hidden" /> Roadmap
           </GradientText>
         </section>
-        <section className="relative flex px-5">
+        <section className="relative flex px-5 w-full">
           <div className="flex flex-col justify-center items-center text-center gap-10 relative w-full">
             <div className="flex md:gap-10 gap-[1.38rem] max-[920px]:flex-col lg:w-fit w-full ">
-              <div className="flex items-center lg:w-fit min-[920px]:w-[40%]">
+              <div className="flex items-center lg:w-fit min-[920px]:w-1/2">
                 <div className="flex flex-col gap-6 lg:w-fit w-full">
                   {roadmap.map((_, i) => {
                     return (
@@ -98,17 +98,17 @@ export const ProjectRoadmap = () => {
                         <div className="flex justify-center w-full items-center gap-7">
                           <div className="flex relative -translate-y-[6px]">
                             <span
-                              className={`flex w-3 aspect-square rounded-full bg-white/15 -translate-y-[10px] absolute transition-all duration-300 ease-in-out ${
+                              className={`flex w-3 aspect-square rounded-full bg-white/15 absolute transition-all duration-300 ease-in-out ${
                                 currentStep === i && "opacity-0"
                               }`}
                             />
                             <span
-                              className={`flex w-3 aspect-square rounded-full bg-gradient-to-r from-blue-400 to-purple-600 -translate-y-[10px] absolute opacity-0 transition-all duration-300 ease-in-out ${
+                              className={`flex w-3 aspect-square rounded-full bg-gradient-to-r from-blue-400 to-purple-600 absolute opacity-0 transition-all duration-300 ease-in-out ${
                                 currentStep === i && "opacity-100"
                               }`}
                             />
                             <span
-                              className={`flex w-3 aspect-square rounded-full bg-gradient-to-r from-blue-400 to-purple-600 blur -translate-y-[10px] absolute opacity-0 transition-all duration-300 ease-in-out ${
+                              className={`flex w-3 aspect-square rounded-full bg-gradient-to-r from-blue-400 to-purple-600 blur absolute opacity-0 transition-all duration-300 ease-in-out ${
                                 currentStep === i && "opacity-100"
                               }`}
                             />
@@ -128,11 +128,14 @@ export const ProjectRoadmap = () => {
                               {roadmap[i].quarter}
                             </p>
 
-                            <p className="text-start text-sm sm:text-base w-3/4 sm:w-1/2 min-[920px]:w-full lg:w-3/4 min-[920px]:text-sm leading-[1.5]">
+                            <p
+                              className="text-start text-sm sm:text-base w-[90%] sm:max-w-[24rem] max-w-[18rem] lg:w-3/4 min-[920px]:text-sm leading-[1.5] truncate
+                            "
+                            >
                               {roadmap[i].info}
                             </p>
                             <span
-                              className={`absolute right-6 top-7 transition-all duration-300 ease-in-out ${
+                              className={`absolute right-6 top-[22px] transition-all duration-300 ease-in-out ${
                                 currentStep === i && "rotate-180"
                               }`}
                             >
@@ -140,8 +143,9 @@ export const ProjectRoadmap = () => {
                             </span>
                           </div>
                         </div>
-                        <div className="flex pl-7">
+                        <div className="flex pl-7 w-full">
                           <RoadmapCard
+                            desc={roadmap[i].info}
                             phases={roadmap[i].phases}
                             className={`min-[920px]:hidden ${
                               currentStep === i ? "flex" : "hidden"
@@ -156,6 +160,7 @@ export const ProjectRoadmap = () => {
               </div>
 
               <RoadmapCard
+                desc={roadmap[currentStep].info}
                 phases={roadmap[currentStep].phases}
                 className="min-[920px]:w-[60%] hidden min-[920px]:flex"
                 currentStep={currentStep}
