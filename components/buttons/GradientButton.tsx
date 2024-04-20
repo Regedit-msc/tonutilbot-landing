@@ -26,7 +26,7 @@ export function GradientButton({
   const [hoverPic, setHoverPic] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative flex justify-center items-center">
       <button
         className={`${className} shadow-lg rounded-full flex justify-center items-center text-white gap-2 w-fit transition-all
       ${
@@ -49,7 +49,7 @@ export function GradientButton({
       </button>
       {hover && (
         <div
-          className={`absolute scale-150 top-0 opacity-0 transition-all duration-1000 ease-in-out w-[8rem] h-[3rem] translate-y-8 bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9] blur-2xl rounded-full -z-10 ${
+          className={`w-[10rem] absolute scale-150 top-0 opacity-0 transition-all duration-1000 ease-in-out h-[3rem] translate-y-8 bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9] blur-2xl rounded-full -z-10 ${
             hoverPic && "opacity-100"
           }`}
         />

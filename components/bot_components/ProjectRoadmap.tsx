@@ -50,19 +50,18 @@ export const ProjectRoadmap = () => {
 
   return (
     <Transition>
-      <div ref={ref} className="text-white flex flex-col items-center lg:pt-[7rem]">
+      <div
+        ref={ref}
+        className="text-white flex flex-col items-center lg:pt-[7rem]"
+      >
         <section className="flex flex-col justify-center items-center">
-          <DarkButton text="ROADMAP" />
+          <DarkButton text="ROADMAP" isIcon={false} />
 
-          <GradientText className="text-[3rem] lg:text-[4rem] tracking-tighter mb-8 font-semibold leading-none mt-5 text-center">
+          <GradientText className="text-[3rem] lg:text-[4rem] tracking-tighter mb-8 pb-2 font-bold leading-none mt-5 text-center">
             Project <br className="md:hidden" /> Roadmap
           </GradientText>
         </section>
         <section className="relative flex px-5">
-          {/* <div className="flex flex-col h-full w-[10%] justify-center items-center">
-            <Indicator currentStep={currentStep} />
-          </div> */}
-
           <div className="flex flex-col justify-center items-center text-center gap-10 relative w-full">
             <div className="flex md:gap-10 gap-[1.38rem] max-[920px]:flex-col lg:w-fit w-full ">
               <div className="flex items-center lg:w-fit min-[920px]:w-[40%]">
