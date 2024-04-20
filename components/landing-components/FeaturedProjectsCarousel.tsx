@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import tonderBot from "@assets/landing-page/FeaturedProjects/tonderBot.svg";
 import tonBot from "@assets/landing-page/FeaturedProjects/tonBot.svg";
 import tonApp from "@assets/landing-page/FeaturedProjects/tonApp.svg";
-import Laptop from "@assets/landing-page/FeaturedProjects/laptop.svg";
+import Laptop from "@assets/landing-page/FeaturedProjects/laptop.png";
 import Link from "next/link";
 
 interface CarouselProps {
