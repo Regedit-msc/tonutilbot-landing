@@ -28,7 +28,7 @@ const TonderBotMarketplace: FC = () => {
         </p>
         <Link href={"/"} className="w-fit">
           <GradientButton
-            className="text-sm hidden lg:flex mt-4"
+            className="text-sm hidden lg:flex mt-4 lg:mt-8"
             text="Open In Telegram"
           />
         </Link>

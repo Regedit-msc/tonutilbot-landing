@@ -24,7 +24,7 @@ export const ThirdPartyWeb2Payments = () => {
 
         <p
           className="text-white sm:text-lg text-sm font-light 
-         mt-6 leading-[1.8]"
+         mt-6 leading-[1.8] lg:mt-10"
         >
           Web 2 transactions such as making <br className="sm:hidden" />
           payments and <br className="hidden sm:flex" /> purchasing airtime or{" "}

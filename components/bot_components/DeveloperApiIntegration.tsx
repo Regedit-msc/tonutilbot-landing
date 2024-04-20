@@ -14,7 +14,7 @@ export const DeveloperApiIntegration = () => {
         <p className="text-transparent bg-gradient-to-r from from-blue-500 to-purple-500 bg-clip-text text-lg font-semibold lg:text-start lg:w-fit mb-5">
           FLEXIBLE DEVELOPMENT
         </p>
-        <GradientText className="lg:w-full text-center sm:mb-5 lg:text-[3.75rem] md:text-6xl text-[3rem] tracking-tighter leading-[0.9] pb-2 lg:text-start">
+        <GradientText className="lg:w-full text-center sm:mb-5 lg:text-[3.65rem] md:text-6xl text-[3rem] tracking-tighter leading-[0.9] pb-2 lg:text-start">
           Developer <br className="hidden lg:flex" /> API{" "}
           <br className="flex lg:hidden" />
           integration
