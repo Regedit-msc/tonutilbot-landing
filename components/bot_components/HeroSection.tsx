@@ -56,7 +56,7 @@ export const HeroSection = () => {
             >
               <GradientButton className="text-sm" text="Open In Telegram" />
             </Link>
-            <Link href="docs.tonderlabs.com">
+            <Link href="https://docs.tonderlabs.com">
               <GradientButton
                 text="Read our Documentation"
                 className="hidden sm:flex text-sm"
