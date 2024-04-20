@@ -14,7 +14,10 @@ export const CTA = ({
         <FaTelegramPlane className="text-base" />
       </Link>
       <FaXTwitter />
-      <FaDiscord />
+
+      <Link href="https://discord.com/invite/YdpyHVAr">
+        <FaDiscord />
+      </Link>
     </div>
   );
 };
