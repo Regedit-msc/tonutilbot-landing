@@ -4,7 +4,6 @@ import { DarkButton } from "@components/buttons/DarkButton";
 import { GradientButton } from "@components/buttons/GradientButton";
 import { GradientText } from "@components/special_text/GradientText";
 import docs from "@/assets/docs.svg";
-import mesh from "@assets/mesh.png";
 import Transition from "@components/transitions";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -40,7 +39,7 @@ export const HeroSection = () => {
                 <br className="sm:hidden" /> Network.
               </>
             }
-            className="insetShadow lg:text-8xl text-[3rem] sm:text-[4rem] font-semibold sm:px-3 tracking-tighter leading-[0.9]"
+            className="insetShadow lg:text-8xl text-[3rem] sm:text-[4rem] font-bold sm:px-3 tracking-tighter leading-[0.9]"
           />
 
           <p className="text-white font-normal text-sm lg:text-lg leading-[1.7]">
