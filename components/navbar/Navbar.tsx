@@ -69,7 +69,7 @@ export const Navbar = () => {
             <p>About</p>
           </a>
 
-          <Link href="mailto:tonderlabs@gmail.com">
+          <Link href="https://t.me/tonderbot_news">
             <GradientButton
               myPadding={true}
               className="text-sm px-6 py-2 sm:py-3"

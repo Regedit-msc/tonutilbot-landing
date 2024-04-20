@@ -45,7 +45,7 @@ const WeBuildSolutionsForWeb3: FC<IProps> = () => {
               network.
             </p>
 
-            <Link href="mailto:tonderlabs@gmail.com">
+            <Link href="https://t.me/tonderbot_news">
               <button
                 className={`bg-white shadow-lg rounded-full px-4 lg:px-6 py-2 flex justify-center 
               items-center gap-2 w-fit transition-all z-10 `}
