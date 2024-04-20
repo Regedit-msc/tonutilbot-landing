@@ -18,7 +18,7 @@ export const ThirdPartyWeb2Payments = () => {
           }
           className="text-center lg:leading-[0.8] lg:text-[6rem] text-6xl text-[40px] lg:pb-6 pt-2"
         />
-        <p className="lg:text-[5rem] text-[2.8rem] sm:text-5xl md:text-6xl font-bold sm:px-3 tracking-tighter leading-[0.9] text-transparent bg-gradient-to-r from from-blue-500 to-purple-500 bg-clip-text pb-2">
+        <p className="text-[3rem] sm:text-[3.5rem] lg:text-[5.5rem] tracking-tighter font-bold sm:px-3 leading-[0.9] text-transparent bg-gradient-to-r from from-blue-500 to-purple-500 bg-clip-text pb-2 lg:-my-4">
           Payments
         </p>
 
