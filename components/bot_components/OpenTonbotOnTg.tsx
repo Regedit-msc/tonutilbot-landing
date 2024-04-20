@@ -32,7 +32,7 @@ export const OpenTonbotOnTg = () => {
           <br className="sm:flex hidden" /> and start
           <br className="flex sm:hidden" /> trading.
         </p>
-        <Link href={"/"} className="z-[90]">
+        <Link href="https://t.me/tonderlabs_tonderbot" className="z-[90]">
           <button
             className={`bg-white shadow-lg rounded-full py-3 px-5 flex justify-center items-center gap-2 w-fit transition-all`}
           >

@@ -43,24 +43,29 @@ export const HeroSection = () => {
           />
 
           <p className="text-white font-normal text-sm lg:text-lg leading-[1.7]">
-            Buy, Swap or Sell TON using our wallet
-            <br className="flex sm:hidden" />
-            along with web2 <br className="sm:flex hidden" /> payments and
-            <br className="sm:hidden" /> developer API integration.{" "}
+            TonderBot simplifies your crypto
+            <br className="flex sm:hidden" /> life. Swap, trade, and handle <br className="hidden sm:flex" /> your
+            TON
+            <br className="flex sm:hidden" /> finances with ease.
           </p>
 
           <section className="flex justify-center items-center gap-3">
-            <Link href={"/"}>
+            <Link
+              href="https://t.me/tonderlabs_tonderbot
+"
+            >
               <GradientButton className="text-sm" text="Open In Telegram" />
             </Link>
-            <GradientButton
-              text="Read our Documentation"
-              className="hidden sm:flex text-sm"
-              gradient={false}
-              isIcon={false}
-              myIcon={docs}
-              hover={false}
-            />
+            <Link href="docs.tonderlabs.com">
+              <GradientButton
+                text="Read our Documentation"
+                className="hidden sm:flex text-sm"
+                gradient={false}
+                isIcon={false}
+                myIcon={docs}
+                hover={false}
+              />
+            </Link>
           </section>
         </div>
       </div>
