@@ -64,13 +64,19 @@ export const Navbar = () => {
             </p>
             <ProductsDropdown open={productsOpen} setOpen={setProductsOpen} />
           </div>
-          <p>About</p>
-          <GradientButton
-            myPadding={true}
-            className="text-sm px-6 py-2 sm:py-3"
-            text="Contact Us"
-            isIcon={false}
-          />
+
+          <a href="https://docs.tonderlabs.com">
+            <p>About</p>
+          </a>
+
+          <Link href="mailto:tonderlabs@gmail.com">
+            <GradientButton
+              myPadding={true}
+              className="text-sm px-6 py-2 sm:py-3"
+              text="Contact Us"
+              isIcon={false}
+            />
+          </Link>
         </section>
       </nav>
     </div>

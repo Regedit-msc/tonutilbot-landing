@@ -25,7 +25,7 @@ const FeaturedProducts: FC<IProps> = () => {
 
           <p className="text-white font-light text-[12px] sm:text-sm lg:text-lg leading-[1.7]">
             We&apos;ve embarked on a few projects to build products{" "}
-            <br className="" /> that help us fulfil our mission at TONDr labs
+            <br className="" /> that help us fulfil our mission at TonderLabs.
           </p>
         </div>
       </div>
