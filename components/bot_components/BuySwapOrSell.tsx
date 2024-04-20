@@ -6,8 +6,8 @@ import Transition from "@components/transitions";
 
 export const BuySwapOrSell = () => {
   const cards = [
-    { imgIndex: 0, text: "Create buy or sell limit orders" },
-    { imgIndex: 1, text: "Swap TON for other jettons and tokens" },
+    { imgIndex: 0, text: "Create buy limit orders" },
+    { imgIndex: 1, text: "Swap TON for USDT and other jettons" },
     { imgIndex: 2, text: "Create sell limit orders" },
   ];
 
@@ -17,7 +17,7 @@ export const BuySwapOrSell = () => {
         <Transition>
           <GradientText className="insetShadow text-[2.6rem] tracking-tighter sm:text-5xl lg:text-[4rem] lg:w-full text-center mb-2 sm:mb-6 bg-gradient-to-tr from-white to-gray-600 bg-clip-text text-transparent leading-[0.9em] font-bold flex justify-center items-center">
             Buy, Swap or <br className="sm:hidden" /> Sell{" "}
-            <br className="hidden sm:flex" /> Ton in a{" "}
+            <br className="hidden sm:flex" /> TON in a{" "}
             <br className="sm:hidden" /> few clicks.
           </GradientText>
         </Transition>
