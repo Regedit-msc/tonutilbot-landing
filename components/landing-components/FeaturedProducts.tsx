@@ -7,6 +7,7 @@ import arrowBack from "@assets/landing-page/FeaturedProjects/arrowBack.svg";
 import arrowForward from "@assets/landing-page/FeaturedProjects/arrowForward.svg";
 import LandingDarkButton from "@components/buttons/LandingDarkButton";
 import FeaturedProjectsCarousel from "@components/landing-components/FeaturedProjectsCarousel";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 interface IProps {}
 
@@ -25,7 +26,7 @@ const FeaturedProducts: FC<IProps> = () => {
 
           <p className="text-white font-light text-[12px] sm:text-sm lg:text-lg leading-[1.7]">
             We&apos;ve embarked on a few projects to build products{" "}
-            <br className="" /> that help us fulfil our mission at TONDr labs
+            <br className="" /> that help us fulfil our mission at TonderLabs.
           </p>
         </div>
       </div>
@@ -35,22 +36,26 @@ const FeaturedProducts: FC<IProps> = () => {
       </div>
 
       <div className="flex justify-center items-center sm:justify-end  gap-3 max-w-[75rem] xl:mx-auto mx-6 mt-4 lg:absolute lg:right-[10%] lg:-translate-y-[230px]">
-        <img
-          src={arrowBack.src}
-          alt="back"
-          className="cursor-pointer w-[54px]"
+        <div
+          className={`w-[54px] h-[54px] rounded-full flex justify-center items-center  border cursor-pointer ${
+            next ? "" : "bg-[#ffffff0e] border-transparent"
+          }  `}
           onClick={() => {
             setNext(false);
           }}
-        />
-        <img
-          src={arrowForward.src}
-          alt="forward"
-          className="cursor-pointer w-[54px]"
+        >
+          <BsArrowLeft className="text-[1.3rem] text-white" />
+        </div>
+        <div
+          className={` w-[54px] h-[54px] rounded-full flex justify-center items-center border cursor-pointer ${
+            next ? "bg-[#ffffff0e] border-transparent" : ""
+          } `}
           onClick={() => {
             setNext(true);
           }}
-        />
+        >
+          <BsArrowRight className="text-[1.3rem] text-white" />
+        </div>
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import worldTablet from "@assets/landing-page/WeBuildSolutionsForWeb3/World.svg"
 import imageGroup from "@assets/landing-page/WeBuildSolutionsForWeb3/groupImageDextop.svg";
 import { GradientText } from "@components/special_text/GradientText";
 import LandingDarkButton from "@components/buttons/LandingDarkButton";
+import Link from "next/link";
 
 interface IProps {}
 
@@ -44,18 +45,23 @@ const WeBuildSolutionsForWeb3: FC<IProps> = () => {
               network.
             </p>
 
-            <button
-              className={`bg-white shadow-lg rounded-full px-4 lg:px-6 py-2 flex justify-center 
+            <Link href="https://t.me/tonderbot_news">
+              <button
+                className={`bg-white shadow-lg rounded-full px-4 lg:px-6 py-2 flex justify-center 
               items-center gap-2 w-fit transition-all z-10 `}
-            >
-              <div
-                className="font-semibold bg-gradient-to-tr from-blue-400 to-purple-600 bg-clip-text 
-              text-transparent tracking-tighter text-[1.25rem] lg:text-[1.5rem]"
               >
-                Contact Us
-              </div>
-              <img src={imageGroup.src} alt="button-image max-md:w-[3.2rem]" />
-            </button>
+                <div
+                  className="font-semibold bg-gradient-to-tr from-blue-400 to-purple-600 bg-clip-text 
+              text-transparent tracking-tighter text-[1.25rem] lg:text-[1.5rem]"
+                >
+                  Contact Us
+                </div>
+                <img
+                  src={imageGroup.src}
+                  alt="button-image max-md:w-[3.2rem]"
+                />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
