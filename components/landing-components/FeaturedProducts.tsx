@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { GradientText } from "@components/special_text/GradientText";
-import Transition from "@components/transitions";
 import React, { FC, useState } from "react";
-import arrowBack from "@assets/landing-page/FeaturedProjects/arrowBack.svg";
-import arrowForward from "@assets/landing-page/FeaturedProjects/arrowForward.svg";
 import LandingDarkButton from "@components/buttons/LandingDarkButton";
 import FeaturedProjectsCarousel from "@components/landing-components/FeaturedProjectsCarousel";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";

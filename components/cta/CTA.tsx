@@ -13,7 +13,9 @@ export const CTA = ({
       <Link href="https://t.me/tonderbot_news">
         <FaTelegramPlane className="text-base" />
       </Link>
-      <FaXTwitter />
+      <Link href="https://x.com/tonderlabs">
+        <FaXTwitter />
+      </Link>
 
       <Link href="https://discord.com/invite/YdpyHVAr">
         <FaDiscord />
