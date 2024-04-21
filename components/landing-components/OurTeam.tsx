@@ -58,7 +58,7 @@ const developers = [
   {
     image: Bayo,
     name: "Bayo",
-    role: "Marketplace and Integrations Engineer",
+    role: "Integrations Engineer",
     link: ""
   },
 
