@@ -3,6 +3,7 @@ import { GradientButton } from "@components/buttons/GradientButton";
 import React, { FC } from "react";
 import zigzag from "@assets/landing-page/Zigzag.png";
 import zigzag2 from "@assets/landing-page/Zigzag2.png";
+import Link from "next/link";
 
 interface IProps {}
 
@@ -26,12 +27,15 @@ const Hero: FC<IProps> = () => {
           <br className="hidden sm:flex" /> best utility software on{" "}
           <br className="flex sm:hidden" /> the TON network
         </p>
-        <GradientButton
-          myPadding={true}
-          className="text-sm px-6 py-2 sm:px-10 sm:py-3"
-          text="Contact Us"
-          isIcon={false}
-        />
+
+        <Link href="https://t.me/tonderbot_news">
+          <GradientButton
+            myPadding={true}
+            className="text-sm px-6 py-2 sm:px-10 sm:py-3"
+            text="Contact Us"
+            isIcon={false}
+          />
+        </Link>
       </section>
       <img
         src={zigzag.src}

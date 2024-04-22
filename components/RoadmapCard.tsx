@@ -20,7 +20,7 @@ const RoadmapCard: FC<IProps> = ({
       <div className="h-[10rem] sm:h-[15rem] min-[920px]:h-[19rem] overflow-y-scroll">
         <div className="pl-6 sm:pl-12 sm:pr-12">
           <div className="absolute text-sm sm:text-lg py-4 sm:py-6 z-10 top-0 lg:w-2/3">
-            Q {currentStep + 1}. {desc}
+            Q{currentStep + 1}. {desc}
           </div>
 
           <section>

@@ -28,13 +28,13 @@ const developers = [
   {
     image: Ayomide,
     name: "Ayomide",
-    role: "C.E.O",
+    role: "Team Lead",
     link: ""
   },
   {
     image: Somto,
     name: "Somto",
-    role: "C.T.O",
+    role: "TonderBot Lead Engineer",
     link: ""
   },
   {
@@ -46,26 +46,26 @@ const developers = [
   {
     image: Divine,
     name: "Divine",
-    role: "Developer",
+    role: "Front-end Developer",
     link: ""
   },
   {
     image: Kinyichukwu,
     name: "Kinyichukwu",
-    role: "Developer",
+    role: "Front-end Developer",
     link: ""
   },
   {
     image: Bayo,
     name: "Bayo",
-    role: "Developer",
+    role: "Integrations Engineer",
     link: ""
   },
 
   {
     image: Mayowa,
     name: "Mayowa",
-    role: "Developer",
+    role: "Developer and Technical Writer",
     link: ""
   },
 ];

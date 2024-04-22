@@ -12,41 +12,43 @@ import { IoIosArrowUp } from "react-icons/io";
 const roadmap = [
   {
     quarter: "Q1",
-    info: "Building Product Architecture of Core Functionality Features",
+    info: "Building Product Architecture",
     phases: [
-      "- Idea Acquisition Phase",
-      "- Mapping out product Infrastructures, requirements, and development trends.",
-      "- Coding Starts.",
-    ],
-  },
-  {
-    quarter: "Q1b",
-    info: "Software Development, Code Optimization, and Infrastructural Setup",
-    phases: [
-      "- Building out core bot functions - swapping, automated trade, utility service, third-party connectors, API Infrastructure.",
-      "- Database architecture and management.",
-      "- Shipping of company and product web applications.",
-      "- Building backbone for the product’s third-party connectors.",
-      "- Building developers’ API architecture, endpoints, and documentation.",
+      "Idea Acquisition and User Research Phase.",
+      "Mapping out Product Infrastructures, requirements, and development goals.",
+      "Setup infrastructure and procure providers needed (TonAPI, Geckoterminal,etc.)",
+      "Build Bot website",
+      "Setup bot docs V1.0",
+      "Setting up Cloud infrastructure and CI.",
+      "Launch full bot MVP.",
     ],
   },
   {
     quarter: "Q2",
-    info: "Usability Testing and Security Optimization.",
+    info: "Bot Alpha Testing and Optimization",
     phases: [
-      "- A series of usability testing by developers and end-users, ",
-      "- Inviting specific users to test the application and give constructive feedback and critique",
-      "- Inviting developers to contribute to an open source public repository on GitHub",
+      "Building backbone for the TonderBot marketplace’s third-party integrations.",
+      "Fund float balances for all accepted integrations.",
+      "Add more bot features e.g Auto buy, Realtime spot trades with little to no slippages.",
+      "Scaling systems and migration from heavily rate limited services",
+      "Building developers’ API architecture, endpoints, and documentation.",
+      "Testing and Optimization of API and Production deployment",
+      "Usability Testing and Security Optimization.",
+      "A series of usability testing by developers and end-users.",
+      "A/B Testing for TonderBot Marketplace",
+      "Inviting developers to contribute to an open-source public repository on GitHub, This enables developers to add third-party integrations that provide real-world assets & utilities to the TonderBot Marketplace.",
+      "Launch TonderBot Marketplace for all users."
     ],
   },
   {
     quarter: "Q3",
-    info: " Launching, User Acquisition, and Marketing.",
+    info: " Launch, User Acquisition, Marketing.",
     phases: [
-      "- Mass adoption and marketing",
-      "- Social Media reach outs, community formation and management",
-      "- Deployment of resources like designs, documentation, and content to guide developer and end users’ onboarding.",
-      "- Airdrops and rewards for all early adopters.",
+      "Social Media reach outs, community formation and management.",
+      "Deployment of resources like designs, documentation, and content to guide developer and end users’ onboarding.",
+      "Referral program.",
+      "Token launch (Holders pay less fees) and rewarding Github contributors.",
+      "Airdrops and rewards for all early adopters."
     ],
   },
 ];
@@ -129,7 +131,7 @@ export const ProjectRoadmap = () => {
                             </p>
 
                             <p
-                              className="text-start text-sm sm:text-base w-[90%] sm:max-w-[24rem] max-w-[18rem] lg:w-3/4 min-[920px]:text-sm leading-[1.5] truncate
+                              className="text-start text-sm sm:text-base w-[90%] sm:max-w-[24rem] max-w-[18rem] lg:w-3/4 min-[920px]:text-sm leading-[1.5]
                             "
                             >
                               {roadmap[i].info}
