@@ -9,7 +9,7 @@ import Link from "next/link";
 const WeBuildSolutionsForWeb3: FC = () => {
   return (
     <Transition>
-      <div className="text-white bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9] w-full flex justify-center items-center my-48 py-10 lg:py-[4.5rem] relative px-4 overflow-hidden max-w-[100rem]">
+      <div className="text-white bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9] w-full flex justify-center items-center mb-48 py-10 lg:py-[4.5rem] relative px-4 overflow-hidden max-w-[100rem]">
         <img
           src={worlddextop.src}
           alt="Xmen Image"

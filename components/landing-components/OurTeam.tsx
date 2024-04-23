@@ -24,48 +24,41 @@ interface Developer {
   role: string;
 }
 
-const developers = [
+const developers: Developer[] = [
   {
     image: Ayomide,
     name: "Ayomide",
     role: "Team Lead",
-    link: "",
   },
   {
     image: Somto,
     name: "Somto",
     role: "TonderBot Lead Engineer",
-    link: "",
   },
   {
     image: MuizSanni,
     name: "Muiz",
     role: "Art Director",
-    link: "",
   },
   {
     image: Divine,
     name: "Divine",
     role: "Full-stack Engineer",
-    link: "",
   },
   {
     image: Bayo,
     name: "Bayo",
     role: "Integrations Engineer",
-    link: "",
   },
   {
     image: Kinyichukwu,
     name: "Kinyichukwu",
     role: "Front-end Developer",
-    link: "",
   },
   {
     image: Mayowa,
     name: "Mayowa",
     role: "Developer & Technical Writer",
-    link: "",
   },
 ];
 
@@ -74,7 +67,7 @@ interface IProps {}
 const OurTeam: FC<IProps> = () => {
   return (
     <Transition>
-      <div className="text-white py-20 sm:py-8 w-full flex flex-col relative">
+      <div className="text-white py-20 md:py-28 lg:py-32 w-full flex flex-col relative">
         <div className="absolute w-screen h-[1000px] overflow-hidden">
           <img
             src={vector1.src}
@@ -102,7 +95,6 @@ const OurTeam: FC<IProps> = () => {
                   name={developers[i].name}
                   title={developers[i].role}
                   img={developers[i].image}
-                  
                 />
               ))}
           </section>

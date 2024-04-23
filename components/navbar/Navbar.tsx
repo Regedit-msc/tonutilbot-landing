@@ -22,15 +22,21 @@ export const Navbar = () => {
 
     window.addEventListener("scroll", function () {
       newScroll = window.scrollY;
+
       if (newScroll < 75) {
-        return;
+        document.querySelector(".nav")?.classList.remove("shadow-lg");
+        document.querySelector(".nav")?.classList.remove("shadow-black/20");
       } else {
         if (scrollY > newScroll) {
           document
-            .querySelector("nav")
+            .querySelector(".nav")
             ?.classList.remove("-translate-y-[450px]");
+          document.querySelector(".nav")?.classList.add("shadow-lg");
+          document.querySelector(".nav")?.classList.add("shadow-black/20");
         } else {
-          document.querySelector("nav")?.classList.add("-translate-y-[450px]");
+          document.querySelector(".nav")?.classList.add("-translate-y-[450px]");
+          document.querySelector(".nav")?.classList.remove("shadow-lg");
+          document.querySelector(".nav")?.classList.remove("shadow-black/20");
         }
       }
       scrollY = newScroll;
@@ -46,7 +52,7 @@ export const Navbar = () => {
       <DesktopScrolledNav />
       <div className="w-full flex justify-center items-center relative">
         <nav
-          className={`top-0 flex flex-col sm:flex-row justify-between items-center fixed sm:static w-full py-3 md:py-7 sm:px-10 lg:px-20 lg:max-w-[70rem] z-[999] backdrop-blur-[60px] sm:backdrop:blur-none transition-all duration-500 ease-in-out border-ashyBorder border-b sm:border-none ${
+          className={`nav top-0 flex flex-col sm:flex-row justify-between items-center fixed sm:static w-full py-3 md:py-7 sm:px-10 lg:px-20 lg:max-w-[70rem] z-[999] backdrop-blur-[60px] sm:backdrop:blur-none transition-all duration-500 ease-in-out border-ashyBorder border-b sm:border-none ${
             !menuOpen && "border-none"
           }`}
         >
@@ -63,20 +69,20 @@ export const Navbar = () => {
                 setMenuOpen(!menuOpen);
               }}
               src={menu.src}
-              className={`fixed right-0 w-8 sm:hidden mr-6 transition-all duration-300 ease-in-out ${
+              className={`fixed right-0 w-7 sm:hidden mr-8 transition-all duration-300 ease-in-out ${
                 menuOpen ? "opacity-0" : "opacity-100"
               }`}
-              alt=""
+              alt="menu"
             />
             <img
               onClick={() => {
                 setMenuOpen(!menuOpen);
               }}
               src={close.src}
-              className={`fixed right-0 sm:hidden mr-8 transition-all duration-300 ease-in-out w-4 ${
+              className={`fixed right-0 sm:hidden mr-9 transition-all duration-300 ease-in-out w-5 ${
                 !menuOpen ? "opacity-0" : "opacity-100"
               }`}
-              alt=""
+              alt="close"
             />
           </div>
 

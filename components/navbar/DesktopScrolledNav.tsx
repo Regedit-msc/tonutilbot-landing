@@ -42,9 +42,9 @@ export const DesktopScrolledNav = () => {
   }, []);
 
   return (
-    <div className="w-full flex justify-center items-center relative">
+    <div className="w-full sm:flex justify-center items-center relative hidden">
       <nav
-        className={`top-0 flex flex-col sm:flex-row justify-between items-center fixed w-full sm:w-[90%] py-3 sm:py-0 sm:my-10 sm:rounded-full px-6 lg:max-w-[70rem] z-[999] backdrop-blur-[60px] sm:backdrop:blur-none transition-all duration-500 ease-in-out- bg-white/10 opacity-0`}
+        className={`top-0 flex flex-col sm:flex-row justify-between items-center fixed w-full sm:w-[90%] py-3 sm:py-0 sm:my-10 sm:rounded-full px-6 lg:max-w-[70rem] z-[999] backdrop-blur-[60px] sm:backdrop:blur-none transition-all duration-500 ease-in-out bg-white/10 opacity-0 shadow-lg shadow-black/10`}
       >
         <div className="flex justify-between items-center w-full">
           <Link href={"/"}>
