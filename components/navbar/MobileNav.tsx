@@ -16,7 +16,12 @@ const MobileNav: FC<MobileNavProps> = ({ open, setOpen }: MobileNavProps) => {
       }`}
     >
       <span className="absolute top-20 w-[90%] border-t border-ashyBorder" />
-      <ul className="flex flex-col gap-4 py-10">
+      <ul
+        onClick={() => {
+          setOpen(false);
+        }}
+        className="flex flex-col gap-4 py-10"
+      >
         <li>
           <Link href={"/"}>Home</Link>
         </li>
