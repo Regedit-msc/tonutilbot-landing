@@ -11,14 +11,14 @@ export const ThirdPartyWeb2Payments = () => {
         <img src={Card.src} alt="" className="w-[90px] sm:w-[110px] my-3" />
         <GradientText
           text={
-            <span className="text-[3rem] sm:text-[3.5rem] lg:text-[5.5rem] tracking-tighter insetShadow z-30">
+            <span className="text-[3rem] sm:text-[3.5rem] lg:text-[4rem] tracking-tighter insetShadow z-30">
               Third Party <br className="md:hidden" /> Web2
               <br />
             </span>
           }
           className="text-center lg:leading-[0.8] lg:text-[6rem] text-6xl text-[40px] lg:pb-6 pt-2"
         />
-        <p className="text-[3rem] sm:text-[3.5rem] lg:text-[5.5rem] tracking-tighter font-bold sm:px-3 leading-[0.9] text-transparent bg-gradient-to-r from from-blue-500 to-purple-500 bg-clip-text pb-2 lg:-my-4">
+        <p className="text-[3rem] sm:text-[3.5rem] lg:text-[4rem] tracking-tighter font-bold sm:px-3 leading-[0.9] text-transparent bg-gradient-to-r from from-blue-500 to-purple-500 bg-clip-text pb-2 lg:-my-4">
           Payments
         </p>
 

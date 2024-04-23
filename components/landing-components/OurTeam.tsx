@@ -29,44 +29,43 @@ const developers = [
     image: Ayomide,
     name: "Ayomide",
     role: "Team Lead",
-    link: ""
+    link: "",
   },
   {
     image: Somto,
     name: "Somto",
     role: "TonderBot Lead Engineer",
-    link: ""
+    link: "",
   },
   {
     image: MuizSanni,
     name: "Muiz",
     role: "Art Director",
-    link: ""
+    link: "",
   },
   {
     image: Divine,
     name: "Divine",
-    role: "Front-end Developer",
-    link: ""
-  },
-  {
-    image: Kinyichukwu,
-    name: "Kinyichukwu",
-    role: "Front-end Developer",
-    link: ""
+    role: "Full-stack Engineer",
+    link: "",
   },
   {
     image: Bayo,
     name: "Bayo",
     role: "Integrations Engineer",
-    link: ""
+    link: "",
   },
-
+  {
+    image: Kinyichukwu,
+    name: "Kinyichukwu",
+    role: "Front-end Developer",
+    link: "",
+  },
   {
     image: Mayowa,
     name: "Mayowa",
-    role: "Developer and Technical Writer",
-    link: ""
+    role: "Developer & Technical Writer",
+    link: "",
   },
 ];
 

@@ -13,15 +13,13 @@ export const metadata: Metadata = {
     url: "https://tonderlabs.com",
     description:
       "We're a company dedicated to developing the best utility software on the TON Network",
-    images:
-      "https://tonderlabs.com/tonderlabs.png",
+    images: "https://tonderlabs.com/tonderlabs.png",
   },
   twitter: {
     card: "summary_large_image",
     site: "@",
     creator: "@",
-    images:
-      "https://tonderlabs.com/tonderlabs.png",
+    images: "https://tonderlabs.com/tonderlabs.png",
     description: "Building Web3 solutions for the TON Network",
   },
 };
@@ -75,11 +73,6 @@ export default function RootLayout({
           alt="prism light image"
           className="absolute sm:h-fit w-full h-[40rem] top-0"
         />
-        {/* <img
-          src={mesh.src}
-          alt="Mesh Image"
-          className="absolute w-full h-[40rem] sm:h-full -lg:top-96 opacity-50"
-        /> */}
         {children}
       </body>
     </html>

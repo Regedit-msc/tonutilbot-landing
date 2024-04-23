@@ -43,10 +43,8 @@ export const HeroSection = () => {
           />
 
           <p className="text-white font-normal text-sm lg:text-lg leading-[1.7]">
-            TonderBot simplifies your crypto
-            <br className="flex sm:hidden" /> life. Swap, trade, and handle <br className="hidden sm:flex" /> your
-            TON
-            <br className="flex sm:hidden" /> finances with ease.
+            Unleash the power of TonderBot for utility,
+            <br /> seamless swaps, trades & asset management
           </p>
 
           <section className="flex justify-center items-center gap-3">

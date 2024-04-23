@@ -1,11 +1,13 @@
 "use client";
 import React, { FC, useRef, useState } from "react";
 import tonderBot from "@assets/Navbar/ProductsTonderBot.svg";
+import beta from "@assets/landing-page/beta.svg";
 import tonderApp from "@assets/Navbar/ProductsTonderApp.svg";
 import { IoIosArrowForward } from "react-icons/io";
 import Link from "next/link";
 import { useOnClickOutside } from "@hooks/useOnClickOutside";
 import Transition from "./transitions";
+import comingSoon from "@assets/Navbar/comingSoon.svg";
 
 interface ProductsProps {
   open: boolean;
@@ -44,8 +46,13 @@ const ProductsDropdown: FC<ProductsProps> = ({
             >
               <img src={tonderBot.src} alt="tonderBot" className="h-[40px]" />
               <div className="flex flex-col">
-                <h1 className="font-medium text-sm md:text-[16px]">
+                <h1 className="font-medium text-sm md:text-[16px] relative">
                   TonderBot
+                  <img
+                    src={beta.src}
+                    alt=""
+                    className="absolute top-0 left-[84px]"
+                  />
                 </h1>
                 <p className="font-thin text-xs md:text-[14px] text-white/50">
                   The best utility bot on the TON Network
@@ -56,9 +63,14 @@ const ProductsDropdown: FC<ProductsProps> = ({
             <section className="flex gap-3 justify-start items-center">
               <img src={tonderApp.src} alt="tonderBot" className="h-[40px]" />
               <div className="flex flex-col">
-                <h1 className="font-medium medium text-sm md:text-[16px]">
+                <h1 className="font-medium medium text-sm md:text-[16px] blur-[3px] flex gap-2">
                   TonderApp
                 </h1>
+                <img
+                  src={comingSoon.src}
+                  alt=""
+                  className="w-20 absolute left-40"
+                />
                 <p className="font-thin text-xs md:text-[14px] text-white/50">
                   The next big thing we&apos;re working on!
                 </p>

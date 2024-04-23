@@ -120,4 +120,7 @@
   animation: float-2 6s ease-in-out infinite;
 }
 
-/** landing slideshow (products)*/
+.desktop-nav {
+  background-color: aqua;
+}
+
