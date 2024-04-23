@@ -3,6 +3,7 @@
 import { GradientButton } from "@components/buttons/GradientButton";
 import logo from "@assets/logo-new.png";
 import menu from "@assets/menu.png";
+import close from "@assets/Navbar/close.svg";
 import tonderLabs from "@assets/TonderLabs.png";
 import down from "@assets/Navbar/arrowdown.svg";
 import { useEffect, useState, useRef } from "react";
@@ -12,6 +13,7 @@ import MobileNav from "./MobileNav";
 
 export const Navbar = () => {
   const [productsOpen, setProductsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     var scrollY = window.scrollY;
@@ -25,9 +27,9 @@ export const Navbar = () => {
         if (scrollY > newScroll) {
           document
             .querySelector("nav")
-            ?.classList.remove("-translate-y-[400px]");
+            ?.classList.remove("-translate-y-[450px]");
         } else {
-          document.querySelector("nav")?.classList.add("-translate-y-[400px]");
+          document.querySelector("nav")?.classList.add("-translate-y-[450px]");
         }
       }
       scrollY = newScroll;
@@ -41,7 +43,9 @@ export const Navbar = () => {
   return (
     <div className="w-full flex justify-center items-center relative">
       <nav
-        className={`top-0 flex flex-col sm:flex-row justify-between items-center fixed md:static w-full py-3 md:py-7 sm:px-10 lg:px-20 lg:max-w-[70rem] z-[999] backdrop-blur-[60px] sm:backdrop:blur-none transition-all duration-500 ease-in-out border-ashyBorder border-b sm:border-none`}
+        className={`top-0 flex flex-col sm:flex-row justify-between items-center fixed md:static w-full py-3 md:py-7 sm:px-10 lg:px-20 lg:max-w-[70rem] z-[999] backdrop-blur-[60px] sm:backdrop:blur-none transition-all duration-500 ease-in-out border-ashyBorder border-b sm:border-none ${
+          !menuOpen && "border-none"
+        }`}
       >
         <div className="flex justify-between items-center w-full">
           <Link href={"/"}>
@@ -51,10 +55,29 @@ export const Navbar = () => {
             </div>
           </Link>
 
-          <img src={menu.src} className="w-8 sm:hidden mr-6" alt="" />
+          <img
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+            }}
+            src={menu.src}
+            className={`fixed right-0 w-8 sm:hidden mr-6 transition-all duration-300 ease-in-out ${
+              menuOpen ? "opacity-0" : "opacity-100"
+            }`}
+            alt=""
+          />
+          <img
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+            }}
+            src={close.src}
+            className={`fixed right-0 sm:hidden mr-8 transition-all duration-300 ease-in-out w-4 ${
+              !menuOpen ? "opacity-0" : "opacity-100"
+            }`}
+            alt=""
+          />
         </div>
 
-        <MobileNav />
+        <MobileNav open={menuOpen} setOpen={setMenuOpen} />
 
         <section className="sm:flex text-white gap-8 justify-center items-center hidden text-xs sm:text-sm lg:text-base">
           <div className="relative">
@@ -76,7 +99,7 @@ export const Navbar = () => {
           <Link href="https://t.me/tonderbot_news">
             <GradientButton
               myPadding={true}
-              className="text-sm py-2 sm:py-3 w-32"
+              className="text-sm py-2 sm:py-3 w-[128px]"
               text="Contact Us"
               isIcon={false}
             />

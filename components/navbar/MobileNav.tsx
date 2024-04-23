@@ -4,10 +4,19 @@ import Link from "next/link";
 import comingSoon from "@assets/Navbar/comingSoon.svg";
 import { GradientButton } from "@components/buttons/GradientButton";
 
-const MobileNav: FC = () => {
+interface MobileNavProps {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const MobileNav: FC<MobileNavProps> = ({ open, setOpen }: MobileNavProps) => {
   return (
-    <section className="sm:hidden text-white font-semibold text-3xl w-full flex justify-center items-center">
-      <ul className="flex flex-col gap-3 py-10">
+    <section
+      className={`sm:hidden text-white font-semibold text-3xl w-full flex justify-center items-center transition-all duration-300 ease-in-out ${
+        open ? "opacity-100 h-[350px]" : "opacity-0 h-0"
+      }`}
+    >
+      <span className="absolute top-20 w-[90%] border-t border-ashyBorder" />
+      <ul className="flex flex-col gap-4 py-10">
         <li>
           <Link href={"/"}>Home</Link>
         </li>
@@ -31,7 +40,7 @@ const MobileNav: FC = () => {
           </Link>
         </li>
 
-        <li className="w-fit">
+        <li className="w-fit mt-2">
           <Link href="https://t.me/tonderbot_news">
             <GradientButton
               myPadding={true}
