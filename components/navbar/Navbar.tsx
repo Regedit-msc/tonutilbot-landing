@@ -4,11 +4,11 @@ import { GradientButton } from "@components/buttons/GradientButton";
 import logo from "@assets/logo-new.png";
 import menu from "@assets/menu.png";
 import tonderLabs from "@assets/TonderLabs.png";
-import { IoIosArrowDown } from "react-icons/io";
+import down from "@assets/Navbar/arrowdown.svg";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import ProductsDropdown from "@components/ProductsDropdown";
-import { useOnClickOutside } from "@hooks/useOnClickOutside";
+import MobileNav from "./MobileNav";
 
 export const Navbar = () => {
   const [productsOpen, setProductsOpen] = useState(false);
@@ -25,9 +25,9 @@ export const Navbar = () => {
         if (scrollY > newScroll) {
           document
             .querySelector("nav")
-            ?.classList.remove("-translate-y-[150px]");
+            ?.classList.remove("-translate-y-[400px]");
         } else {
-          document.querySelector("nav")?.classList.add("-translate-y-[150px]");
+          document.querySelector("nav")?.classList.add("-translate-y-[400px]");
         }
       }
       scrollY = newScroll;
@@ -41,16 +41,20 @@ export const Navbar = () => {
   return (
     <div className="w-full flex justify-center items-center relative">
       <nav
-        className={`top-0 flex justify-between items-center fixed md:static w-full py-3 md:py-7 sm:px-10 lg:px-20 lg:max-w-[70rem] z-[999] backdrop-blur-xl sm:backdrop:blur-none transition-all duration-500 ease-in-out`}
+        className={`top-0 flex flex-col sm:flex-row justify-between items-center fixed md:static w-full py-3 md:py-7 sm:px-10 lg:px-20 lg:max-w-[70rem] z-[999] backdrop-blur-[60px] sm:backdrop:blur-none transition-all duration-500 ease-in-out border-ashyBorder border-b sm:border-none`}
       >
-        <Link href={"/"}>
-          <div className="flex items-center pl-6 sm:pl-0 sm:py-8 py-4">
-            <img src={logo.src} alt="Logo" className="mr-2 h-10" />
-            <img src={tonderLabs.src} alt="" className="h-5" />
-          </div>
-        </Link>
+        <div className="flex justify-between items-center w-full">
+          <Link href={"/"}>
+            <div className="flex items-center pl-6 sm:pl-0 sm:py-8 py-4">
+              <img src={logo.src} alt="Logo" className="mr-2 h-10" />
+              <img src={tonderLabs.src} alt="" className="h-5" />
+            </div>
+          </Link>
 
-        <img src={menu.src} className="w-8 sm:hidden mr-6" alt="" />
+          <img src={menu.src} className="w-8 sm:hidden mr-6" alt="" />
+        </div>
+
+        <MobileNav />
 
         <section className="sm:flex text-white gap-8 justify-center items-center hidden text-xs sm:text-sm lg:text-base">
           <div className="relative">
@@ -60,19 +64,19 @@ export const Navbar = () => {
               }}
               className="cursor-pointer flex text-white justify-center items-center gap-2"
             >
-              Products <IoIosArrowDown />
+              Products <img src={down.src} alt="open" className="w-2" />
             </p>
             <ProductsDropdown open={productsOpen} setOpen={setProductsOpen} />
           </div>
 
-          <a href="https://docs.tonderlabs.com">
+          <Link href="https://docs.tonderlabs.com">
             <p>About</p>
-          </a>
+          </Link>
 
           <Link href="https://t.me/tonderbot_news">
             <GradientButton
               myPadding={true}
-              className="text-sm px-6 py-2 sm:py-3"
+              className="text-sm py-2 sm:py-3 w-32"
               text="Contact Us"
               isIcon={false}
             />

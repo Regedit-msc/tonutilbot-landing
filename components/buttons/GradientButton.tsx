@@ -31,7 +31,7 @@ export function GradientButton({
         className={`${className} shadow-lg rounded-full flex justify-center items-center text-white gap-2 w-fit transition-all
       ${
         gradient
-          ? "bg-gradient-to-r from-blue-400 to-purple-600 via-indigo-500"
+          ? "bg-gradient-to-r from-[#3DB3FC] to-[#936BF9] via-[#5C80FA]"
           : "border"
       }
       ${!hover && "hover:shadow-2xl"}

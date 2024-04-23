@@ -4,13 +4,9 @@ import React, { FC } from "react";
 import worlddextop from "@assets/landing-page/WeBuildSolutionsForWeb3/WorldDextop.png";
 import worldTablet from "@assets/landing-page/WeBuildSolutionsForWeb3/World.svg";
 import imageGroup from "@assets/landing-page/WeBuildSolutionsForWeb3/groupImageDextop.svg";
-import { GradientText } from "@components/special_text/GradientText";
-import LandingDarkButton from "@components/buttons/LandingDarkButton";
 import Link from "next/link";
 
-interface IProps {}
-
-const WeBuildSolutionsForWeb3: FC<IProps> = () => {
+const WeBuildSolutionsForWeb3: FC = () => {
   return (
     <Transition>
       <div className="text-white bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9] w-full flex justify-center items-center my-48 py-10 lg:py-[4.5rem] relative px-4 overflow-hidden max-w-[100rem]">
@@ -24,9 +20,7 @@ const WeBuildSolutionsForWeb3: FC<IProps> = () => {
           alt="Xmen Image"
           className="absolute -z-0 opacity-100 left-0 md:hidden h-full"
         />
-        {/**left */}
-
-        <div className="max-w-[100rem] ml-[2.19rem] mr-[1.69rem] flex flex-col justify-center items-center md:flex-row lg:gap-[5rem] gap-10 sm:gap-4">
+        <div className="max-w-[100rem] flex flex-col justify-center items-center md:flex-row lg:gap-[3rem] gap-10 sm:gap-4 lg:px-20">
           <div className="flex flex-col w-full">
             <button className="bg-white/[0.1] rounded-full py-2 px-3 flex justify-center items-center text-white gap-3 w-fit tracking-widest font-light mb-6 flex-col">
               OUR MISSION
