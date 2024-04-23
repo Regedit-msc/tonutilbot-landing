@@ -12,7 +12,7 @@ const MobileNav: FC<MobileNavProps> = ({ open, setOpen }: MobileNavProps) => {
   return (
     <section
       className={`sm:hidden text-white font-semibold text-3xl w-full flex justify-center items-center transition-all duration-300 ease-in-out ${
-        open ? "opacity-100 h-[350px]" : "opacity-0 h-0"
+        open ? "opacity-100 h-[350px]" : "opacity-0 h-0 -translate-y-[250px]"
       }`}
     >
       <span className="absolute top-20 w-[90%] border-t border-ashyBorder" />
