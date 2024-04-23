@@ -11,7 +11,7 @@ export const DeveloperApiIntegration = () => {
   return (
     <div className="w-full flex flex-col lg:flex-row justify-center lg:gap-[10%] items-center text-white relative mt-28 sm:mt-[12rem] mb-28">
       <div className="flex flex-col justify-center lg:items-start items-center text-center gap-5 sm:gap-3 lg:gap-2 relative">
-        <p className="text-transparent bg-gradient-to-r from from-blue-500 to-purple-500 bg-clip-text text-lg font-semibold lg:text-start lg:w-fit mb-5">
+        <p className="text-transparent bg-gradient-to-r from from-blue-500 to-purple-500 bg-clip-text text-lg font-normal lg:text-start lg:w-fit mb-5">
           FLEXIBLE DEVELOPMENT
         </p>
         <GradientText className="lg:w-full text-center sm:mb-5 lg:text-[3.6rem] md:text-6xl text-[3rem] tracking-tighter leading-[0.9] pb-2 lg:text-start">
