@@ -14,9 +14,9 @@ const FeaturedProjectsCarousel: FC<CarouselProps> = ({
 }: CarouselProps) => {
   return (
     <section
-      className={`flex justify-start gap-3 sm:gap-5 lg:gap-8 pl-[12%] sm:pl-[20%] lg:pl-[5%] transition-all duration-300 ease-in-out w-screen ${
+      className={`flex justify-start min-[1640px]:justify-center gap-3 sm:gap-5 lg:gap-8 pl-[12%] sm:pl-[20%] lg:pl-[5%]  min-[1640px]:pl-0 transition-all duration-300 ease-in-out w-screen ${
         next &&
-        "-translate-x-[220px] sm:-translate-x-[330px] lg:-translate-x-[600px]"
+        "-translate-x-[220px] sm:-translate-x-[330px] lg:-translate-x-[600px] min-[1640px]:translate-x-0"
       }`}
     >
       <Link href="/bot">
