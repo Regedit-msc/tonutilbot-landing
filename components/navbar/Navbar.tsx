@@ -23,7 +23,7 @@ export const Navbar = () => {
     window.addEventListener("scroll", function () {
       newScroll = window.scrollY;
 
-      if (newScroll < 75) {
+      if (newScroll < 100) {
         document.querySelector(".nav")?.classList.remove("shadow-lg");
         document.querySelector(".nav")?.classList.remove("shadow-black/20");
       } else {

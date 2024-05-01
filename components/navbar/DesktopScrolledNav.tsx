@@ -19,7 +19,7 @@ export const DesktopScrolledNav = () => {
 
     window.addEventListener("scroll", function () {
       newScroll = window.scrollY;
-      if (newScroll < 100) {
+      if (newScroll < 150) {
         document.querySelector("nav")?.classList.add("opacity-0");
       } else {
         if (scrollY > newScroll) {
