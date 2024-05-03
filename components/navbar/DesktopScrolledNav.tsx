@@ -2,8 +2,6 @@
 "use client";
 import { GradientButton } from "@components/buttons/GradientButton";
 import logo from "@assets/logo-new.png";
-import menu from "@assets/menu.png";
-import close from "@assets/Navbar/close.svg";
 import tonderLabs from "@assets/TonderLabs.png";
 import down from "@assets/Navbar/arrowdown.svg";
 import { useEffect, useState, useRef } from "react";
@@ -21,7 +19,7 @@ export const DesktopScrolledNav = () => {
 
     window.addEventListener("scroll", function () {
       newScroll = window.scrollY;
-      if (newScroll < 100) {
+      if (newScroll < 150) {
         document.querySelector("nav")?.classList.add("opacity-0");
       } else {
         if (scrollY > newScroll) {
