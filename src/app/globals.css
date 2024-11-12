@@ -24,6 +24,26 @@
   background-clip: text;
 }
 
+.section {
+  position: relative;
+  min-height: 100vh; /* Make sure each section takes at least the full viewport height */
+}
+
+.section.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@layer base {
+  .font-outline {
+    -webkit-text-stroke: 0.5px white;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px white;
+  }
+}
 
 @keyframes slide {
   to {
@@ -123,4 +143,3 @@
 .desktop-nav {
   background-color: aqua;
 }
-

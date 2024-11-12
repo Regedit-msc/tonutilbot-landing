@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-spring/parallax": "^9.7.5",
+    "@react-spring/web": "^9.7.5",
     "@svgr/webpack": "^8.1.0",
     "framer-motion": "^10.16.4",
     "github-markdown-css": "^5.3.0",

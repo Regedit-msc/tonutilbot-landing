@@ -1,13 +1,14 @@
-/* eslint-disable @next/next/no-img-element */
 import { HeroSection } from "@components/bot_components/HeroSection";
 import { BuySwapOrSell } from "@components/bot_components/BuySwapOrSell";
-import { ThirdPartyWeb2Payments } from "@components/bot_components/ThirdPartyWeb2Payments";
-import { DeveloperApiIntegration } from "@components/bot_components/DeveloperApiIntegration";
-import { ProjectRoadmap } from "@components/bot_components/ProjectRoadmap";
 import { OpenTonbotOnTg } from "@components/bot_components/OpenTonbotOnTg";
 import { CTA } from "@components/cta/CTA";
+import IntroducingBot from "@components/bot_components/IntroducingMiniApp";
+import BuySellAndSwap from "@components/bot_components/BuySellAndSwap";
+import AccessToServices from "@components/bot_components/AccessToServices";
+import ReferralsAndAirdrop from "@components/bot_components/ReferralsAndAirdrop";
+import ParallaxScrollWrapper from "@components/bot_components/ParallaxScrollWrapper";
 import { Metadata } from "next";
-import TonderBotMarketplace from "@components/bot_components/TonderBotMarketplace";
+import ParallaxSections from "@components/bot_components/ParallaxSections";
 
 export const metadata: Metadata = {
   title: "Tonder Bot",
@@ -34,13 +35,12 @@ export default function Home() {
   return (
     <>
       <div className="flex justify-center">
-        <div className="mx-5 w-full lg:max-w-[70rem]">
+        <div className="w-full lg:max-w-[100rem]">
           <HeroSection />
           <BuySwapOrSell />
-          <TonderBotMarketplace />
-          <ThirdPartyWeb2Payments />
-          <DeveloperApiIntegration />
-          <ProjectRoadmap />
+          <IntroducingBot />
+          <ParallaxSections />
+
           <div className="flex justify-center items-center">
             <OpenTonbotOnTg />
           </div>

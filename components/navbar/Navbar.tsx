@@ -50,9 +50,9 @@ export const Navbar = () => {
   return (
     <>
       <DesktopScrolledNav />
-      <div className="w-full flex justify-center items-center relative">
+      <div className="w-full  flex justify-center items-center relative">
         <nav
-          className={`nav top-0 flex flex-col sm:flex-row justify-between items-center fixed sm:static w-full py-3 md:py-7 sm:px-10 lg:px-20 lg:max-w-[70rem] z-[999] backdrop-blur-[60px] sm:backdrop:blur-none transition-all duration-500 ease-in-out border-ashyBorder border-b sm:border-none ${
+          className={`nav top-0 flex flex-col sm:flex-row justify-between  backdrop-blur-md items-center fixed sm:static w-full py-3 md:py-7 sm:px-10 lg:px-20 lg:max-w-[70rem] z-[999]  sm:backdrop:blur-none transition-all duration-500 ease-in-out border-ashyBorder border-b sm:border-none ${
             !menuOpen && "border-none"
           }`}
         >

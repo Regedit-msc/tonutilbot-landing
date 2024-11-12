@@ -17,7 +17,10 @@ export function DarkButton({
 }: DarkButtonProps): JSX.Element {
   return (
     <button
-      className={`border border-[#333] bg-gradient-to-b from-transparent to-white/10 ${className} shadow-lg rounded-full py-2 px-3 flex justify-center items-center text-white gap-3 w-fit transition-all z-10 tracking-[0.4em] sm:tracking-[0.3em] text-[0.8rem] font-light`}
+      className={` bg-gradient-to-b h-fit from-transparent to-white/10 ${className} 
+          shadow-white text-xs sm:text-sm py-2 px-3 flex justify-center items-center text-white gap-3 w-fit 
+        transition-all z-10 tracking-[0.4em] sm:tracking-[0.3em] text-[0.8rem] font-light 
+        rounded-xl shadow-inner`}
     >
       {myIcon && <img src={myIcon.src} alt={myIcon} className="w-[25px]" />}
       {isIcon && <img src={bot.src} alt="plane" width={"25px"} />}

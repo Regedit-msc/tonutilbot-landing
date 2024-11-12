@@ -71,7 +71,7 @@ export default function RootLayout({
         <img
           src={prismLight.src}
           alt="prism light image"
-          className="absolute sm:h-fit w-full h-[40rem] top-0"
+          className="absolute sm:h-fit w-full h-[40rem] top-0 opacity-85 sm:w-[70vw] sm:top-20 md:top-0 sm:left-[15vw] lg:w-[50vw] lg:left-[25vw]"
         />
         {children}
       </body>

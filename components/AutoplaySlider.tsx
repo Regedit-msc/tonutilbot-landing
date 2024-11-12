@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import shopify from "@assets/integrationSlideImages/Shopify.png";
 import PayPal from "@assets/integrationSlideImages/PayPal.png";
 import Stripe from "@assets/integrationSlideImages/Stripe.png";
