@@ -16,10 +16,12 @@ const BuySellAndSwap: FC = (props) => {
         className="absolute translate-y-20 w-[20rem] h-fit"
       />
       <section className="flex flex-col gap-3 sm:max-w-[50vw] py-10 md:pl-[5vw] lg:pl-[8vw]">
-        <h1 className="text-8xl font-bold text-transparent font-outline">01.</h1>
-        <div className="flex gap-2 items-center">
+        <h1 className="text-8xl font-bold text-transparent font-outline">
+          01.
+        </h1>
+        <div className="flex flex-col xs:flex-row gap-2 xs:items-center">
           <DarkButton text="TRADING" />
-          <span className="bg-white px-3 py-2 rounded-full flex gap-2 border-[4px] border-blue/70 text-blue font-medium text-nowrap items-center text-sm sm:text-base">
+          <span className="bg-white px-3 py-2 rounded-full flex gap-2 border-[4px] border-blue/70 text-blue font-medium text-nowrap items-center text-sm sm:text-base w-fit">
             <Image src={rocket} alt="" className="w-5 h-5" /> Coming Soon!
           </span>
         </div>

@@ -9,6 +9,7 @@ import ReferralsAndAirdrop from "@components/bot_components/ReferralsAndAirdrop"
 import ParallaxScrollWrapper from "@components/bot_components/ParallaxScrollWrapper";
 import { Metadata } from "next";
 import ParallaxSections from "@components/bot_components/ParallaxSections";
+import GridSection from "@components/bot_components/GridSection";
 
 export const metadata: Metadata = {
   title: "Tonder Bot",
@@ -40,10 +41,11 @@ export default function Home() {
           <BuySwapOrSell />
           <IntroducingBot />
           <ParallaxSections />
-
+          <GridSection />
           <div className="flex justify-center items-center">
             <OpenTonbotOnTg />
           </div>
+
           <CTA />
         </div>
       </div>

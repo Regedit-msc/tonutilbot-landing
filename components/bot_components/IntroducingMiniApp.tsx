@@ -1,8 +1,7 @@
 import { GradientText } from "@components/special_text/GradientText";
 import React, { FC } from "react";
 import bg from "@assets/bg.svg";
-import { GradientButton } from "@components/buttons/GradientButton";
-import Link from "next/link";
+import newusers from "@assets/newusers.svg";
 import { DarkButton } from "@components/buttons/DarkButton";
 
 const IntroducingMiniApp: FC = () => {
@@ -11,6 +10,7 @@ const IntroducingMiniApp: FC = () => {
       <div className="flex flex-col justify-center items-center text-center gap-2 text-white w-full ">
         <DarkButton
           text="NEW USERS"
+          customIcon={newusers}
           className="max-auto sm:translate-y-3 text-sm"
         />
         <GradientText

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 3px;
@@ -13,9 +17,32 @@
   border-radius: 2px;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Auto Images Carousel */
+@keyframes swipe {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes swipe-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-swipe {
+  animation: swipe 20s linear infinite;
+}
+
+.animate-swipe-reverse {
+  animation: swipe-reverse 20s linear infinite;
+}
 
 .insetShadow {
   color: transparent;

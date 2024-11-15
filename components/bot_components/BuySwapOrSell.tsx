@@ -33,25 +33,25 @@ export const BuySwapOrSell = () => {
           of trading using TonderBot
         </p>
 
-        <div className="flex justify-center items-center max-lg:flex-wrap py-10 gap-4 lg:mt-6">
+        <div className="flex justify-center items-center max-xl:flex-wrap py-10 gap-4 lg:mt-6 px-6">
           {cards.map((card, i) => (
             <Transition
               key={i}
-              className="relative w-[20rem] sm:w-[400px] h-[20rem] sm:h-[400px]"
+              className="relative w-[20rem] md:w-[23rem] h-[20rem] md:h-[23rem]"
             >
               <Image
                 src={card[0]}
                 alt=""
                 width={400}
                 height={400}
-                className="absolute duration-500 w-[20rem] sm:w-[400px] hover:opacity-0"
+                className="absolute duration-500 w-[20rem] md:w-[23rem] hover:opacity-0"
               />
               <Image
                 src={card[1]}
                 alt=""
                 width={400}
                 height={400}
-                className="absolute opacity-0 duration-500 w-[20rem] sm:w-[400px] hover:opacity-100"
+                className="absolute opacity-0 duration-500 w-[20rem] md:w-[23rem] hover:opacity-100"
               />
             </Transition>
           ))}

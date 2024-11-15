@@ -12,9 +12,9 @@ const ReferralsAndAirdrop: FC = (props) => {
   return (
     <div className="flex-col sm:flex-row flex justify-center text-white sm:gap-10 px-8 pt-20">
       <section className="flex flex-col gap-3 sm:max-w-[50vw] pt-10 md:pl-[5vw] lg:pl-[8vw] z-10">
-        <div className="flex gap-2 items-center">
-          <DarkButton text="COMMUNITY" />
-          <span className="bg-white px-3 py-2 rounded-full flex gap-2 border-[4px] border-purple/70 text-purple font-medium text-nowrap items-center text-sm sm:text-base">
+        <div className="flex gap-2 xs:items-center flex-col xs:flex-row">
+          <DarkButton text="COMMUNITY" customIcon={comm} />
+          <span className="bg-white px-3 py-2 rounded-full flex gap-2 border-[4px] border-purple/70 text-purple font-medium text-nowrap items-center text-sm sm:text-base min-w-fit">
             <Image src={rocket} alt="" className="w-5 h-5" /> Coming Soon!
           </span>
         </div>
@@ -40,7 +40,7 @@ const ReferralsAndAirdrop: FC = (props) => {
           alt="transactions"
           width={1000}
           height={1000}
-          className="w-[60vw] sm:scale-[1.25] max-w-[25rem] h-fit sm:w-[30vw] z-10"
+          className="w-[60vw] animate-float max-w-[25rem] xl:max-w-[28rem] h-fit sm:w-[38vw] z-10"
         />
       </div>
     </div>

@@ -66,7 +66,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={poppinsFont.className}>
-      <body className="bg-ashy overflow-x-hidden box-border">
+      <body className="bg-ashy w-full overflow-x-hidden box-border">
         <Navbar />
         <img
           src={prismLight.src}
