@@ -45,9 +45,9 @@ export const HeroSection = () => {
             className="insetShadow lg:text-[6.5rem] text-[3rem] sm:text-[4rem] font-bold sm:px-3 tracking-tighter leading-[0.9]"
           />
 
-          <p className="text-white font-normal text-sm lg:text-lg leading-[1.7] -mt-8 lg:-mt-10">
-            Unleash the power of TonderBot for utility,
-            <br /> seamless swaps, trades & asset management
+          <p className="text-balance -mt-4 sm:-mt-10 sm:text-lg md:text-xl px-4 font-light">
+            Buy, Swap or Sell TON using our wallet along with <br /> Web2
+            payments and developer API integration.
           </p>
 
           <section className="flex justify-center items-center gap-3">

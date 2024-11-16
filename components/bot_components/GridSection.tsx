@@ -18,7 +18,7 @@ import { DarkButton } from "@components/buttons/DarkButton";
 
 const GridSection: FC = () => {
   return (
-    <div className="flex flex-col sm:grid grid-rows-3 sm:grid-cols-5 w-full gap-3 py-20 sm:py-32 md:px-[5vw] lg:px-[8vw] lg:py-60 relative px-6">
+    <div className="flex flex-col sm:grid grid-rows-3 sm:grid-cols-5 w-full gap-3 py-20 sm:pt-32 md:px-[5vw] lg:px-[8vw] lg:pt-60 relative px-6">
       <Image
         src={bg}
         alt=""

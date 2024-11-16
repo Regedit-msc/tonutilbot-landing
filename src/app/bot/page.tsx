@@ -10,6 +10,7 @@ import ParallaxScrollWrapper from "@components/bot_components/ParallaxScrollWrap
 import { Metadata } from "next";
 import ParallaxSections from "@components/bot_components/ParallaxSections";
 import GridSection from "@components/bot_components/GridSection";
+import StartTradingToday from "@components/bot_components/StartTradingToday";
 
 export const metadata: Metadata = {
   title: "Tonder Bot",
@@ -42,10 +43,7 @@ export default function Home() {
           <IntroducingBot />
           <ParallaxSections />
           <GridSection />
-          <div className="flex justify-center items-center">
-            <OpenTonbotOnTg />
-          </div>
-
+          <StartTradingToday />
           <CTA />
         </div>
       </div>

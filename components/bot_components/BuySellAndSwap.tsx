@@ -20,16 +20,17 @@ const BuySellAndSwap: FC = (props) => {
           01.
         </h1>
         <div className="flex flex-col xs:flex-row gap-2 xs:items-center">
-          <DarkButton text="TRADING" />
-          <span className="bg-white px-3 py-2 rounded-full flex gap-2 border-[4px] border-blue/70 text-blue font-medium text-nowrap items-center text-sm sm:text-base w-fit">
-            <Image src={rocket} alt="" className="w-5 h-5" /> Coming Soon!
+          <DarkButton text="TRADING" noIcon />
+          <span className="bg-white px-3 py-2 lg:py-3 lg:px-5 lg:text-lg rounded-full flex gap-2 border-[4px] border-blue/70 text-blue font-medium text-nowrap items-center text-sm sm:text-base w-fit">
+            <Image src={rocket} alt="" className="w-5 h-5 lg:w-6 lg:h-6" />{" "}
+            Coming Soon!
           </span>
         </div>
 
         <strong className="leading-[3rem] sm:leading-[4rem] sm:text-6xl relative tracking-tighter text-5xl lg:text-8xl lg:w-full font-semibold flex">
           Buy, sell & <br /> swap
         </strong>
-        <p className="text-balance lg:text-2xl sm:text-lg md:text-xl">
+        <p className="text-balance lg:text-2xl sm:text-lg md:text-xl font-light">
           Buy, sell and swap TON and other Jettons using our telegram mini-app
         </p>
       </section>

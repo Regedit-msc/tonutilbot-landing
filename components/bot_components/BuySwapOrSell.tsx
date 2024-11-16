@@ -28,7 +28,7 @@ export const BuySwapOrSell = () => {
           </GradientText>
         </Transition>
 
-        <p className="text-balance -mt-4 sm:-mt-10 sm:text-lg md:text-xl px-4">
+        <p className="text-balance -mt-4 sm:-mt-10 sm:text-lg md:text-xl px-4 font-light">
           Import your wallet or create a new one and <br /> experience the ease
           of trading using TonderBot
         </p>

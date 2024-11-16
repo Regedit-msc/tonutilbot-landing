@@ -11,14 +11,13 @@ const IntroducingMiniApp: FC = () => {
         <DarkButton
           text="NEW USERS"
           customIcon={newusers}
-          className="max-auto sm:translate-y-3 text-sm"
+          className="sm:translate-y-3 text-sm"
         />
         <GradientText
           className="lg:text-[5.5rem]"
           text={
             <>
-              Introducing our
-              <br />
+              Introducing our <br className="sm:flex hidden" />
               Telegram Mini App
             </>
           }
