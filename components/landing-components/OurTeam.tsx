@@ -62,9 +62,9 @@ const developers: Developer[] = [
   },
 ];
 
-interface IProps {}
+// interface IProps {}
 
-const OurTeam: FC<IProps> = () => {
+const OurTeam: FC = () => {
   return (
     <Transition>
       <div className="text-white py-20 md:py-28 lg:py-32 w-full flex flex-col relative">
@@ -84,7 +84,7 @@ const OurTeam: FC<IProps> = () => {
         <div className="flex flex-col justify-center items-center text-center gap-6 relative w-full">
           <LandingDarkButton text="MEET THE MINDS" isIcon={false} />
 
-          <GradientText text={<>Our Team</>} />
+          <GradientText text={<>Our Team</>} className="py-0" />
 
           <section className="flex gap-10 lg:gap-14 flex-wrap w-4/5 sm:w-[70%] lg:w-3/5 max-w-[700px] justify-center items-center sm:my-10">
             {Array(7)

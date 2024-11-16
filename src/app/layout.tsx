@@ -2,7 +2,7 @@
 import { Navbar } from "@components/navbar/Navbar";
 import "./globals.css";
 import localFont from "next/font/local";
-import prismLight from "@/assets/herolight.svg";
+import prismLight from "@/assets/light.svg";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

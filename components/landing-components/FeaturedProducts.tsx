@@ -18,7 +18,7 @@ const FeaturedProducts: FC<IProps> = () => {
           <LandingDarkButton text="OUR WORK" isIcon={false} />
           <GradientText
             text={<>Featured Projects</>}
-            className="sm:w-full w-2/3 insetShadow lg:text-8xl text-[2.6rem] sm:text-5xl md:text-6xl font-bold sm:px-3 tracking-tighter pb-[6px] lg:pb-3"
+            className="sm:w-full w-2/3 insetShadow lg:text-8xl text-[2.6rem] sm:text-5xl md:text-6xl font-bold sm:px-3 tracking-tighter pb-[6px] pt-0 lg:pb-3 leading-10"
           />
 
           <p className="text-white font-light text-[12px] sm:text-sm lg:text-lg leading-[1.7]">
