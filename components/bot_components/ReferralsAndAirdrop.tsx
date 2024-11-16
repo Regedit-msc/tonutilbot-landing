@@ -1,7 +1,6 @@
 import { DarkButton } from "@components/buttons/DarkButton";
 import React, { FC } from "react";
 import img from "@assets/referrals.svg";
-import rocket from "@assets/rocket.png";
 import bg from "@assets/shine.svg";
 import comm from "@assets/comm.svg";
 import Image from "next/image";
@@ -19,7 +18,8 @@ const ReferralsAndAirdrop: FC = (props) => {
         <strong className="leading-[3rem] sm:leading-[4rem] sm:text-6xl relative tracking-tighter text-5xl lg:text-7xl xl:text-8xl lg:w-full font-semibold flex">
           Referrals & <br /> Airdrop <br /> Campaign
         </strong>
-        <p className="text-balance lg:text-2xl sm:text-lg md:text-xl mt-4 font-light">
+
+        <p className="text-balance sm:text-lg md:text-xl mt-4 font-light">
           We&apos;re giving back to the community by using a referral system to
           reward users and an airdrop campaign to encourage more adoption of the
           Bot.

@@ -29,7 +29,7 @@ const AccessToServices: FC = (props) => {
         <strong className="leading-[3rem] sm:leading-[4rem] sm:text-6xl relative tracking-tighter text-5xl lg:text-8xl lg:w-full font-semibold flex">
           Access to <br /> services
         </strong>
-        <p className="text-balance lg:text-2xl sm:text-lg md:text-xl font-light">
+        <p className="text-balance sm:text-lg md:text-xl font-light">
           Get access to a variety of services in the platform created by the
           community and pay directly from your wallet using TON tokens.
         </p>

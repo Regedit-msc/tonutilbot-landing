@@ -21,7 +21,7 @@ export const HeroSection = () => {
 
   return (
     <Transition>
-      <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-0 lg:pt-14">
+      <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-0 lg:pt-0">
         <div className="flex flex-col justify-center items-center text-center gap-6 my-[4rem] sm:my-[8rem] md:my-[4rem] lg:my-0 relative">
           <div
             className={`${

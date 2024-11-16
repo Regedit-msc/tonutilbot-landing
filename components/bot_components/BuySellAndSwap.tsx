@@ -30,7 +30,7 @@ const BuySellAndSwap: FC = (props) => {
         <strong className="leading-[3rem] sm:leading-[4rem] sm:text-6xl relative tracking-tighter text-5xl lg:text-8xl lg:w-full font-semibold flex">
           Buy, sell & <br /> swap
         </strong>
-        <p className="text-balance lg:text-2xl sm:text-lg md:text-xl font-light">
+        <p className="text-balance sm:text-lg md:text-xl font-light">
           Buy, sell and swap TON and other Jettons using our telegram mini-app
         </p>
       </section>

@@ -2,7 +2,7 @@
 import { Navbar } from "@components/navbar/Navbar";
 import "./globals.css";
 import localFont from "next/font/local";
-import prismLight from "@/assets/light.svg";
+import light from "@/assets/light.svg";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -69,7 +69,7 @@ export default function RootLayout({
       <body className="bg-ashy w-full overflow-x-hidden box-border">
         <Navbar />
         <img
-          src={prismLight.src}
+          src={light.src}
           alt="prism light image"
           className="absolute sm:h-fit w-full h-[40rem] top-0 opacity-85 sm:w-[70vw] sm:top-20 md:top-0 sm:left-[15vw] lg:w-[50vw] lg:left-[25vw]"
         />
