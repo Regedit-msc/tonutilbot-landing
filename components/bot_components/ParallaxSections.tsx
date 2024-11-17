@@ -7,11 +7,11 @@ import ReferralsAndAirdrop from "./ReferralsAndAirdrop";
 const ParallaxSections: FC = () => {
   return (
     <div className="relative">
-      <div className="sticky -top-12 lg:top-0 z-10">
+      <div className="sticky -top-16 lg:top-0 z-10">
         <BuySellAndSwap />
       </div>
 
-      <div className="sticky -top-12 lg:top-0 z-20">
+      <div className="sticky -top-16 lg:top-0 z-20">
         <AccessToServices />
       </div>
 
