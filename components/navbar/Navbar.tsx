@@ -23,20 +23,13 @@ export const Navbar = () => {
     window.addEventListener("scroll", function () {
       newScroll = window.scrollY;
 
-      if (newScroll < 100) {
-        document.querySelector(".nav")?.classList.remove("shadow-lg");
-        document.querySelector(".nav")?.classList.remove("shadow-black/20");
-      } else {
+      if (newScroll > 100) {
         if (scrollY > newScroll) {
           document
             .querySelector(".nav")
             ?.classList.remove("-translate-y-[450px]");
-          document.querySelector(".nav")?.classList.add("shadow-lg");
-          document.querySelector(".nav")?.classList.add("shadow-black/20");
         } else {
           document.querySelector(".nav")?.classList.add("-translate-y-[450px]");
-          document.querySelector(".nav")?.classList.remove("shadow-lg");
-          document.querySelector(".nav")?.classList.remove("shadow-black/20");
         }
       }
       scrollY = newScroll;
@@ -52,8 +45,8 @@ export const Navbar = () => {
       <DesktopScrolledNav />
       <div className="w-full flex justify-center items-center relative">
         <nav
-          className={`nav top-0 flex flex-col sm:flex-row justify-between items-center fixed sm:static w-[90%] py-3 md:py-7 sm:px-10 lg:px-20 lg:max-w-[70rem] z-[999]  sm:backdrop:blur-none transition-all duration-500 ease-in-out border-ashyBorder border-b sm:border-none ${
-            !menuOpen && "border-none"
+          className={`nav backdrop-blur-md top-0 flex flex-col sm:flex-row justify-between items-center fixed sm:static w-[90%] py-3 md:py-7 sm:px-10 lg:px-20 lg:max-w-[70rem] z-[999]  sm:backdrop:blur-none transition-all duration-500 ease-in-out border-ashyBorder border-b sm:border-none ${
+            !menuOpen && "border-transparent"
           }`}
         >
           <div className="flex justify-between items-center w-full">

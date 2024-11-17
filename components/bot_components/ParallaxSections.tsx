@@ -4,18 +4,22 @@ import BuySellAndSwap from "./BuySellAndSwap";
 import AccessToServices from "./AccessToServices";
 import ReferralsAndAirdrop from "./ReferralsAndAirdrop";
 
-// interface IProps {};
+const ParallaxSections: FC = () => {
+  return (
+    <div className="relative min-h-[300vh]">
+      <div className="sticky top-0 min-h-screen z-10">
+        <BuySellAndSwap />
+      </div>
 
-const ParallaxSections: FC = (props) => {
-   return (
-     <div>
-       <BuySellAndSwap />
+      <div className="sticky top-0 min-h-screen z-20">
+        <AccessToServices />
+      </div>
 
-       <AccessToServices />
-
-       <ReferralsAndAirdrop />
-     </div>
-   );
+      <div className="sticky top-0 min-h-screen z-30">
+        <ReferralsAndAirdrop />
+      </div>
+    </div>
+  );
 };
 
 export default ParallaxSections;

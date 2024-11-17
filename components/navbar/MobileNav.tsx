@@ -15,7 +15,7 @@ const MobileNav: FC<MobileNavProps> = ({ open, setOpen }: MobileNavProps) => {
         open ? "opacity-100 h-[350px]" : "opacity-0 h-0 -translate-y-[250px]"
       }`}
     >
-      <span className="absolute top-20 w-[90%] border-t border-ashyBorder" />
+      <span className="absolute top-20 w-[90%] bg-ashyBorder flex h-[1px]" />
       <ul
         onClick={() => {
           setOpen(false);

@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const ReferralsAndAirdrop: FC = (props) => {
   return (
-    <div className="flex-col sm:flex-row flex justify-center text-white sm:gap-10 px-8 pt-20">
+    <div className="flex-col sm:flex-row flex justify-center text-white sm:gap-10 px-8 pt-20 bg-ashy min-h-screen">
       <section className="flex flex-col gap-3 sm:max-w-[50vw] pt-10 md:pl-[5vw] lg:pl-[8vw] z-10">
         <div className="flex gap-2 xs:items-center flex-col xs:flex-row">
           <DarkButton text="COMMUNITY" customIcon={comm} />
@@ -19,7 +19,7 @@ const ReferralsAndAirdrop: FC = (props) => {
           Referrals & <br /> Airdrop <br /> Campaign
         </strong>
 
-        <p className="text-balance sm:text-lg md:text-xl mt-4 font-light">
+        <p className="text-balance sm:text-lg md:text-xl mt-4 font-light lg:text-2xl">
           We&apos;re giving back to the community by using a referral system to
           reward users and an airdrop campaign to encourage more adoption of the
           Bot.
