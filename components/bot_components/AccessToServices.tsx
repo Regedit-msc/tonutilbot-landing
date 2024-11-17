@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const AccessToServices: FC = (props) => {
   return (
-    <div className="bg-purple flex-col sm:flex-row flex justify-center text-white sm:gap-8 px-8 pt-20 -translate-y-2 min-h-screen overflow-hidden">
+    <div className="bg-purple flex-col sm:flex-row flex justify-center text-white sm:gap-8 px-8 pt-20 -translate-y-2 overflow-x-hidden min-h-screen">
       <Image
         src={bg}
         alt=""

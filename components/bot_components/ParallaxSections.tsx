@@ -6,16 +6,16 @@ import ReferralsAndAirdrop from "./ReferralsAndAirdrop";
 
 const ParallaxSections: FC = () => {
   return (
-    <div className="relative min-h-[300vh]">
-      <div className="sticky top-0 min-h-screen z-10">
+    <div className="relative">
+      <div className="sticky -top-12 lg:top-0 z-10">
         <BuySellAndSwap />
       </div>
 
-      <div className="sticky top-0 min-h-screen z-20">
+      <div className="sticky -top-12 lg:top-0 z-20">
         <AccessToServices />
       </div>
 
-      <div className="sticky top-0 min-h-screen z-30">
+      <div className="sticky -top-12 lg:top-0 z-30">
         <ReferralsAndAirdrop />
       </div>
     </div>

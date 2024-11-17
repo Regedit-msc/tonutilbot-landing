@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const BuySellAndSwap: FC = (props) => {
   return (
-    <div className="bg-blue flex-col sm:flex-row flex justify-center text-white sm:gap-10 px-8 pt-20 -translate-y-1 min-h-screen overflow-hidden">
+    <div className="bg-blue flex-col sm:flex-row flex justify-center text-white sm:gap-10 px-8 pt-20 -translate-y-1 min-h-screen overflow-x-hidden">
       <Image
         src={bg}
         alt=""

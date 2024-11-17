@@ -46,8 +46,9 @@ export const HeroSection = () => {
           />
 
           <p className="text-balance -mt-4 sm:-mt-10 sm:text-lg md:text-xl px-4 font-light">
-            Buy, Swap or Sell TON using our wallet along with <br /> Web2
-            payments and developer API integration.
+            Buy, Swap or Sell TON using our wallet along with{" "}
+            <br className="sm:flex hidden" /> Web2 payments and developer API
+            integration.
           </p>
 
           <section className="flex justify-center items-center gap-3">
