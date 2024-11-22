@@ -1,39 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { GradientText } from "@components/special_text/GradientText";
-import AutoplaySlider from "@components/AutoplaySlider";
 import Card from "@assets/Card.svg";
+import Image from "next/image";
+import ImageAutoCarousel from "@components/ImageAutoCarousel";
 
 export const ThirdPartyWeb2Payments = () => {
   return (
-    <div className="text-white pt-8">
-      <div className="flex flex-col justify-center items-center text-center relative">
-        <img src={Card.src} alt="" className="w-[90px] sm:w-[110px] my-3" />
-        <GradientText
-          text={
-            <span className="text-[3rem] sm:text-[3.5rem] lg:text-[4rem] tracking-tighter insetShadow z-30">
-              Third Party <br className="md:hidden" /> Web2
-              <br />
-            </span>
-          }
-          className="text-center lg:leading-[0.8] lg:text-[6rem] text-6xl text-[40px] lg:pb-6 pt-2"
-        />
-        <p className="text-[3rem] sm:text-[3.5rem] lg:text-[4rem] tracking-tighter font-bold sm:px-3 leading-[0.9] text-transparent bg-gradient-to-r from from-blue-500 to-purple-500 bg-clip-text pb-2 lg:-my-4">
-          Payments
-        </p>
-
-        <p
-          className="text-white sm:text-lg text-sm font-light 
-         mt-6 leading-[1.8] lg:mt-10"
-        >
-          Web2 transactions such as making <br className="sm:hidden" />
-          payments and <br className="hidden sm:flex" /> purchasing airtime or{" "}
-          <br className="flex sm:hidden" />
-          data subscriptions can be made <br className="hidden sm:flex" /> using{" "}
-          <br className="flex sm:hidden" /> TON token on TonderBot.
-        </p>
+    <div className="text-white py-6 w-full relative overflow-hidden h-full flex flex-col justify-center">
+      <div className="flex flex-col justify-center items-center text-center relative sm:pb-3">
+        <Image src={Card} alt="" className="w-20" />
+        <GradientText variant="grid-section">
+          Third party Web2 <br /> payments
+        </GradientText>
       </div>
-      <AutoplaySlider />
+      <ImageAutoCarousel />
+      <ImageAutoCarousel reverse />
     </div>
   );
 };

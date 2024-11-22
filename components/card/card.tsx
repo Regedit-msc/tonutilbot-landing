@@ -13,18 +13,25 @@ import { useState } from "react";
 
 interface CardProps {
   imgIndex: number;
-  text: string;
+  title: string;
+  content: string;
   className?: string;
 }
 
 const hover = [GlowCoin, GlowMoney, GlowPaper];
+const icons = [];
 const normal = [coin, Money, Paper];
 
-export const Card: React.FC<CardProps> = ({ imgIndex, text, className }) => {
+export const Card: React.FC<CardProps> = ({
+  imgIndex,
+  title,
+  content,
+  className,
+}) => {
   const [hoverPic, setHoverPic] = useState(false);
   return (
     <div
-      className={`${className} flex flex-col items-center justify-between px-4 w-[295px] h-[277px] box-border inset-0 bg-gradient-to-b from-[#ffffff03] to-[#ffffff09] rounded-[2rem] border border-[#ffffff20] relative cursor-pointer transition-all duration-500 ease-in-out
+      className={`${className} flex flex-col items-center justify-between px-4 w-[325px] h-[320px] box-border inset-0 bg-gradient-to-b from-[#ffffff03] to-[#ffffff09] rounded-[1.5rem] border border-[#ffffff20] relative cursor-pointer transition-all duration-500 ease-in-out 
       ${hoverPic && "sm:-translate-y-4"}`}
       onMouseOver={() => {
         setHoverPic(true);
@@ -65,9 +72,10 @@ export const Card: React.FC<CardProps> = ({ imgIndex, text, className }) => {
           alt="HoverGradient Image"
         />
       </div>
-      <h1 className="bg-white inline-block text-transparent bg-clip-text text-[1.45rem] font-bold -translate-y-8 leading-[1.2] w-[90%]">
-        {text}
-      </h1>
+      <div className="bg-white inline-block text-transparent bg-clip-text text-3xl font-semibold  -translate-y-8 leading-[1.2] w-[90%] text-start">
+       <h2 className="pr-20">{title}</h2>
+        <p className="text-base mt-2 font-normal">{content}</p>
+      </div>
     </div>
   );
 };

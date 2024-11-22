@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 3px;
@@ -13,9 +17,32 @@
   border-radius: 2px;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Auto Images Carousel */
+@keyframes swipe {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes swipe-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-swipe {
+  animation: swipe 20s linear infinite;
+}
+
+.animate-swipe-reverse {
+  animation: swipe-reverse 20s linear infinite;
+}
 
 .insetShadow {
   color: transparent;
@@ -24,6 +51,26 @@
   background-clip: text;
 }
 
+.section {
+  position: relative;
+  min-height: 100vh; /* Make sure each section takes at least the full viewport height */
+}
+
+.section.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@layer base {
+  .font-outline {
+    -webkit-text-stroke: 0.5px white;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px white;
+  }
+}
 
 @keyframes slide {
   to {
@@ -123,4 +170,3 @@
 .desktop-nav {
   background-color: aqua;
 }
-

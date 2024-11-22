@@ -21,14 +21,17 @@ export const HeroSection = () => {
 
   return (
     <Transition>
-      <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-0 lg:pt-20">
+      <div className="relative text-white px-3 sm:px-0 pt-20 sm:pt-0 lg:pt-0">
         <div className="flex flex-col justify-center items-center text-center gap-6 my-[4rem] sm:my-[8rem] md:my-[4rem] lg:my-0 relative">
           <div
             className={`${
               inView ? "opacity-100" : "opacity-0"
             } transition-all duration-1000 ease-in-out`}
           >
-            <DarkButton text="TONDERBOT" className="sm:translate-y-3 text-sm" />
+            <DarkButton
+              text="TONDERBOT"
+              className="sm:translate-y-3 lg:translate-y-10 text-sm"
+            />
           </div>
 
           <GradientText
@@ -39,12 +42,13 @@ export const HeroSection = () => {
                 <br className="sm:hidden" /> Network.
               </>
             }
-            className="insetShadow lg:text-8xl text-[3rem] sm:text-[4rem] font-bold sm:px-3 tracking-tighter leading-[0.9]"
+            className="insetShadow lg:text-[6.5rem] text-[3rem] sm:text-[4rem] font-bold sm:px-3 tracking-tighter leading-[0.9]"
           />
 
-          <p className="text-white font-normal text-sm lg:text-lg leading-[1.7]">
-            Unleash the power of TonderBot for utility,
-            <br /> seamless swaps, trades & asset management
+          <p className="text-balance -mt-4 sm:-mt-10 sm:text-lg md:text-xl px-4 font-light">
+            Buy, Swap or Sell TON using our wallet along with{" "}
+            <br className="sm:flex hidden" /> Web2 payments and developer API
+            integration.
           </p>
 
           <section className="flex justify-center items-center gap-3">
