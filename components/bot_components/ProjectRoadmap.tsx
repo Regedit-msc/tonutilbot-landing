@@ -5,8 +5,8 @@ import { DarkButton } from "@components/buttons/DarkButton";
 import { GradientText } from "@components/special_text/GradientText";
 import Transition from "@components/transitions";
 import useWindowWidth from "@hooks/useWindowWidth";
-import { useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useInView, useMotionValueEvent, useScroll, useSpring } from "framer-motion";
+import { useRef, useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 
 const roadmap = [
@@ -60,24 +60,36 @@ export const ProjectRoadmap = () => {
   const INTERVAL = 4000;
   const size = useWindowWidth() || 0;
 
-  useEffect(() => {
-    if (!visible || size <= 768) {
-      return;
-    }
-    const interval = setInterval(() => {
-      const next = currentStep === roadmap.length - 1 ? 0 : currentStep + 1;
-      setCurrentStep(next);
-      console.log("next", visible);
-    }, INTERVAL);
-
-    return () => clearInterval(interval);
-  }, [visible, currentStep, size]);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+  });
+  
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 400,
+    damping: 90,
+  
+  });
+  
+  useMotionValueEvent(scaleX, "change", (latest) => {
+    const cardsBreakpoints = roadmap.map((_, index) => index / roadmap.length).reverse();
+    const closestBreakpointIndex = cardsBreakpoints.reduce(
+      (acc, breakpoint, index) => {
+        const distance = Math.abs(latest - breakpoint);
+        if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
+          return index;
+        }
+        return acc;
+      },
+      0
+    );
+    setCurrentStep(closestBreakpointIndex);
+  });
 
   return (
     <Transition>
       <div
         ref={ref}
-        className="w-full text-white flex flex-col items-center lg:pt-[7rem]"
+        className="w-full text-white flex flex-col items-center lg:pt-[10rem]"
       >
         <section className="flex flex-col justify-center items-center">
           <DarkButton text="ROADMAP" isIcon={false} />
@@ -86,7 +98,7 @@ export const ProjectRoadmap = () => {
             Project <br className="md:hidden" /> Roadmap
           </GradientText>
         </section>
-        <section className="relative flex px-5 w-full">
+        <section className="relative flex px-5 pt-[2rem] w-full">
           <div className="flex flex-col justify-center items-center text-center gap-10 relative w-full">
             <div className="flex md:gap-10 gap-[1.38rem] max-[920px]:flex-col lg:w-fit w-full ">
               <div className="flex items-center lg:w-fit min-[920px]:w-1/2">
@@ -94,7 +106,7 @@ export const ProjectRoadmap = () => {
                   {roadmap.map((_, i) => {
                     return (
                       <section
-                        className="flex items-end w-full flex-col gap-4"
+                        className="flex items-end w-full flex-col lg:w-[340px] gap-4"
                         key={i}
                       >
                         <div className="flex justify-center w-full items-center gap-7">
@@ -117,7 +129,7 @@ export const ProjectRoadmap = () => {
                           </div>
 
                           <div
-                            className={`relative text-white gap-3 flex px-5 py-4 lg:w-[18.55rem] w-full rounded-[1.4rem] border transition-all duration-300 ease-out pr-10 cursor-pointer ${
+                            className={`relative text-white gap-3 flex px-5 py-4 lg:w-[18.55rem] w-full rounded-[1.4rem] border transition-all duration-300 ease-out cursor-pointer ${
                               currentStep === i
                                 ? "bg-gradient-to-b from-white/[8%] to-white/[3%] border-[#ffffff07]"
                                 : "border-transparent"

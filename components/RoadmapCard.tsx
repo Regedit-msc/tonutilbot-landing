@@ -15,7 +15,7 @@ const RoadmapCard: FC<IProps> = ({
 }: IProps) => {
   return (
     <div
-      className={`${className} flex w-full text-white pt-14 sm:pt-[4.5rem] pb-8 sm:pb-12 min-[920px]:pb-10 rounded-[1.4rem] border border-[#ffffff07] flex-grow text-start relative bg-gradient-to-b from-white/[8%] to-white/[3%] min-[920px]:h-[340px] overflow-hidden`}
+      className={`flex w-full text-white pt-14 sm:pt-[4.5rem] pb-8 sm:pb-12 min-[920px]:pb-10 rounded-[1.4rem] border border-[#ffffff07] flex-grow text-start relative bg-gradient-to-b from-white/[8%] to-white/[3%] min-[920px]:h-[340px] overflow-hidden ${className} `}
     >
       <div className="h-[10rem] sm:h-[15rem] min-[920px]:h-[13rem] overflow-y-scroll">
         <div className="pl-6 sm:pl-12 sm:pr-12">
