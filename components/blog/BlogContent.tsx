@@ -16,26 +16,26 @@ export const BlogContent: FC<BlogContentProps> = ({ content }) => {
     <div className="prose prose-lg prose-invert prose-blue max-w-none">
       <ReactMarkdown
         components={{
-          // Custom heading components
+          // Custom heading components - Map markdown h1 to h2 to avoid nesting with page title
           h1: ({ children }) => (
-            <h1 className="text-4xl font-bold mb-6 mt-8 text-white bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {children}
-            </h1>
-          ),
-          h2: ({ children }) => (
-            <h2 className="text-3xl font-bold mb-4 mt-8 text-white border-b border-gray-700 pb-2">
+            <h2 className="text-4xl font-bold mb-6 mt-8 text-white bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               {children}
             </h2>
           ),
-          h3: ({ children }) => (
-            <h3 className="text-2xl font-semibold mb-3 mt-6 text-gray-100">
+          h2: ({ children }) => (
+            <h3 className="text-3xl font-bold mb-4 mt-8 text-white border-b border-gray-700 pb-2">
               {children}
             </h3>
           ),
-          h4: ({ children }) => (
-            <h4 className="text-xl font-semibold mb-2 mt-4 text-gray-200">
+          h3: ({ children }) => (
+            <h4 className="text-2xl font-semibold mb-3 mt-6 text-gray-100">
               {children}
             </h4>
+          ),
+          h4: ({ children }) => (
+            <h5 className="text-xl font-semibold mb-2 mt-4 text-gray-200">
+              {children}
+            </h5>
           ),
 
           // Custom paragraph styling

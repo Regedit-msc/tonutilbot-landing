@@ -19,6 +19,15 @@ const nextConfig = {
     });
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "via.placeholder.com",
+        pathname: "/**",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
