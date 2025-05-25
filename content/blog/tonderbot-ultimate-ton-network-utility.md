@@ -1,7 +1,7 @@
 ---
 title: "TonderBot: The Ultimate TON Network Utility Revolutionizing Crypto Interactions"
 description: "Discover how TonderBot is transforming the way users interact with the TON Network through its comprehensive utility features, seamless wallet integration, and intelligent automation."
-image: "/blog/tonderbot-ultimate-utility.jpg"
+image: "/blog/tonderbot-ultimate-utility.png"
 publishedAt: "2025-05-24"
 updatedAt: "2025-05-24"
 category: "Product"

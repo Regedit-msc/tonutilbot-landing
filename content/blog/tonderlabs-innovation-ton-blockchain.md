@@ -1,7 +1,7 @@
 ---
 title: "TonderLabs Innovation on TON Blockchain: Building the Future of Web3"
 description: "Explore how TonderLabs is pioneering groundbreaking innovations on The Open Network (TON), creating seamless bridges between Web2 and Web3 experiences for millions of users."
-image: "/blog/tonderlabs-innovation.jpg"
+image: "https://pintu-academy.pintukripto.com/wp-content/uploads/2023/12/Ton.png"
 publishedAt: "2025-05-25"
 updatedAt: "2025-05-25"
 category: "Innovation"

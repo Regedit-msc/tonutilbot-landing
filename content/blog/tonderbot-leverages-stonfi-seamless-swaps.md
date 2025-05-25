@@ -1,7 +1,7 @@
 ---
 title: "How TonderBot Leverages STON.fi for Seamless Token Swaps and Optimal Liquidity"
 description: "Discover how TonderBot's strategic integration with STON.fi, TON's leading AMM protocol, delivers the best swap rates, minimal slippage, and enhanced DeFi experiences for users."
-image: "/blog/tonderbot-stonfi-integration.jpg"
+image: "https://tonstarter-cdn.ams3.digitaloceanspaces.com/projects/stonfi/cover.png"
 publishedAt: "2025-05-23"
 updatedAt: "2025-05-23"
 category: "Technology"

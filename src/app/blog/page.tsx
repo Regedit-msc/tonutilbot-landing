@@ -5,8 +5,7 @@ import { GradientText } from "@/components/special_text/GradientText";
 import { DarkButton } from "@/components/buttons/DarkButton";
 import { CTA } from "@/components/cta/CTA";
 import { siteConfig } from "@/lib/seo";
-import { getAllBlogPosts, calculateReadTime, extractExcerpt } from "@/lib/blog";
-import { BlogType } from "@/types";
+import { getAllBlogPosts, calculateReadTime } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog - TonderLabs",
@@ -114,7 +113,18 @@ export default async function BlogPage() {
             </div>
             <Link href={`/blog/${blogPosts[0].slug}`} className="group">
               <article className="bg-white/5 border border-ashyBorder/50 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-300 group-hover:-translate-y-2">
-                <div className="aspect-video bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9] relative overflow-hidden">
+                <div className="aspect-video relative overflow-hidden">
+                  {blogPosts[0].image &&
+                  !blogPosts[0].image.startsWith("data:image/svg+xml") ? (
+                    <Image
+                      src={blogPosts[0].image}
+                      alt={blogPosts[0].title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9]"></div>
+                  )}
                   <div className="absolute inset-0 bg-black/20"></div>
                   <div className="absolute bottom-6 left-6 right-6">
                     <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
@@ -175,7 +185,18 @@ export default async function BlogPage() {
                   className="group"
                 >
                   <article className="bg-white/5 border border-ashyBorder/50 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 group-hover:-translate-y-2">
-                    <div className="aspect-[16/9] bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9] relative overflow-hidden">
+                    <div className="aspect-[16/9] relative overflow-hidden">
+                      {post.image &&
+                      !post.image.startsWith("data:image/svg+xml") ? (
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-r from-[#3DB3FC] via-[#5C80FA] to-[#936BF9]"></div>
+                      )}
                       <div className="absolute inset-0 bg-black/20"></div>
                       <div className="absolute top-4 left-4">
                         <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">

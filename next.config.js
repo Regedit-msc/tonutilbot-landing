@@ -26,6 +26,16 @@ const nextConfig = {
         hostname: "via.placeholder.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "pintu-academy.pintukripto.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "tonstarter-cdn.ams3.digitaloceanspaces.com",
+        pathname: "/**",
+      },
     ],
   },
 };
