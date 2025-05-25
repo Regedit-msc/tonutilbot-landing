@@ -1,18 +1,18 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from "next";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://tonderlabs.com',
+      url: "https://tonderlabs.com",
       lastModified: new Date(),
-      changeFrequency: 'hourly',
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: 'https://tonderlabs.com/bot',
+      url: "https://tonderlabs.com/bot",
       lastModified: new Date(),
-      changeFrequency: 'hourly',
+      changeFrequency: "monthly",
       priority: 0.8,
     },
-  ]
+  ];
 }

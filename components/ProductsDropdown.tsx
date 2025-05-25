@@ -1,5 +1,6 @@
 "use client";
 import React, { FC, useRef, useState } from "react";
+import Image from "next/image";
 import tonderBot from "@assets/Navbar/ProductsTonderBot.svg";
 import beta from "@assets/landing-page/beta.svg";
 import tonderApp from "@assets/Navbar/ProductsTonderApp.svg";
@@ -44,14 +45,18 @@ const ProductsDropdown: FC<ProductsProps> = ({
               href={"/bot"}
               className="flex gap-3 justify-start items-center relative w-full"
             >
-              <img src={tonderBot.src} alt="tonderBot" className="h-[40px]" />
+              <Image
+                src={tonderBot}
+                alt="TonderBot product icon"
+                className="h-[40px] w-auto"
+              />
               <div className="flex flex-col">
                 <h1 className="font-medium text-sm md:text-[16px] relative">
                   TonderBot
-                  <img
-                    src={beta.src}
-                    alt=""
-                    className="absolute top-0 left-[84px]"
+                  <Image
+                    src={beta}
+                    alt="Beta version badge"
+                    className="absolute top-0 left-[84px] w-auto h-auto"
                   />
                 </h1>
                 <p className="font-thin text-xs md:text-[14px] text-white/50">
@@ -61,14 +66,18 @@ const ProductsDropdown: FC<ProductsProps> = ({
               <IoIosArrowForward className="absolute right-0" />
             </Link>
             <section className="flex gap-3 justify-start items-center">
-              <img src={tonderApp.src} alt="tonderBot" className="h-[40px]" />
+              <Image
+                src={tonderApp}
+                alt="TonderApp product icon"
+                className="h-[40px] w-auto"
+              />
               <div className="flex flex-col">
                 <h1 className="font-medium medium text-sm md:text-[16px] blur-[3px] flex gap-2">
                   TonderApp
                 </h1>
-                <img
-                  src={comingSoon.src}
-                  alt=""
+                <Image
+                  src={comingSoon}
+                  alt="Coming soon badge"
                   className="w-20 absolute left-40"
                 />
                 <p className="font-thin text-xs md:text-[14px] text-white/50">

@@ -1,5 +1,6 @@
 import { GradientText } from "@components/special_text/GradientText";
 import React, { FC } from "react";
+import Image from "next/image";
 import bg from "@assets/bg.svg";
 import newusers from "@assets/newusers.svg";
 import { DarkButton } from "@components/buttons/DarkButton";
@@ -31,14 +32,14 @@ const IntroducingMiniApp: FC = () => {
           we have for new users
         </p>
       </div>
-      <img
-        src={bg.src}
-        alt=""
+      <Image
+        src={bg}
+        alt="Decorative background grid pattern"
         className="absolute left-[15vw] w-[16rem] translate-y-24 xl:left-[18vw]"
       />
-      <img
-        src={bg.src}
-        alt=""
+      <Image
+        src={bg}
+        alt="Decorative background grid pattern"
         className="absolute right-[15vw] w-[16rem] translate-y-24 xl:right-[18vw] hidden sm:flex"
       />
     </section>

@@ -48,7 +48,7 @@ export const DesktopScrolledNav = () => {
           <Link href={"/"}>
             <div className="flex items-center pl-6 sm:pl-0 py-4">
               <img src={logo.src} alt="Logo" className="mr-2 h-10" />
-              <img src={tonderLabs.src} alt="" className="h-5" />
+              <img src={tonderLabs.src} alt="TonderLabs logo" className="h-5" />
             </div>
           </Link>
         </div>

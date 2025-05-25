@@ -12,6 +12,7 @@ interface ImageAutoCarouselProps {
 
 const ImageAutoCarousel: React.FC<ImageAutoCarouselProps> = ({ reverse }) => {
   const images = [shopify, PayPal, Stripe, amazon, paystack];
+  const imageNames = ["Shopify", "PayPal", "Stripe", "Amazon", "Paystack"];
 
   return (
     <div className="relative h-[3rem] -translate-y-2- w-full">
@@ -30,7 +31,7 @@ const ImageAutoCarousel: React.FC<ImageAutoCarouselProps> = ({ reverse }) => {
               <div key={id}>
                 <Image
                   src={image}
-                  alt={`image-${id}`}
+                  alt={`${imageNames[id]} integration logo`}
                   className="h-[3rem] max-w-[120px] object-contain px-3"
                 />
               </div>

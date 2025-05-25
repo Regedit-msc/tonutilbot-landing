@@ -10,7 +10,7 @@ const OurProcess: FC = () => (
       <section className="relative w-full flex md:w-2/5 flex-col text-[2.6rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[0.9] font-bold pl-12 lg:pl-20">
         <img
           src={dots.src}
-          alt=""
+          alt="Decorative dots pattern"
           className="absolute -top-6 left-4 lg:left-10 h-20"
         />{" "}
         <GradientText

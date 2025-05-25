@@ -19,8 +19,8 @@ interface CardProps {
 }
 
 const hover = [GlowCoin, GlowMoney, GlowPaper];
-const icons = [];
 const normal = [coin, Money, Paper];
+const iconDescriptions = ["Coin icon", "Money icon", "Paper icon"];
 
 export const Card: React.FC<CardProps> = ({
   imgIndex,
@@ -45,7 +45,7 @@ export const Card: React.FC<CardProps> = ({
         className={`absolute top-0 left-auto opacity-0 transition-all duration-500 ease-in-out ${
           hoverPic && "opacity-100"
         }`}
-        alt="HoverGradient Image"
+        alt="Card hover gradient background effect"
       />
       {/* */}
       <div
@@ -59,7 +59,7 @@ export const Card: React.FC<CardProps> = ({
            ${imgIndex === 0 && "scale-100"}
            ${imgIndex === 1 && "scale-125"}
            ${imgIndex === 2 && "scale-150"}`}
-          alt="HoverGradient Image"
+          alt={iconDescriptions[imgIndex]}
         />
         <img
           src={hover[imgIndex].src}
@@ -69,11 +69,11 @@ export const Card: React.FC<CardProps> = ({
          ${imgIndex === 0 && "scale-100"}
            ${imgIndex === 1 && "scale-125"}
            ${imgIndex === 2 && "scale-150"}`}
-          alt="HoverGradient Image"
+          alt={`Glowing ${iconDescriptions[imgIndex]}`}
         />
       </div>
       <div className="bg-white inline-block text-transparent bg-clip-text text-3xl font-semibold  -translate-y-8 leading-[1.2] w-[90%] text-start">
-       <h2 className="pr-20">{title}</h2>
+        <h2 className="pr-20">{title}</h2>
         <p className="text-base mt-2 font-normal">{content}</p>
       </div>
     </div>

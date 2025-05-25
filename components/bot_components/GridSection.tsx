@@ -46,10 +46,10 @@ const GridSection: FC = () => {
       {/* Row 2 */}
       <div className="col-span-2 bg-white/5 border-ashyBorder/50 rounded-3xl sm:rounded-[2rem] flex flex-col items-center gap-3 relative overflow-hidden pt-8 pb-10 text-white z-20 group">
         <div className="flex flex-col h-full justify-center items-center text-center px-4">
-          <Image src={tonderbot} alt="" className="w-16" />
+          <Image src={tonderbot} alt="TonderBot logo" className="w-16" />
           <Image
             src={marketplace}
-            alt=""
+            alt="TonderBot marketplace background"
             className="w-full top-0 h-full absolute object-cover bottom-0 group-hover:scale-[1.5] opacity-90 group-hover:opacity-70 duration-500 group-hover:-translate-y-16 ease-in-out"
           />
           <GradientText variant="grid-section">Marketplace</GradientText>
@@ -70,7 +70,7 @@ const GridSection: FC = () => {
         <div className="flex flex-col h-full items-center text-center px-4">
           <Image
             src={api}
-            alt=""
+            alt="Developer API integration background"
             className="w-full top-0 h-full absolute object-cover bottom-0 group-hover:scale-[1.5] opacity-70 group-hover:opacity-50 duration-[700ms] group-hover:-translate-y-20 ease-in-out"
           />
           <DarkButton text="ACCESSIBILITY" customIcon={accessibility} />
@@ -79,7 +79,7 @@ const GridSection: FC = () => {
           </GradientText>
           <Image
             src={plug}
-            alt=""
+            alt="API connection plug icon"
             className="w-60 sm:w-80 lg:w-[22rem] absolute bottom-0 mb-6 sm:mb-0"
           />
         </div>
@@ -88,7 +88,7 @@ const GridSection: FC = () => {
         <div className="flex flex-col h-full items-center text-center px-4">
           <Image
             src={referral}
-            alt=""
+            alt="Referral program illustration"
             className="w-[80%] absolute bottom-0 opacity-70 group-hover:opacity-100 translate-y-[30%] group-hover:translate-y-0 duration-300 max-w-[20rem]"
           />
           <GradientText variant="grid-section">

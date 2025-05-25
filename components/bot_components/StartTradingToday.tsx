@@ -31,14 +31,14 @@ const StartTradingToday: FC = () => {
         <Link href="https://t.me/tonderlabs_tonderbot" className="z-10">
           <Image
             src={openInTg}
-            alt=""
+            alt="Open TonderBot in Telegram button"
             className="w-[16rem] sm:w-[18rem] lg:w-[22rem] h-fit -translate-y-2"
           />
         </Link>
 
         <Image
           src={planet}
-          alt=""
+          alt="Decorative planet background element"
           className="absolute h-fit w-screen -bottom-[20vw] sm:-bottom-[27vw] lg:-bottom-[30vw] max-w-[90rem]"
         />
       </div>

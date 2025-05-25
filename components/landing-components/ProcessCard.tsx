@@ -13,7 +13,7 @@ const ProcessCard: FC<IProps> = ({ icon, title, desc }) => {
       <span className="flex justify-center items-center">
         <img
           src={icon.src}
-          alt=""
+          alt={`${title} process step icon`}
           className="w-[42px] sm:w-[60px] lg:w-[80px]"
         />
       </span>

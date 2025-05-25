@@ -58,7 +58,11 @@ export const Navbar = () => {
                   className="mr-2
                  h-10"
                 />
-                <img src={tonderLabs.src} alt="" className="h-5" />
+                <img
+                  src={tonderLabs.src}
+                  alt="TonderLabs logo"
+                  className="h-5"
+                />
               </div>
             </Link>
 
