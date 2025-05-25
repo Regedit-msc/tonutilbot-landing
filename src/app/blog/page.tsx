@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     title: "Blog - TonderLabs",
     description:
       "Stay updated with the latest insights, tutorials, and news from TonderLabs about Web3, TON Network, and blockchain technology.",
-    url: `${siteConfig.url}/blog`,
+    url: `${siteConfig.url}/tonderlabs.png`,
     siteName: siteConfig.name,
     images: [
       {
-        url: `${siteConfig.url}/blog/blog-og.jpg`,
+        url: `${siteConfig.url}/`,
         width: 1200,
         height: 630,
         alt: "TonderLabs Blog - Web3 Insights and Tutorials",
