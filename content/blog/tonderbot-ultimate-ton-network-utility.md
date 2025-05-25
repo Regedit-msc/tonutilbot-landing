@@ -6,7 +6,7 @@ publishedAt: "2025-05-24"
 updatedAt: "2025-05-24"
 category: "Product"
 author:
-  name: "TonderLabs Engineering Team"
+  name: "TonderLabs Eng. Team"
   avatar: "/team/tonderlabs-avatar.png"
   bio: "The engineering team at TonderLabs, focused on building innovative and user-friendly Web3 solutions on the TON Network."
 slug: "tonderbot-ultimate-ton-network-utility"

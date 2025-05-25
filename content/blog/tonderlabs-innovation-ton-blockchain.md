@@ -4,7 +4,7 @@ description: "Explore how TonderLabs is pioneering groundbreaking innovations on
 image: "https://pintu-academy.pintukripto.com/wp-content/uploads/2023/12/Ton.png"
 publishedAt: "2025-05-25"
 updatedAt: "2025-05-25"
-category: "Innovation"
+category: "Product"
 author:
   name: "TonderLabs Team"
   avatar: "/team/tonderlabs-avatar.png"
