@@ -6,30 +6,19 @@ export type BlogTabType = {
 };
 
 export type BlogType = {
-  attributes: {
-    title: string;
-    description: string;
-    content: string;
-    image: string;
-    slug: string;
-    categories: BlogTabType[];
-    author?: {
-      data: {
-        attributes: {
-          name: string;
-        };
-      };
-    };
-    bannerImage?: {
-      data: {
-        attributes: {
-          url: string;
-        };
-      };
-    };
-    createdAt: string;
-    updatedAt: string;
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  publishedAt: string;
+  updatedAt: string;
+  category: string;
+  author: {
+    name: string;
+    avatar: string;
+    bio: string;
   };
+  content: string;
 };
 
 export type NextSearchParams = { [key: string]: string };
