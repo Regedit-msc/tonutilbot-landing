@@ -39,27 +39,6 @@ export default function NotFound() {
           >
             Go to Homepage
           </Link>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/bot"
-              className="text-blue-400 hover:text-blue-300 transition-colors"
-            >
-              TonderBot
-            </Link>
-            <Link
-              href="/#about"
-              className="text-blue-400 hover:text-blue-300 transition-colors"
-            >
-              About Us
-            </Link>
-            <Link
-              href="/#contact"
-              className="text-blue-400 hover:text-blue-300 transition-colors"
-            >
-              Contact
-            </Link>
-          </div>
         </div>
 
         <div className="mt-12 text-sm text-gray-500">

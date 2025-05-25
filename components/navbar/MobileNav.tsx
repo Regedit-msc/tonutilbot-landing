@@ -40,6 +40,9 @@ const MobileNav: FC<MobileNavProps> = ({ open, setOpen }: MobileNavProps) => {
           <img src={comingSoon.src} alt="" />
         </li>
         <li>
+          <Link href="/blog">Blog</Link>
+        </li>
+        <li>
           <Link href="https://docs.tonderlabs.com">
             <p>About</p>
           </Link>

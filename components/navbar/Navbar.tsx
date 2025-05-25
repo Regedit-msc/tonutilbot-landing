@@ -103,6 +103,10 @@ export const Navbar = () => {
               <ProductsDropdown open={productsOpen} setOpen={setProductsOpen} />
             </div>
 
+            <Link href="/blog">
+              <p>Blog</p>
+            </Link>
+
             <Link href="https://docs.tonderlabs.com">
               <p>About</p>
             </Link>
