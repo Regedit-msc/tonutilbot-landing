@@ -36,5 +36,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // Line-clamp is now built into Tailwind CSS v3.3+ - no plugin needed
+  ],
 };

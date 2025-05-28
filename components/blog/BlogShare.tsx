@@ -46,53 +46,57 @@ export const BlogShare: FC<BlogShareProps> = ({ title, url, description }) => {
   };
 
   return (
-    <div className="flex items-center justify-center space-x-4">
-      <span className="text-sm text-gray-400 mr-2">Share:</span>
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 sm:px-0">
+      <span className="text-xs sm:text-sm text-gray-400 mb-2 sm:mb-0 sm:mr-2">
+        Share:
+      </span>
 
-      {/* Twitter */}
-      <button
-        onClick={() => handleShare("twitter")}
-        className="p-2 rounded-lg bg-gray-800 hover:bg-blue-600 transition-colors group"
-        aria-label="Share on Twitter"
-      >
-        <TwitterIcon className="w-5 h-5 text-gray-400 group-hover:text-white" />
-      </button>
+      <div className="flex items-center space-x-3 sm:space-x-4">
+        {/* Twitter */}
+        <button
+          onClick={() => handleShare("twitter")}
+          className="p-2 sm:p-2 rounded-lg bg-gray-800 hover:bg-blue-600 transition-colors group"
+          aria-label="Share on Twitter"
+        >
+          <TwitterIcon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-white" />
+        </button>
 
-      {/* Facebook */}
-      <button
-        onClick={() => handleShare("facebook")}
-        className="p-2 rounded-lg bg-gray-800 hover:bg-blue-800 transition-colors group"
-        aria-label="Share on Facebook"
-      >
-        <FacebookIcon className="w-5 h-5 text-gray-400 group-hover:text-white" />
-      </button>
+        {/* Facebook */}
+        <button
+          onClick={() => handleShare("facebook")}
+          className="p-2 sm:p-2 rounded-lg bg-gray-800 hover:bg-blue-800 transition-colors group"
+          aria-label="Share on Facebook"
+        >
+          <FacebookIcon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-white" />
+        </button>
 
-      {/* LinkedIn */}
-      <button
-        onClick={() => handleShare("linkedin")}
-        className="p-2 rounded-lg bg-gray-800 hover:bg-blue-700 transition-colors group"
-        aria-label="Share on LinkedIn"
-      >
-        <LinkedinIcon className="w-5 h-5 text-gray-400 group-hover:text-white" />
-      </button>
+        {/* LinkedIn */}
+        <button
+          onClick={() => handleShare("linkedin")}
+          className="p-2 sm:p-2 rounded-lg bg-gray-800 hover:bg-blue-700 transition-colors group"
+          aria-label="Share on LinkedIn"
+        >
+          <LinkedinIcon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-white" />
+        </button>
 
-      {/* Telegram */}
-      <button
-        onClick={() => handleShare("telegram")}
-        className="p-2 rounded-lg bg-gray-800 hover:bg-blue-500 transition-colors group"
-        aria-label="Share on Telegram"
-      >
-        <MessageCircleIcon className="w-5 h-5 text-gray-400 group-hover:text-white" />
-      </button>
+        {/* Telegram */}
+        <button
+          onClick={() => handleShare("telegram")}
+          className="p-2 sm:p-2 rounded-lg bg-gray-800 hover:bg-blue-500 transition-colors group"
+          aria-label="Share on Telegram"
+        >
+          <MessageCircleIcon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-white" />
+        </button>
 
-      {/* Copy Link */}
-      <button
-        onClick={() => handleShare("copy")}
-        className="p-2 rounded-lg bg-gray-800 hover:bg-gray-600 transition-colors group"
-        aria-label="Copy link"
-      >
-        <CopyIcon className="w-5 h-5 text-gray-400 group-hover:text-white" />
-      </button>
+        {/* Copy Link */}
+        <button
+          onClick={() => handleShare("copy")}
+          className="p-2 sm:p-2 rounded-lg bg-gray-800 hover:bg-gray-600 transition-colors group"
+          aria-label="Copy link"
+        >
+          <CopyIcon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-white" />
+        </button>
+      </div>
     </div>
   );
 };

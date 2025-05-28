@@ -148,40 +148,46 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
       <div className="min-h-screen bg-ashy text-white">
         {/* Navigation Breadcrumb */}
-        <div className="container mx-auto px-4 pt-8 pb-4">
-          <nav className="flex items-center space-x-2 text-sm text-gray-400">
-            <Link href="/" className="hover:text-white transition-colors">
+        <div className="container mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-3 sm:pb-4">
+          <nav className="flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm text-gray-400 overflow-x-auto">
+            <Link
+              href="/"
+              className="hover:text-white transition-colors whitespace-nowrap"
+            >
               Home
             </Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-white transition-colors">
+            <Link
+              href="/blog"
+              className="hover:text-white transition-colors whitespace-nowrap"
+            >
               Blog
             </Link>
             <span>/</span>
-            <span className="text-white">{post.title}</span>
+            <span className="text-white truncate">{post.title}</span>
           </nav>
         </div>
 
         {/* Article Header */}
-        <article className="container mx-auto px-4 pb-12">
-          <header className="max-w-4xl mx-auto text-center mb-12">
+        <article className="container mx-auto px-4 sm:px-6 pb-8 sm:pb-12">
+          <header className="max-w-4xl mx-auto text-center mb-8 sm:mb-12">
             {/* Category Badge */}
             <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 border border-blue-500/30 mb-6">
               {post.category}
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               <GradientText>{post.title}</GradientText>
             </h1>
 
             {/* Description */}
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto px-4 sm:px-0">
               {post.description}
             </p>
 
             {/* Meta Information */}
-            <div className="flex items-center justify-center space-x-6 text-gray-400 mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-gray-400 mb-6 sm:mb-8 px-4 sm:px-0">
               <div className="flex items-center space-x-2">
                 <Image
                   src={post.author.avatar}
@@ -190,23 +196,26 @@ export default async function BlogPage({ params }: BlogPageProps) {
                   height={32}
                   className="rounded-full"
                 />
-                <span>{post.author.name}</span>
+                <span className="text-sm sm:text-base">{post.author.name}</span>
               </div>
-              <span>•</span>
-              <time dateTime={post.publishedAt}>
+              <span className="hidden sm:inline">•</span>
+              <time
+                dateTime={post.publishedAt}
+                className="text-sm sm:text-base"
+              >
                 {new Date(post.publishedAt).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
                 })}
               </time>
-              <span>•</span>
-              <span>{readTime} min read</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="text-sm sm:text-base">{readTime} min read</span>
             </div>
 
             {/* Hero Image */}
             {post.image && (
-              <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-8">
+              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden mb-6 sm:mb-8 sm:mx-0">
                 <Image
                   src={post.image}
                   alt={post.title}
@@ -227,13 +236,13 @@ export default async function BlogPage({ params }: BlogPageProps) {
           </header>
 
           {/* Article Content */}
-          <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg prose-invert prose-blue max-w-none">
+          <div className="max-w-4xl mx-auto px-4 sm:px-0">
+            <div className="prose prose-sm sm:prose prose-lg sm:prose-lg prose-invert prose-blue max-w-none">
               <BlogContent content={post.content} />
             </div>
 
             {/* Author Card */}
-            <div className="mt-16">
+            <div className="mt-12 sm:mt-16">
               <AuthorCard
                 author={post.author}
                 publishedAt={post.publishedAt}
@@ -242,12 +251,12 @@ export default async function BlogPage({ params }: BlogPageProps) {
             </div>
 
             {/* Related Posts */}
-            <div className="mt-16">
+            <div className="mt-12 sm:mt-16">
               <RelatedPosts posts={relatedPosts} />
             </div>
 
             {/* Back to Blog */}
-            <div className="mt-16 text-center">
+            <div className="mt-12 sm:mt-16 text-center">
               <Link href="/blog">
                 <DarkButton text="← Back to Blog" />
               </Link>
