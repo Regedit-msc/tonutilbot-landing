@@ -14,19 +14,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: siteConfig.url,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 1,
+      priority: 1.0,
     },
     {
       url: `${siteConfig.url}/bot`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.8,
+      priority: 1.0,
     },
     {
       url: `${siteConfig.url}/blog`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.9,
+      priority: 1.0,
     },
   ];
 
@@ -35,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${siteConfig.url}/blog/${post.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
-    priority: 0.9,
+    priority: 1.0,
   }));
 
   return [...staticPages, ...blogPages];
