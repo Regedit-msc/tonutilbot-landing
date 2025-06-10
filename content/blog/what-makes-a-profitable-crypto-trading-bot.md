@@ -9,7 +9,7 @@ author:
   name: "TonderLabs Team"
   avatar: "/team/tonderlabs-avatar.png"
   bio: "The innovative team behind TonderBot and TonderLabs, dedicated to building next-generation Web3 solutions on the TON Network."
-slug: "tonderlabs-innovation-ton-blockchain"
+slug: "understanding-profitable-trading-bots"
 ---
 
 ## What are crypto trading bot?
