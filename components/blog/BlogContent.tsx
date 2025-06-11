@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import ReactMarkdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Image from "next/image";
 import Link from "next/link";
@@ -88,6 +88,7 @@ export const BlogContent: FC<BlogContentProps> = ({ content }) => {
             const match = /language-(\w+)/.exec(className || "");
             return !inline && match ? (
               <div className="my-4 sm:my-6 overflow-x-auto">
+                {/* @ts-ignore */}
                 <SyntaxHighlighter
                   style={oneDark}
                   language={match[1]}
