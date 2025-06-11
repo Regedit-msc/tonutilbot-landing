@@ -1,7 +1,7 @@
 ---
 title: "Top 5 TON blockchain project to watch in 2025"
 description: "Explore the fundamentals of building a high-performing crypto trading bot on the TON blockchain."
-image: "https://pintu-academy.pintukripto.com/wp-content/uploads/2023/12/Ton.png"
+image: "/blog/top-five-ton-blockchain-project.png"
 publishedAt: "2025-06-01"
 updatedAt: "2025-06-01"
 category: "Ecosystem"

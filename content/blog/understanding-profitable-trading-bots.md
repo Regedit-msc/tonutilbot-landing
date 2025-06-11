@@ -1,7 +1,7 @@
 ---
 title: "Understanding the Core of a Profitable Trading Bot"
 description: "Discover the core principles of building a profitable crypto trading bot on the TON blockchain. From strategy selection and integration with TON-native DEXs to security, backtesting, and real-world performance, this guide outlines the key considerations that make TON an ideal ecosystem for next-generation automated trading."
-image: "https://pintu-academy.pintukripto.com/wp-content/uploads/2023/12/Ton.png"
+image: "/blog/what-makes-a-profitable-crypto-trading-bot.png"
 publishedAt: "2025-06-01"
 updatedAt: "2025-06-01"
 category: "Ecosystem"
